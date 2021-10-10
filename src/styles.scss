@@ -1,0 +1,233 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@import 'app/constants.scss';
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$kation-primary: mat.define-palette(mat.$indigo-palette);
+$kation-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$kation-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$kation-theme: mat.define-light-theme((
+  color: (
+    primary: $kation-primary,
+    accent: $kation-accent,
+    warn: $kation-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($kation-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+html, body { height: 100%; }
+
+body {
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", sans-serif;
+    max-width: 1500px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+.margin {
+    &-top {
+        &-50 {
+            margin-top: 50px;
+        }
+    }
+}
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    &-40 {
+        flex: 1;
+    }
+
+    &-60 {
+        flex: 2;
+    }
+}
+
+.view {
+    padding-top: 100px;
+
+    section {
+        display: flex;
+        padding: 0 20px;
+        position: relative;
+
+        .with-bg {
+            background-color: $blue-grey;
+            flex: 2;
+            padding: 30px;
+            height: 100%;
+
+            .section-title {
+                background-color: $dark-blue;
+                width: 50%;
+                padding: 10px 30px;
+                margin-left: -50px;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: bolder;
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: .85rem;
+                line-height: 1.5;
+                width: 80%;
+            }
+        }
+
+        .plain {
+            flex: 1;
+            padding: 30px;
+
+            .image-border {
+                .content {
+                    .border {
+                        border: 3px solid $green-blue;
+                        border-radius: 25px;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .service {
+        padding: 30px 0;
+        display: block;
+        
+        .section-title {
+            background-color: $orange;
+            width: 30%;
+            padding: 10px 30px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.center-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    a {
+        pointer-events: none;
+    }
+
+    &-green {
+        background-color: $green-blue;
+        border: 2px solid white;
+        color: white;
+    }
+
+    &-blue {
+        background-color: $dark-blue;
+        color: white;
+        border: 2px solid white;
+    }
+
+    &-orange {
+        background-color: #ED672C;
+        color: white;
+    }
+
+    &-orange-outline {
+        border: 1px solid #ED672C;
+        color: #ED672C;
+        background-color: transparent;
+    }
+
+    &-outline {
+        background-color: transparent;
+        color: white;
+    }
+
+    &-slide {
+        color: #FFF;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #D80286;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+
+        &:hover {
+            box-shadow: inset 400px 0 0 0 #D80286;
+        }
+    }
+}
+
+.mat-dialog-container {
+    width: 800px !important;
+    position: relative;
+    border-radius: 25px !important;
+    padding: 50px 24px !important;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}

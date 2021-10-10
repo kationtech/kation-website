@@ -1,0 +1,222 @@
+@import '../../constants.scss';
+
+#aboutUs {
+    section {
+
+        .with-bg {
+
+            .testimonial-video {
+                width: 80%;
+                margin: auto;
+
+                .customer-testimonial {
+                    background-color: $dark-blue;
+                    padding: 20px 0;
+                    text-align: center;
+                    font-size: 1rem;
+                    color: white;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+
+                .see-more-wrapper {
+                    margin-top: 30px;
+                    text-align: center;
+
+                    button {
+                        padding: 10px 30px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .plain {
+            .image-border {
+                position: absolute;
+                right: 30px;
+
+                .content {
+                    position: relative;
+                    z-index: 2;
+
+                    .image {
+                        border-radius: 25px;
+                        overflow: hidden;
+                    }
+
+                    .bubble-wrapper {
+                        position: absolute;
+                        bottom: -5rem;
+                        right: 4rem;
+                        background-image: url('../../../assets/images/bubble.png');
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        height: 150px;
+                        width: 300px;
+                        padding: 30px 20px 0 15px;
+                        z-index: 3;
+                        color: white;
+                        text-align: right;
+
+                        p {
+                            font-size: 1rem;
+                            font-style: italic;
+                        }
+
+                        span {
+                            font-size: .85rem;
+                        }
+
+                        &:before {
+                            content: '\201C';
+                            position: absolute;
+                            left: 10px;
+                            font-size: 5rem;
+                            top: 25px;
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+
+            .design-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+
+    .section-1 {
+        .with-bg {
+            p {
+                width: 55%;
+            }
+        }
+
+        .plain {
+            .image-border {
+                
+                .image {
+                    width: 850px;
+                    height: 400px;
+                }
+
+                .border {
+                    width: 850px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+    .section-2 {
+        .plain {
+            .design-image {
+                margin-left: -6rem;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .section-3 {
+
+        .with-bg {
+            p {
+                width: 90%;
+            }
+        }
+
+        .award {
+            .award-image {
+                width: 250px;
+                height: 250px;
+                margin: auto;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            .award-title {
+                font-weight: bold;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .award-desc {
+                font-size: .85rem;
+                line-height: 1.5;
+            }
+        }
+
+        .plain {
+            .image-border {
+                top: -2.5rem;
+
+                .image {
+                    width: 500px;
+                    height: 500px;
+                }
+
+                .border {
+                    width: 500px;
+                    height: 500px;
+                }
+            }
+        }
+    }
+
+    .section-4, .section-5, .section-6 {
+
+        .plain {
+            .image-border {
+                right: 7rem;
+
+                .content {
+                    .image {
+                        width: 400px;
+                        height: 400px;
+                    }
+    
+                    .border {
+                        width: 400px;
+                        height: 400px;
+                    }
+    
+                    .bubble-wrapper {
+                        right: -2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-5 {
+        .plain {
+            .image-border {
+                top: -3rem;
+            }
+        }
+    }
+
+    .section-6 {
+        .with-bg {
+            padding-bottom: 10rem;
+        }
+
+        .plain {
+            .image-border {
+                top: -1rem;
+            }
+        }
+    }
+}
+
+.partner-with-us-wrapper {
+    margin-top: -4rem;
+    position: relative;
+    z-index: 2;
+}

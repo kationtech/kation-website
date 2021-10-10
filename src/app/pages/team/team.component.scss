@@ -1,0 +1,153 @@
+@import '../../constants.scss';
+
+#team {
+    section {
+        .with-bg {
+            .member-desc {
+                background-color: $dark-blue;
+                width: 100%;
+                float: right;
+                margin-right: -7rem;
+                padding: 1.3rem 7rem 1.3rem 2rem;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+
+                p {
+                    width: 100%;
+                    text-align: right;
+                    color: white;
+                    font-size: .85rem;
+                    margin: 0 0 10px 0;
+                }
+
+                .member-position {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: .95rem;
+                    margin-bottom: 20px;
+                }
+
+            }
+
+            .design-image {
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+
+        .plain {
+            .image-border {
+    
+                .content {
+                    position: relative;
+    
+                    .image {
+                        width: 350px;
+                        height: 350px;
+                        background-color: $blue-grey;
+                        margin: auto;
+                        border-radius: 25px;
+                    }
+    
+                    .border {
+                        width: 350px;
+                        height: 350px;
+                        right: 60px;
+                        border: 3px solid $dark-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-1 {
+        .member-desc {
+            margin-top: 2rem;
+        }
+
+        .design-image {
+            img {
+                margin-top: -10px;
+                margin-left: 18rem;
+            }
+        }
+
+        .image-border {
+            margin-top: 6rem;
+        }
+    }
+
+    .section-2 {
+        .design-image {
+            img {
+                margin-left: 25rem;
+            }
+        }
+    }
+
+    .section-3 {
+        .with-bg {
+            .career-list {
+                display: flex;
+                margin-top: 30px;
+                margin-bottom: 3rem;
+
+                & > li {
+                    flex: 1;
+                    
+                    .career {
+                        width: 50%;
+                        margin: auto;
+                        height: 200px;
+                        background-color: $green-blue;
+                        border-radius: 25px;
+                        border: 2px solid white;
+                        padding: 15px;
+                        display: flex;
+                        align-items: flex-end;
+
+                        p {
+                            font-size: .85rem;
+                            color: white;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            .know-more {
+                text-align: center;
+                padding-bottom: 5rem;
+            }
+        }
+
+        .plain {
+            .image-border {
+                position: absolute;
+                right: 30px;
+                top: -10rem;
+                width: 550px;
+                height: 550px;
+
+                .content {
+                    position: relative;
+                    z-index: 3;
+
+                    .image {
+                        background-color: transparent;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.partner-with-us-wrapper {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
+}

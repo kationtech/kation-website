@@ -1,0 +1,17 @@
+<mat-dialog-content>
+    <div class="wrapper">
+        <div class="career-tile">
+            <div class="career-details">
+                <p class="title">{{data.title}}</p>
+                <label>{{data.salary}}</label>
+            </div>
+        </div>
+        <h3>{{data.title}}</h3>
+        <p class="salary">{{data.salary}} / month</p>
+        <p class="desc">{{data.desc}}</p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <div class="close" mat-dialog-close><img src="../../../../assets/images/icons/close.png"></div>
+    <button [mat-dialog-close]="true" cdkFocusInitial>KNOW MORE ABOUT THIS CAREER</button>
+</mat-dialog-actions>

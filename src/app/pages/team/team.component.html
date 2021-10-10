@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div id="team" class="view">
+    <section class="section-1">
+        <div class="with-bg">
+            <div class="section-title">Our Culture</div>
+            <p>We believe that technology is made by people, for the people, and so, every person in Kation Technologies is committed to “always successful projects,” even as we continuously invest in each other, and push ourselves to maximize our potential.</p>
+            <div class="member-desc">
+                <p class="member-position">OUR CEO</p>
+                <p>Andrew Anthony Corpus “Albert” is a Filipino business leader and serial entrepreneur. </p>
+                <p>Since graduating from his bachelor’s and master’s degree in Information Technology and Computer Science at the Ateneo de Manila University, Andoni has built a number of IT businesses, including <b>Quark Data, PeopleSoft, 24/7 International</b>, and, most recently, <b>Kation Technologies</b>. His IT enterprises have delivered diverse business solutions across multiple platforms, including Oracle, SAP, and Microsoft.</p>
+                <p>As President and CEO of Kation, <b>Andoni is focusing on leveraging emerging technologies for SMEs, putting new technology in the hands of frontliners, service professionals, and educators</b>. </p>
+            </div>
+            <div class="design-image"><img src="../../../assets/images/team-image-1.png"></div>
+        </div>
+        <div class="plain">
+            <div class="image-border">
+                <div class="content">
+                    <div class="border"></div>
+                    <div class="image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="with-bg">
+            <div class="section-title">Our Team</div>
+            <p>Our team of dynamic IT and ERP professionals can help you solve your day-to-day business challenges, and drive your organization's digital transformation—at any scale or in any field—through Microsoft and Google cloud platforms. We are all highly engaged stakeholders, motivated to continuously deliver excellent services and create game-changing products.</p>
+        </div>
+        <div class="plain">&nbsp;</div>
+    </section>
+    <section class="section-3">
+        <div class="with-bg">
+            <div class="section-title">Careers</div>
+            <p>At Kation Technologies, we believe that technology is made by people, for the people.</p>
+            <p>As a Filipino company, we look for people who seek to elevate the Filipino IT talent to the world stage and create value for our clients, people and communities.</p>
+            <p>Grow your career with us. Bring your pioneering mindset and determination, and together, let's create positively charged connections.</p>
+            <ul class="career-list">
+                <li *ngFor="let career of careerList" (click)="getCareerDetails(career.id)">
+                    <div class="career">
+                        <div>
+                            <p>{{career.title}} <br> {{career.subtitle}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="know-more">
+                <button class="btn btn-green">WANT TO KNOW MORE ABOUT EXPERIENCES AT KATION</button>
+            </div>
+        </div>
+        <div class="plain">
+            <div class="image-border">
+                <div class="content">
+                    <div class="image"><img src="../../../assets/images/team-image-5.png"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="partner-with-us-wrapper">
+    <app-partner-with-us></app-partner-with-us>
+</div>  
+<app-footer></app-footer>

@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div id="{{page}}" class="view">
+    <div class="back">Back</div>
+    <section class="service">
+        <div class="section-title">Business Apps</div>
+        <div class="content">
+            <h2>{{data.title}}</h2>
+            <p>{{data.description}}</p>
+            <div class="product-list">
+                <p>PRODUCTS included for {{data.title}}:</p>
+                <ul>
+                    <li *ngFor="let product of data.products">
+                        <a href=""><p>{{product.title}}</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

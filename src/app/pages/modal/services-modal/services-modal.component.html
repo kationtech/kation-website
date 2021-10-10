@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Tell us what you need by filling out this form.</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="display-flex type-container">
+        <div class="radio-wrapper">
+            <input type="radio" id="customer" name="type-group" (change)="getType('customer')">
+            <label for="customer" class="customer">Customer</label>
+        </div>
+        <div class="radio-wrapper">
+            <input type="radio" id="supplier" name="type-group" (change)="getType('supplier')">
+            <label for="supplier" class="supplier">Supplier</label>
+        </div>
+        <div class="radio-wrapper">
+            <input type="radio" id="reseller" name="type-group" (change)="getType('reseller')">
+            <label for="reseller" class="reseller">Reseller</label>
+        </div>
+    </div>
+    <form>
+        <div>
+            <mat-select class="business" placeholder="What business industry are you in?" id="industry" (selectionChange)="setValueForm('select', $event)">
+                <mat-option value="sample"> Sample </mat-option>
+            </mat-select>
+        </div>
+        <div>
+            <mat-select class="looking" placeholder="Are you looking for a service or a product?" id="isServiceorProduct" (selectionChange)="setValueForm('select', $event)">
+                <mat-option value="sample"> Sample </mat-option>
+            </mat-select>
+        </div>
+        <div>
+            <mat-select class="company" placeholder="How big is your company?" id="companySize" (selectionChange)="setValueForm('select', $event)">
+                <mat-option value="sample"> Sample </mat-option>
+            </mat-select>
+        </div>
+        <div class="display-flex with-input">
+            <div class="select">
+                <mat-select class="tech" placeholder="Do you have a current technology?" id="technology" (selectionChange)="setValueForm('select', $event)">
+                    <mat-option value="true"> Yes </mat-option>
+                    <mat-option value="false"> No </mat-option>
+                </mat-select>
+            </div>
+            <div class="input">
+                <div *ngIf="!showSpecifyField">&nbsp;</div>
+                <div class="display-flex" *ngIf="showSpecifyField">
+                    <label>If YES, please specify</label>
+                    <input type="text" (keyup)="setValueForm('input', $event)">
+                </div>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <div class="close" mat-dialog-close><img src="../../../../assets/images/icons/close.png"></div>
+  <button [mat-dialog-close]="formValues" [disabled]="isDisabled" cdkFocusInitial>Submit</button>
+</mat-dialog-actions>
