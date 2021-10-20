@@ -49,6 +49,8 @@
 
                 .button-wrapper {
                     text-align: right;
+                    margin-top: 50px;
+                    margin-right: 20px;
 
                     button {
                         border: 2px solid;
@@ -62,6 +64,24 @@
                         &:hover {
                             box-shadow: inset 400px 0 0 0 #ED672C;
                             color: white;
+                        }
+                    }
+                }
+
+                .tagline {
+                    text-align: right;
+
+                    p {
+                        font-size: 3rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        margin: 0;
+
+                        span {
+                            font-size: 1rem;
+                            text-transform: none;
+                            font-weight: normal;
+                            margin: 0;
                         }
                     }
                 }

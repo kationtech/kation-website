@@ -13,12 +13,12 @@ export class ServicesModalComponent implements OnInit {
 
   constructor() {
     this.formValues = {
-      type: null,
-      industry: null,
-      isServiceorProduct: null,
-      companySize: null,
-      technology: null,
-      technologyType: null
+      type: '',
+      industry: '',
+      service: '',
+      company_size: null,
+      has_technology: false,
+      technology_name: ''
     }
   }
 
@@ -33,9 +33,9 @@ export class ServicesModalComponent implements OnInit {
   setValueForm(type: string, value: any){
     if(type === 'select') {
       this.formValues[value.source._id] = value.value;
-      this.showSpecifyField = this.formValues['technology'] && this.formValues['technology'] === 'true';
+      this.showSpecifyField = this.formValues['has_technology'] && this.formValues['has_technology'] === 'true';
     } else {
-      this.formValues['technologyType'] = value.target.value;
+      this.formValues['technology_name'] = value.target.value;
     }
     
     this.validateForm();
@@ -43,9 +43,10 @@ export class ServicesModalComponent implements OnInit {
 
   validateForm(){
     let data = this.formValues;
-    if (data['type'] && data['industry'] && data['isServiceorProduct'] && data['companySize'] && data['technology']) {
-      if (data['technology'] === 'true') {
-        this.isDisabled = !data['technologyType'];
+    console.log(data);
+    if (data['type'] && data['industry'] && data['service'] && data['company_size'] && data['has_technology']) {
+      if (data['has_technology'] === 'true') {
+        this.isDisabled = !data['technology_name'];
       } else {
         this.isDisabled = false;
       }

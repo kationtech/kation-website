@@ -21,7 +21,7 @@
     .product-list {
         ul {
             li {
-                a {
+                button {
                     background: $yellow;
 
                     p {
@@ -77,7 +77,7 @@ section {
                 li {
                     margin: 0 30px;
                     
-                    a {
+                    button {
                         width: 180px;
                         height: 180px;
                         border-radius: 25px;

@@ -1,6 +1,6 @@
 <header>
     <div class="display-flex">
-        <div class="logo"><img src="../../../assets/images/about-us-logo.png"></div>
+        <div class="logo"><a href="" [routerLink]="['']"><img src="../../../assets/images/about-us-logo.png"></a></div>
         <ul class="menu display-flex">
             <li><a href="" [routerLink]="['/aboutus']">About Us</a></li>
             <li><a href="" [routerLink]="['/team']">Our Team</a></li>
@@ -8,11 +8,11 @@
                 <a href="" [routerLink]="['/services']">Services</a>
                 <ul class="sub-menu">
                     <li><a href="" [routerLink]="['/businessapp']">Business Apps</a></li>
-                    <li><a href="">Humane Apps</a></li>
-                    <li><a href="">Hybrid Apps</a></li>
+                    <li><a href="" [routerLink]="['/humaneapp']">Humane Apps</a></li>
+                    <li><a href="" [routerLink]="['/hybridapp']">Hybrid Apps</a></li>
                 </ul>
             </li>
-            <li><a href="" class="btn btn-orange btn-slide">Partner with us</a></li>
+            <li><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide">Partner with us</a></li>
         </ul>
     </div>
 </header>

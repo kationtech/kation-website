@@ -1,6 +1,10 @@
 @import '../../constants.scss';
 
 #team {
+    p {
+        line-height: 1.8;
+    }
+
     section {
         .with-bg {
             .member-desc {
@@ -9,8 +13,7 @@
                 float: right;
                 margin-right: -7rem;
                 padding: 1.3rem 7rem 1.3rem 2rem;
-                border-top-left-radius: 25px;
-                border-bottom-left-radius: 25px;
+                border-radius: 25px;
 
                 p {
                     width: 100%;
@@ -35,6 +38,14 @@
                     height: 200px;
                 }
             }
+
+            .sub-content {
+                h3 {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 15px;
+                }
+            }
         }
 
         .plain {
@@ -44,17 +55,17 @@
                     position: relative;
     
                     .image {
-                        width: 350px;
-                        height: 350px;
+                        width: 450px;
+                        height: 450px;
                         background-color: $blue-grey;
                         margin: auto;
                         border-radius: 25px;
                     }
     
                     .border {
-                        width: 350px;
-                        height: 350px;
-                        right: 60px;
+                        width: 450px;
+                        height: 450px;
+                        right: 50px;
                         border: 3px solid $dark-blue;
                     }
                 }
@@ -63,42 +74,127 @@
     }
 
     .section-1 {
-        .member-desc {
-            margin-top: 2rem;
-        }
+        .with-bg {
+            .member-desc {
+                margin-top: 4rem;
+                
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+            }
 
-        .design-image {
-            img {
-                margin-top: -10px;
-                margin-left: 18rem;
+            .design-image {
+                img {
+                    margin-top: -50px;
+                    margin-left: 10rem;
+                    width: 150px;
+                }
             }
         }
 
-        .image-border {
-            margin-top: 6rem;
+        .plain {
+            .image-border {
+                margin-top: 2rem;
+            }
+
+            .team-name {
+                text-align: right;
+                margin: 30px 40px;
+                font-size: 1.3rem;
+                font-weight: bold;
+                line-height: normal;
+                color: $dark-blue;
+
+                span {
+                    font-weight: normal;
+                }
+            }
         }
     }
 
-    .section-2 {
-        .design-image {
-            img {
-                margin-left: 25rem;
+    .section-2, .section-3 {
+        margin-top: -2rem;
+
+        .with-bg {
+            .member-desc {
+                margin-top: 5rem;
+                
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .design-image {
+                img {
+                    margin-top: 0px;
+                    margin-left: 15rem;
+                }
+            }
+        }
+
+        .plain {
+            padding-top: 0;
+            margin-top: -3rem;
+
+            .team-name {
+                text-align: right;
+                margin: 30px 40px;
+                font-size: 1.3rem;
+                font-weight: bold;
+                line-height: normal;
+                color: $dark-blue;
+
+                span {
+                    font-weight: normal;
+                }
             }
         }
     }
 
     .section-3 {
         .with-bg {
+            .design-image {
+                img {
+                    margin-top: -30px;
+                    margin-left: 7rem;
+                    width: 250px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    .section-4 {
+
+        .with-bg {
+            padding-top: 7rem;
+
+            .section-title {
+                margin-bottom: 3rem;
+            }
+
+            & > p {
+                width: 90%;
+            }
+
+            .sub-content {
+                margin-top: 3rem;
+            }
+
             .career-list {
                 display: flex;
                 margin-top: 30px;
                 margin-bottom: 3rem;
+                padding: 0;
+                margin: 0;
 
                 & > li {
                     flex: 1;
-                    
+
                     .career {
-                        width: 50%;
+                        width: 200px;
                         margin: auto;
                         height: 200px;
                         background-color: $green-blue;
@@ -112,6 +208,7 @@
                             font-size: .85rem;
                             color: white;
                             text-align: left;
+                            width: 100%;
                         }
                     }
                 }
@@ -121,15 +218,18 @@
                 text-align: center;
                 padding-bottom: 5rem;
             }
+
+            .experience {
+                margin-top: 15rem;
+            }
         }
 
         .plain {
             .image-border {
                 position: absolute;
-                right: 30px;
-                top: -10rem;
+                right: 5rem;
+                top: -5rem;
                 width: 550px;
-                height: 550px;
 
                 .content {
                     position: relative;
@@ -144,10 +244,128 @@
             }
         }
     }
+
+    .section-5, .section-6, .section-7 {
+        .with-bg {
+            padding-top: 8rem;
+
+            .sub-content {
+                .experience {
+                    background-color: transparent;
+                    position: relative;
+                    margin-top: 4rem;
+                    background-image: url('../../../assets/images/bubble-team.png');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    padding-bottom: 50px;
+
+            
+                    &:before {
+                        content: '\201C';
+                        font-size: 6rem;
+                        color: white;
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                    }
+
+                    p {
+                        margin-top: .60rem;
+                        margin-bottom: 1rem;
+                        width: 92%;
+                        float: right;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .design-image {
+                    z-index: 2;
+                    position: relative;
+
+                    img {
+                        margin-left: 15rem;
+                        margin-top: -6rem;
+                    }
+                }
+            }
+        }
+
+        .plain {
+            .image-border {
+                padding-top: 8rem;
+
+                .content {
+                    .image {
+                        width: 400px;
+                        height: 400px;
+                        margin: 0 0 0 30px;
+                    }
+
+                    .border {
+                        width: 400px;
+                        height: 400px;
+                        right: 90px;
+                        border: 3px solid $green-blue;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-6 {
+        .with-bg {
+            padding-top: 2rem;
+
+            .sub-content {
+                .design-image {
+                    z-index: 2;
+                    position: relative;
+
+                    img {
+                        margin-left: 13rem;
+                        margin-top: -6rem;
+                        height: 180px;
+                    }
+                }
+            }
+        }
+
+        .plain {
+            .image-border {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .section-7 {
+        .with-bg {
+            background-color: white;
+            padding-top: 4rem;
+
+            .sub-content {
+                .design-image {
+                    img {
+                        width: 150px;
+                        margin-left: 17rem;
+                    }
+                }
+            }
+        }
+
+        .plain {
+            .image-border {
+                padding-top: 2rem;
+            }
+        }
+    }
 }
 
 .partner-with-us-wrapper {
-    margin-top: -3rem;
+    margin-top: 3rem;
     position: relative;
     z-index: 2;
 }

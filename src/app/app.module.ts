@@ -19,6 +19,13 @@ import { ServicesComponent } from './pages/services/services.component';
 import { BusinessServiceComponent } from './pages/business-service/business-service.component';
 import { BusinessSubServiceComponent } from './pages/business-service/business-sub-service/business-sub-service.component';
 import { DetailsModalComponent } from './pages/modal/details-modal/details-modal.component';
+import { HumaneServiceComponent } from './pages/humane-service/humane-service.component';
+import { HumaneSubServiceComponent } from './pages/humane-service/humane-sub-service/humane-sub-service.component';
+import { HybridServiceComponent } from './pages/hybrid-service/hybrid-service.component';
+import { TermsAndConditionsModalComponent } from './pages/modal/terms-and-conditions-modal/terms-and-conditions-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
 
 
 @NgModule({
@@ -36,6 +43,11 @@ import { DetailsModalComponent } from './pages/modal/details-modal/details-modal
     BusinessServiceComponent,
     BusinessSubServiceComponent,
     DetailsModalComponent,
+    HumaneServiceComponent,
+    HumaneSubServiceComponent,
+    HybridServiceComponent,
+    TermsAndConditionsModalComponent,
+    PromptModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +56,9 @@ import { DetailsModalComponent } from './pages/modal/details-modal/details-modal
     NoopAnimationsModule,
     MatButtonModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

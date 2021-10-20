@@ -1,0 +1,23 @@
+@import '../../../constants.scss';
+
+.wrapper {
+
+    h3 {
+        color: $greyish;
+        text-align: center;
+    }
+
+    p {
+        font-size: .85rem;
+        line-height: 1.8;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
+mat-dialog-actions {
+    label {
+        cursor: pointer;
+    }
+}

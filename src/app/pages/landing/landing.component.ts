@@ -17,11 +17,27 @@ export class LandingComponent implements OnInit {
   }
 
   showModal() {
-    const dialogRef = this.dialog.open(ServicesModalComponent);
+    const dialogRef = this.dialog.open(ServicesModalComponent, {
+      width: '800px'
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       // SUBMIT API HERE
       console.log(result);
+      let finalData = {
+        type: result.type,
+        description: '',
+        industry: result.industry,
+        service: result.service,
+        company_size: result.company_size,
+        has_technology: Boolean(result.has_technology),
+        name: '',
+        email: '',
+        contact_number: '',
+        subscription: false
+      }
+
+      localStorage.setItem('data', JSON.stringify(finalData))
     });
   }
 

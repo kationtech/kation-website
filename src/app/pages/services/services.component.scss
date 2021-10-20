@@ -65,6 +65,7 @@
                 position: relative;
                 color: white;
                 box-sizing: border-box;
+                z-index: 2;
 
                 h2 {
                     font-size: 2rem;
@@ -96,6 +97,13 @@
                         margin-bottom: 10px;
                     }
                 }
+
+                .shadow {
+                    position: absolute;
+                    font-size: 7rem;
+                    opacity: 0.1;
+                    top: 30%;
+                }
             }
 
             .business {
@@ -104,10 +112,26 @@
 
             .humane {
                 background-color: $yellow;
+
+                .desc {
+                    button {
+                        border: 2px solid black;
+                        color: black;
+                    }
+                }
+
+                .shadow {
+                    color: black;
+                }
             }
 
             .hybrid {
                 background-color: $green-blue;
+
+                .shadow {
+                    font-size: 3.5rem;
+                    top: 40%;
+                }
             }
         }
     }

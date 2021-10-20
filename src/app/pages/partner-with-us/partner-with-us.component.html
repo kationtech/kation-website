@@ -1,58 +1,174 @@
-<div class="wrapper" id="pwu-form">
+<app-header *ngIf="isPage"></app-header>
+<div class="wrapper" [ngClass]="{'fullPage': isPage, 'view': isPage}" id="pwu-form">
     <div class="display-flex">
         <div class="partner-with-us-left">
             <div>
-                <h1>GET THERE.<br>TOGETHER.</h1>
-                <p>Your one-stop shop technology partner, <br>for your business. </p>
+                <h1>Bringing opportunities and co-creation <br>to unlimit</h1>
+                <p>the world’s digital workforce.</p>
             </div>
         </div>
         <div class="partner-with-us-form">
-            <h1>PARTNER WITH US!</h1>
-            <p>I would like to get a <b>FREE</b> copy of white paper study about:</p>
-            <div class="services-wrapper">
-                <h2>Services</h2>
-                <div class="checkbox-wrapper">
-                    <input type="checkbox" id="business">
-                    <label for="business">Business Apps</label>
+            <div *ngIf="isPage">
+                <div *ngIf="showFullForm">
+                    <h1>PARTNER WITH US!</h1>
+                    <form [formGroup]="partnerFormGrp">
+                        <div class="display-flex type-container">
+                            <div class="radio-wrapper">
+                                <input type="radio" id="customer" name="type" value="customer" formControlName="type">
+                                <label for="customer" class="customer">Customer</label>
+                            </div>
+                            <div class="radio-wrapper">
+                                <input type="radio" id="supplier" name="type" value ="supplier" formControlName="type">
+                                <label for="supplier" class="supplier">Supplier</label>
+                            </div>
+                            <div class="radio-wrapper">
+                                <input type="radio" id="reseller" name="type" value="reseller" formControlName="type">
+                                <label for="reseller" class="reseller">Reseller</label>
+                            </div>
+                        </div>
+                        <div class="select-list">
+                            <div>
+                                <mat-select class="business" placeholder="What business industry are you in?" id="industry" formControlName="industry">
+                                    <mat-option value="sample"> Sample </mat-option>
+                                </mat-select>
+                            </div>
+                            <div>
+                                <mat-select class="looking" placeholder="Are you looking for a service or a product?" id="isServiceorProduct" formControlName="service">
+                                    <mat-option value="sample"> Sample </mat-option>
+                                </mat-select>
+                            </div>
+                            <div>
+                                <mat-select class="company" placeholder="How big is your company?" id="companySize" formControlName="company_size">
+                                    <mat-option value="sample"> Sample </mat-option>
+                                </mat-select>
+                            </div>
+                            <div class="display-flex with-input">
+                                <div class="select">
+                                    <mat-select class="tech" placeholder="Do you have a current technology?" id="technology" formControlName="has_technology">
+                                        <mat-option value="true"> Yes </mat-option>
+                                        <mat-option value="false"> No </mat-option>
+                                    </mat-select>
+                                </div>
+                                <div class="input">
+                                    <div *ngIf="!partnerFormGrp.value.has_technology">&nbsp;</div>
+                                    <div class="display-flex" *ngIf="partnerFormGrp.value.has_technology == 'true'">
+                                        <label>If YES, please specify</label>
+                                        <input type="text" formControlName="technology_name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fullname">
+                                <input type="text" placeholder="Full Name" formControlName="name"/>
+                            </div>
+                            <div class="display-flex">
+                                <div class="email">
+                                    <input type="text" placeholder="Email" formControlName="email"/>
+                                </div>
+                                <div class="number">
+                                    <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
+                                </div>
+                            </div>
+                            <div class="subs-and-terms-wrapper">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="subs">
+                                    <label for="subs">I allow KATION TECHNOLOGIES to reach out to me.</label>
+                                </div>
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="terms">
+                                    <label for="terms">I have read and understood the <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>.</label>
+                                </div>
+                            </div>
+                            <div class="display-flex">
+                                <div class="recaptcha">
+                                    <ngx-recaptcha2 #captchaElem
+                                        [siteKey]="siteKey"
+                                        formControlName="recaptcha">
+                                    </ngx-recaptcha2>
+                                </div>
+                                <div class="submit-btn">
+                                    <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="checkbox-wrapper">
-                    <input type="checkbox" id="humane">
-                    <label for="humane">Humane Apps</label>
-                </div>
-                <div class="checkbox-wrapper">
-                    <input type="checkbox" id="hybrid">
-                    <label for="hybrid">Hybrid Apps</label>
+                <div *ngIf="!showFullForm" class="withData">
+                    <div>
+                        <h1>PARTNER WITH US!</h1>
+                        <form [formGroup]="infoFormGrp">
+                            <div class="fullname">
+                                <input type="text" placeholder="Full Name"/>
+                            </div>
+                            <div class="display-flex">
+                                <div class="email">
+                                    <input type="text" placeholder="Email"/>
+                                </div>
+                                <div class="number">
+                                    <input type="text" placeholder="Phone Number"/>
+                                </div>
+                            </div>
+                            <div class="subs-and-terms-wrapper">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="subs" formControlName="subscription">
+                                    <label for="subs">I allow KATION TECHNOLOGIES to reach out to me.</label>
+                                </div>
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="terms" formControlName="terms">
+                                    <label for="terms">I have read and understood the <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>.</label>
+                                </div>
+                            </div>
+                            <div class="display-flex">
+                                <div class="recaptcha">asd</div>
+                                <div class="submit-btn">
+                                    <button class="btn btn-orange btn-slide" [disabled]="infoFormGrp.invalid">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <form>
-                <div class="fullname">
-                    <input type="text" placeholder="Full Name"/>
+            <div *ngIf="!isPage" class="inComponent">
+                <div>
+                    <h1>PARTNER WITH US!</h1>
+                    <form [formGroup]="infoFormGrp">
+                        <div class="fullname">
+                            <input type="text" placeholder="Full Name" formControlName="name" />
+                        </div>
+                        <div class="display-flex">
+                            <div class="email">
+                                <input type="text" placeholder="Email" formControlName="email" />
+                            </div>
+                            <div class="number">
+                                <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
+                            </div>
+                        </div>
+                        <div class="subs-and-terms-wrapper">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="subs" formControlName="subscription" />
+                                <label for="subs">I allow KATION TECHNOLOGIES to reach out to me.</label>
+                            </div>
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="terms" formControlName="terms" />
+                                <label for="terms">I have read and understood the <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>.</label>
+                            </div>
+                        </div>
+                        <div class="display-flex">
+                            <div class="recaptcha">
+                                <div class="recaptcha">
+                                    <ngx-recaptcha2 #captchaElem
+                                        [siteKey]="siteKey"
+                                        formControlName="recaptcha">
+                                    </ngx-recaptcha2>
+                                </div>
+                            </div>
+                            <div class="submit-btn">
+                                <button class="btn btn-orange btn-slide" [disabled]="infoFormGrp.invalid">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="display-flex">
-                    <div class="email">
-                        <input type="text" placeholder="Email"/>
-                    </div>
-                    <div class="number">
-                        <input type="text" placeholder="Phone Number"/>
-                    </div>
-                </div>
-                <div class="subs-and-terms-wrapper">
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="subs">
-                        <label for="subs">I allow KATION TECHNOLOGIES to reach out to me.</label>
-                    </div>
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="terms">
-                        <label for="terms">I have read and understood the <a href="">Terms and Conditions</a>.</label>
-                    </div>
-                </div>
-                <div class="display-flex">
-                    <div class="recaptcha">asd</div>
-                    <div class="submit-btn">
-                        <button class="btn btn-orange btn-slide">Submit</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+<app-footer *ngIf="isPage"></app-footer>

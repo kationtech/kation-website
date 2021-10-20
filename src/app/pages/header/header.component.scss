@@ -21,6 +21,11 @@ header {
             width: 500px;
             height: 80px;
             align-items: center;
+
+            a {
+                align-items: center;
+                display: flex;
+            }
         }
     }
 
