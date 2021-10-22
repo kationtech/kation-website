@@ -429,3 +429,11 @@ img {
         top: 15px;
     }
 }
+
+@media (max-width: $mobile) {
+    .view {
+        section {
+            flex-direction: column;
+        }
+    }
+}

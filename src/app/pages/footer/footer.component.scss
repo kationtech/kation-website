@@ -1,3 +1,5 @@
+@import '../../constants.scss';
+
 footer {
     padding: 1.5rem;
     box-sizing: border-box;
@@ -56,6 +58,51 @@ footer {
 
                     img {
                         width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    footer {
+        & > .display-flex {
+            display: block;
+        }
+
+        .display-flex {
+            .links {
+                .display-flex {
+                    & > div.icons {
+                        margin: 10px auto;
+                    }
+                }
+            }
+
+            .socials {
+                .logo {
+                    width: 300px;
+                    margin: auto;
+                }
+
+                .icons {
+                    text-align: center;
+                }
+            }
+
+            .contacts {
+                text-align: left;
+
+                & > .display-flex {
+                    display: block;
+                    justify-content: flex-start;
+                }
+
+                .display-flex {
+                    & > div {
+                        text-align: left;
+                        display: inline;
                     }
                 }
             }

@@ -1,3 +1,5 @@
+@import '../../constants.scss';
+
 #landing {
     height: 100vh;
     padding-top: 100px;
@@ -111,6 +113,33 @@
                 background-repeat: no-repeat;
                 background-size: 80% 100%;
                 right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    #landing {
+        .content-wrapper {
+            .logo-wrapper {
+                display: none;
+            }
+
+            .content {
+                .landing-details {
+                    width: 90%;
+                    padding-top: 20px;
+
+                    .tagline{
+                        p {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
+                &:after {
+                    display: none;
+                }
             }
         }
     }

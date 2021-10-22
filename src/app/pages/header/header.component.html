@@ -1,18 +1,33 @@
 <header>
     <div class="display-flex">
         <div class="logo"><a href="" [routerLink]="['']"><img src="../../../assets/images/about-us-logo.png"></a></div>
-        <ul class="menu display-flex">
-            <li><a href="" [routerLink]="['/aboutus']">About Us</a></li>
-            <li><a href="" [routerLink]="['/team']">Our Team</a></li>
-            <li>
-                <a href="" [routerLink]="['/services']">Services</a>
-                <ul class="sub-menu">
-                    <li><a href="" [routerLink]="['/businessapp']">Business Apps</a></li>
-                    <li><a href="" [routerLink]="['/humaneapp']">Humane Apps</a></li>
-                    <li><a href="" [routerLink]="['/hybridapp']">Hybrid Apps</a></li>
+        <div id="menu-mobile">
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="" [routerLink]="['/aboutus']">About Us</a></li>
+                    <li><a href="" [routerLink]="['/team']">Our Team</a></li>
+                    <li><a href="" [routerLink]="['/services']">Services</a></li>
+                    <li><a href="" [routerLink]="['/partnerWithUs']">Partner with us</a></li>
                 </ul>
-            </li>
-            <li><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide">Partner with us</a></li>
-        </ul>
+            </div>
+        </div>
+        <div id="main-menu">
+            <ul class="menu display-flex">
+                <li><a href="" [routerLink]="['/aboutus']">About Us</a></li>
+                <li><a href="" [routerLink]="['/team']">Our Team</a></li>
+                <li>
+                    <a href="" [routerLink]="['/services']">Services</a>
+                    <ul class="sub-menu">
+                        <li><a href="" [routerLink]="['/businessapp']">Business Apps</a></li>
+                        <li><a href="" [routerLink]="['/humaneapp']">Humane Apps</a></li>
+                        <li><a href="" [routerLink]="['/hybridapp']">Hybrid Apps</a></li>
+                    </ul>
+                </li>
+                <li><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide">Partner with us</a></li>
+            </ul>
+        </div>
     </div>
 </header>

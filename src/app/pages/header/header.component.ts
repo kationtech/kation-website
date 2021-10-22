@@ -8,10 +8,16 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  mobileMenu: boolean = false;
+
   constructor( private route: Router ) {}
 
   ngOnInit(): void {
 
+  }
+
+  showMenu(){
+    this.mobileMenu = !this.mobileMenu
   }
 
 }

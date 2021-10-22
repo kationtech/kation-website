@@ -279,3 +279,103 @@
     position: relative;
     z-index: 2;
 }
+
+@media (max-width: $mobile) {
+    #aboutUs {
+        section {
+            .with-bg {
+                .section-title {
+                    width: 110%;
+                }
+            }
+
+            .plain {
+                position: relative;
+
+                .image-border {
+                    position: relative;
+                    right: 0;
+
+                    .border {
+                        top: 10px;
+                        right: 10px;
+                    }
+
+                    .content {
+                        .bubble-wrapper {
+                            position: relative;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-1, .section-2 {
+            .with-bg {
+                p {
+                    width: 100%;
+                }
+            }
+
+            .plain {
+                .image-border {
+                    
+                    .image {
+                        width: 100%;
+                        height: 150px;
+                    }
+    
+                    .border {
+                        width: 100%;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        .section-2 {
+            .plain {
+                .design-image {
+                    margin: -4rem auto 0 auto;
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+
+        .section-3 {
+            .plain {
+                display: none;
+            }
+        }
+
+        .section-4, .section-5 {
+            height: 700px;
+
+            .with-bg {
+                .testimonial-video {
+
+                    .testimonial {
+                        p {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            iframe {
+                height: 250px;
+            }
+
+            .plain {
+                display: none;
+            }
+        }
+
+        .section-5 {
+            height: 600px;
+        }
+    }
+}
