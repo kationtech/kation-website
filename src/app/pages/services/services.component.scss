@@ -140,3 +140,41 @@
 .partner-with-us-wrapper{
     margin-top: -9rem;
 }
+
+@media (max-width: $mobile) {
+    #services {
+        .section-1 {
+            height: auto;
+            padding-bottom: 3rem;
+
+            & > div {
+                padding: 10px;
+            }
+
+            &:before, &:after {
+                display: none;
+            }
+        }
+
+        .section-2 {
+            .services-list {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                    margin-bottom: 10px;
+
+                    .shadow {
+                        font-size: 5rem;
+                    }
+
+                    &.hybrid {
+                        .shadow {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
