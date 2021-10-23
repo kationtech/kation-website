@@ -46,6 +46,33 @@
                     margin-bottom: 15px;
                 }
             }
+
+            .isMobile {
+                padding: 0;
+                margin-top: 2rem;
+
+                .image-border {
+                    .content {
+                        .image {
+                            width: 200px;
+                            height: 200px;
+                            background: red;
+                        }
+
+                        .border {
+                            width: 200px;
+                            height: 200px;
+                            right: 45px;
+                        }
+                    }
+                }
+
+                .team-name {
+                    text-align: center;
+                    font-size: 1rem;
+                    margin: 20px auto;
+                }
+            }
         }
 
         .plain {
@@ -368,4 +395,233 @@
     margin-top: 3rem;
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: $mobile) {
+    #team {
+        section {
+            .with-bg {
+                .section-title {
+                    width: 110%;
+                }
+
+                .member-desc {
+                    margin: 0;
+                    padding: 20px;
+                    
+                    p {
+                        text-align: left;
+                        font-size: .85rem;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .plain {
+                position: relative;
+
+                .image-border {
+                    position: relative;
+                    right: 0;
+
+                    .border {
+                        top: 10px;
+                        right: 10px;
+                    }
+
+                    .content {
+                        .bubble-wrapper {
+                            position: relative;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-1, .section-2, .section-3 {
+            .with-bg {
+                p {
+                    width: 100%;
+                }
+
+                .member-desc {
+                    margin-top: 0;
+
+                    p {
+                        font-size: .85rem;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .design-image {
+                    img {
+                        margin-top: -20px;
+                        margin-left: 10rem;
+                        width: 50px;
+                        height: 100px;
+                    }
+                }
+            }
+
+            .plain {
+                .image-border {
+                    
+                    .image {
+                        width: 100%;
+                        height: 150px;
+                    }
+    
+                    .border {
+                        width: 100%;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        .section-2 {
+
+            .with-bg {
+                .design-image {
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+
+
+            .plain {
+                .design-image {
+                    margin: -4rem auto 0 auto;
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+
+        .section-3 {
+            .with-bg {
+                .design-image {
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+
+        .section-4, .section-5 {
+            height: auto;
+
+            .with-bg {
+                padding-top: 0;
+
+                .career-list {
+                    flex-direction: column;
+
+                    li {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .testimonial-video {
+
+                    .testimonial {
+                        p {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            iframe {
+                height: 250px;
+            }
+        }
+
+        .section-4 {
+            .plain {
+                display: none;
+            }
+        }
+
+        .section-5, .section-6, .section-7 {
+            .with-bg {
+                .sub-content {
+                    .design-image {
+                        display: none;
+                    }
+
+                    .experience {
+                        position: relative;
+                        margin-top: 0;
+                        background-image: none;
+                        background-color: $green-blue;
+                        padding: 15px;
+
+                        &:before {
+                            font-size: 2rem;
+                            top: 20px;
+                        }
+
+                        &:after {
+                            content: "";
+                            width: 0px;
+                            height: 0px;
+                            position: absolute;
+                            border-left: 24px solid $green-blue;
+                            border-right: 12px solid transparent;
+                            border-top: 12px solid $green-blue;
+                            border-bottom: 20px solid transparent;
+                            left: 40px;
+                            bottom: -32px;
+                        }
+                    }
+                }
+            }
+
+            .plain {
+                background-color: $blue-grey;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .image-border {
+                    padding-top: 0;
+
+                    .content {
+                        .image, .border {
+                            width: 100%;
+                            height: 250px;
+                            margin: auto;
+                        }
+
+                        .image {
+                            overflow: hidden;
+                        }
+
+                        .border {
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-6 {
+            .plain {
+                padding-bottom: 50px;
+            }
+        }
+
+        .section-7 {
+            .with-bg {
+                padding-top: 1rem;
+            }
+            
+            .plain {
+                background-color: white;
+            }
+        }
+    }
 }

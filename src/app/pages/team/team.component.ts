@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { UtilsService } from 'src/app/utils.service';
 import { CareersModalComponent } from '../modal/careers-modal/careers-modal.component';
 
 @Component({
@@ -100,11 +101,15 @@ export class TeamComponent implements OnInit {
     ]
   }];
 
+  isMobile: boolean = false;
+
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public utils: UtilsService
   ) { }
 
   ngOnInit(): void {
+    this.isMobile = this.utils.isMobileDevice();
   }
 
   getCareerDetails(id: string) {
