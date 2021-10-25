@@ -21,3 +21,10 @@ mat-dialog-actions {
         cursor: pointer;
     }
 }
+
+@media (max-width: $mobile) {
+    .mat-dialog-actions {
+        height: 0;
+        min-height: 0;
+    }
+}

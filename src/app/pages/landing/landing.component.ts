@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServicesModalComponent } from '../modal/services-modal/services-modal.component';
+import { UtilsService } from 'src/app/utils.service';
 
 @Component({
   selector: 'app-landing',
@@ -11,6 +12,7 @@ export class LandingComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
+    public utils: UtilsService
   ) { }
 
   ngOnInit(): void {
@@ -18,7 +20,8 @@ export class LandingComponent implements OnInit {
 
   showModal() {
     const dialogRef = this.dialog.open(ServicesModalComponent, {
-      width: '800px'
+      width: '800px',
+      height: this.utils.isMobileDevice() ? '600px' : 'auto'
     });
 
     dialogRef.afterClosed().subscribe(result => {

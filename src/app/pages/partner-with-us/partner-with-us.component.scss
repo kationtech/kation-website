@@ -271,20 +271,19 @@
 }
 
 @media (max-width: $mobile) {
-    #pwu-form {
+    #pwu-form, #pwu-form.fullPage {
         .display-flex {
             .partner-with-us-left {
                 display: none;
             }
 
             .partner-with-us-form {
-                padding-left: 2rem;
-                padding-right: 2rem;
+                padding: 20px;
 
                 form {
                     & > div {
                         display: block;
-                        margin: 0;
+                        margin: 0 auto;
                     }
 
                     .email {
@@ -294,6 +293,30 @@
                     .submit-btn {
                         padding: 0;
                         margin: 2rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #pwu-form.fullPage {
+        height: auto;
+        
+        .display-flex {
+            & > div {
+                width: 100%;
+            }
+
+            .partner-with-us-form {
+                padding: 20px;
+
+                form {
+                    .select-list {
+                        margin-top: 20px;
+
+                        .with-input {
+                            display: block;
+                        }
                     }
                 }
             }

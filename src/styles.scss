@@ -462,4 +462,8 @@ img {
             flex-direction: column;
         }
     }
+
+    .mat-dialog-content {
+        overflow: auto !important;
+    }
 }
