@@ -1,11 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilsService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+    public dialog: MatDialog
+  ) { }
 
   isMobileDevice() {
     var check = false;
@@ -16,6 +22,26 @@ export class UtilsService {
     (navigator.userAgent||navigator.vendor);
     return check;
   };
+
+  register(data: any) {
+    const body = data;
+    console.log(body);
+    this.http.put<any>('https://localhost:4200/user/register', body)
+        .subscribe({
+            next: data => {
+              console.log(data);
+              const dialogRef = this.dialog.open(PromptModalComponent, {
+                width: '500px'
+              });
+            },
+            error: error => {
+                // this.errorMessage = error.message;
+                const dialogRef = this.dialog.open(PromptModalComponent, {
+                  width: '500px'
+                });
+            }
+        });
+  }
 
 
 }

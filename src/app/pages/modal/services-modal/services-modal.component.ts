@@ -35,7 +35,7 @@ export class ServicesModalComponent implements OnInit {
       this.formValues[value.source._id] = value.value;
       this.showSpecifyField = this.formValues['has_technology'] && this.formValues['has_technology'] === 'true';
     } else {
-      this.formValues['technology_name'] = value.target.value;
+      this.formValues['current_technology'] = value.target.value;
     }
     
     this.validateForm();

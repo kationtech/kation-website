@@ -26,6 +26,7 @@ import { TermsAndConditionsModalComponent } from './pages/modal/terms-and-condit
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.co
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

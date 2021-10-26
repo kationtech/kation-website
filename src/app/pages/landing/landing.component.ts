@@ -33,7 +33,7 @@ export class LandingComponent implements OnInit {
         industry: result.industry,
         service: result.service,
         company_size: result.company_size,
-        has_technology: Boolean(result.has_technology),
+        has_technology: JSON.parse(result.has_technology),
         name: '',
         email: '',
         contact_number: '',
