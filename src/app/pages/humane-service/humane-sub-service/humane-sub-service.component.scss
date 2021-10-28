@@ -3,7 +3,7 @@
 .view {
     background-color: $yellow;
     height: 100vh;
-    background-image: url('../../../../assets/images/humane-image-2.png');
+    background-image: url('assets/images/humane-image-2.png');
     background-repeat: no-repeat;
     background-position: 107% 90%;
 
@@ -13,7 +13,7 @@
         }
 
         &::before {
-            background-image: url('../../../../assets/images/icons/back-dark.png');
+            background-image: url('assets/images/icons/back-dark.png');
         }
     }
 
@@ -56,7 +56,7 @@
 }
 
 #kioskart {
-    background-image: url('../../../../assets/images/humane-image-5.png');
+    background-image: url('assets/images/humane-image-5.png');
     background-position: 112% 90%;
 
     .content {
@@ -79,7 +79,7 @@
 }
 
 #moocentral {
-    background-image: url('../../../../assets/images/humane-image-6.png');
+    background-image: url('assets/images/humane-image-6.png');
     background-color: white;
     background-position: center;
     background-size: contain;
