@@ -363,20 +363,20 @@ img {
 }
 
 .business::before {
-    background-image: url('assets/images/icons/icon-1.png');
+    background-image: url('/assets/images/icons/icon-1.png');
 }
 
 .looking::before {
-    background-image: url('assets/images/icons/icon-2.png');
+    background-image: url('/assets/images/icons/icon-2.png');
 }
 
 .company::before {
-    background-image: url('assets/images/icons/icon-3.png');
+    background-image: url('/assets/images/icons/icon-3.png');
     background-size: 100% 70%;
 }
 
 .tech::before {
-    background-image: url('assets/images/icons/icon-4.png');
+    background-image: url('/assets/images/icons/icon-4.png');
 }
 
 .with-input {
@@ -419,7 +419,7 @@ img {
     
     &:before {
         content: ' ';
-        background-image: url('assets/images/icons/back.png');
+        background-image: url('/assets/images/icons/back.png');
         background-repeat: no-repeat;
         background-size: 8px 10px;
         width: 25px;

@@ -50,7 +50,7 @@
                         position: absolute;
                         bottom: -5rem;
                         right: 4rem;
-                        background-image: url('assets/images/bubble.png');
+                        background-image: url('/assets/images/bubble.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
                         height: 150px;
@@ -247,7 +247,7 @@
     }
 
     .section-4 {
-        background-image: url('assets/images/section-4-bg.png');
+        background-image: url('/assets/images/section-4-bg.png');
         background-repeat: no-repeat;
         background-position: 91% 97%;
         background-size: 200px 150px;
@@ -255,7 +255,7 @@
 
     .section-5 {
         height: 850px;
-        background-image: url('assets/images/section-5-bg.png');
+        background-image: url('/assets/images/section-5-bg.png');
         background-repeat: no-repeat;
         background-position: 91% 90%;
         background-size: 200px 150px;
