@@ -1,0 +1,45 @@
+<mat-dialog-content>
+    <div class="wrapper">
+        <div class="career-tile">
+            <div class="career-details">
+                <p class="title">{{data.title}}</p>
+            </div>
+        </div>
+        <h3>{{data.title}}</h3>
+        <h4>{{data.subtitle}}</h4>
+        <div class="scrollable-content">
+            <div class="desc" *ngIf="data.scope">
+                <h4>Job Scope</h4>
+                <p>{{data.scope}}</p>
+            </div>
+            <div class="duties" *ngIf="data.duties"> 
+                <h4>Duties and Responsibilities</h4>
+                <div>
+                    <ul>
+                        <li *ngFor="let duty of data.duties"><p>{{duty}}</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="qualification" *ngIf="data.qualification">
+                <h4>Qualifications</h4>
+                <div>
+                    <ul>
+                        <li *ngFor="let qualification of data.qualification"><p>{{qualification}}</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="niceToHave" *ngIf="data.niceToHave">
+                <h4>Nice to have</h4>
+                <div>
+                    <ul>
+                        <li *ngFor="let edge of data.niceToHave"><p>{{edge}}</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <div class="close" mat-dialog-close><img src="../../../../assets/images/icons/close.png"></div>
+    <button [mat-dialog-close]="true" cdkFocusInitial>KNOW MORE ABOUT THIS CAREER</button>
+</mat-dialog-actions>

@@ -1,0 +1,72 @@
+@import '../../../constants.scss';
+
+h2 {
+    text-align: center;
+}
+
+.mat-dialog-content {
+    width: 90%;
+    margin: auto;
+}
+
+form {
+    & > div {
+        margin-top: 20px;
+    }
+}
+
+.with-input {
+    div {
+        flex: 1;
+    }
+
+    .input {
+        padding: 10px;
+        box-sizing: border-box;
+
+        label {
+            margin-top: 5px;
+            flex: 1;
+        }
+
+        input {
+            margin-left: 10px;
+            appearance: none;
+            border: 0;
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding: 5px 0;
+            flex: 1;
+        }
+    }
+}
+
+.mat-dialog-actions {
+    button {
+        width: 180px;
+        border-radius: 25px;
+        background-color: #ED672C;
+        color: white;
+        text-transform: uppercase;
+        padding: 10px;
+        appearance: none;
+        border: 0;
+        cursor: pointer;
+
+        &:disabled {
+            background-color: #A8A8A8;
+        }
+    }
+}
+
+
+@media (max-width: $mobile) {
+    .mat-dialog-content {
+        padding: 0;
+        width: 100%;
+    }
+
+    .type-container {
+        flex-direction: column;
+    }
+}
