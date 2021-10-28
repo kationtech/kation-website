@@ -94,7 +94,7 @@
                                     <label for="terms">I have read and understood the <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>.</label>
                                 </div>
                             </div>
-                            <div class="display-flex">
+                            <div class="display-flex recaptcha-container">
                                 <div class="recaptcha">
                                     <ngx-recaptcha2 #captchaElem
                                         [siteKey]="siteKey"
@@ -133,7 +133,7 @@
                                     <label for="terms">I have read and understood the <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>.</label>
                                 </div>
                             </div>
-                            <div class="display-flex">
+                            <div class="display-flex recaptcha-container">
                                 <div class="recaptcha">
                                     <ngx-recaptcha2 #captchaElem
                                         [siteKey]="siteKey"
@@ -175,7 +175,7 @@
                         </div>
                         <div class="display-flex">
                             <div class="recaptcha">
-                                <div class="recaptcha">
+                                <div class="recaptcha recaptcha-container">
                                     <ngx-recaptcha2 #captchaElem
                                         [siteKey]="siteKey"
                                         formControlName="recaptcha">

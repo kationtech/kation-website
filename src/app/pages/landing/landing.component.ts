@@ -21,7 +21,7 @@ export class LandingComponent implements OnInit {
   showModal() {
     const dialogRef = this.dialog.open(ServicesModalComponent, {
       width: '800px',
-      height: this.utils.isMobileDevice() ? '600px' : 'auto'
+      height: 'auto'
     });
 
     dialogRef.afterClosed().subscribe(result => {

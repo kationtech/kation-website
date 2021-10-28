@@ -456,8 +456,17 @@ img {
     bottom: -24px;
   }
 
-@media (max-width: $mobile) {
+@media (max-width: $large-screen) {
+    body {
+        // max-width: 1200px;
+        margin: auto;
+    }
+}
+
+@media (max-width: $tablet) {
     .view {
+        padding-top: 80px;
+        
         section {
             flex-direction: column;
         }

@@ -57,7 +57,7 @@ export class PartnerWithUsComponent implements OnInit {
 
     const data = localStorage.getItem('data');
 
-    if (data) {
+    if (data !== 'undefined') {
       this.showFullForm = false;
       this.prefillFullForm(data);
     } else {
@@ -73,7 +73,6 @@ export class PartnerWithUsComponent implements OnInit {
 
   prefillFullForm(data: any){
     let formValue = JSON.parse(data);
-    console.log(formValue);
     this.partnerFormGrp.patchValue({
       company_size: formValue['company_size'],
       contact_number: "",
@@ -86,8 +85,6 @@ export class PartnerWithUsComponent implements OnInit {
       subscription: false,
       type: formValue['type']
     });
-
-    console.log(this.partnerFormGrp.value);
   }
 
   showTermsAndConditions(){

@@ -110,6 +110,7 @@ export class TeamComponent implements OnInit {
 
   ngOnInit(): void {
     this.isMobile = this.utils.isMobileDevice();
+    console.log(this.isMobile);
   }
 
   getCareerDetails(id: string) {

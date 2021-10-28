@@ -182,7 +182,7 @@
 }
 
 #pwu-form.fullPage {
-    height: 100vh;
+    height: auto;
 
     .display-flex {
         & > div {
@@ -270,7 +270,49 @@
     cursor: pointer;
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $large-screen) {
+    #pwu-form {
+        .display-flex {
+            .partner-with-us-left {
+                div {
+                    width: 50%;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $small-screen) {
+    #pwu-form {
+        .display-flex {
+            .partner-with-us-left {
+                div {
+                    width: 60%;
+                    padding-bottom: 30px;
+
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #pwu-form ,#pwu-form.fullpage {
+        .display-flex {
+            .partner-with-us-form {
+                .select-list {
+                    div.recaptcha-container {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
     #pwu-form, #pwu-form.fullPage {
         .display-flex {
             .partner-with-us-left {

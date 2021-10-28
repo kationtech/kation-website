@@ -12,6 +12,7 @@ header {
     padding-left: 20px;
     max-width: 1500px;
     margin: auto;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 
     .display-flex {
         align-items: center;
@@ -129,7 +130,23 @@ header {
     }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $large-screen) {
+    header {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: $small-screen) {
+    header {
+        .display-flex {
+            .logo {
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
     header {
         padding-left: 10px;
         padding-right: 10px;

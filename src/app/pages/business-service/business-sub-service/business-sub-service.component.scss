@@ -73,9 +73,10 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-wrap: wrap;
 
                 li {
-                    margin: 0 30px;
+                    margin: 0 30px 10px 30px;
                     
                     button {
                         width: 180px;
