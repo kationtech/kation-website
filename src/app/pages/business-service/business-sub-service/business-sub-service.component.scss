@@ -3,13 +3,13 @@
 #customer-engagement, #finance {
     background-color: $dark-blue;
     height: 100vh;
-    background-image: url('/assets/images/business-image-2.png');
+    background-image: url('../../../../assets/images/business-image-2.png');
     background-repeat: no-repeat;
     background-position: 105% 90%;
 }
 
 #finance {
-    background-image: url('/assets/images/business-image-3.png');
+    background-image: url('../../../../assets/images/business-image-3.png');
 
     .content {
         h2 {

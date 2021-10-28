@@ -56,12 +56,11 @@ export class PartnerWithUsComponent implements OnInit {
     this.isPage = this.router.url === '/partnerWithUs';
 
     const data = localStorage.getItem('data');
-
-    if (data !== 'undefined') {
+    if (data === 'undefined') {
+      this.showFullForm = true;
+    } else {
       this.showFullForm = false;
       this.prefillFullForm(data);
-    } else {
-      this.showFullForm = true;
     }
   }
 
