@@ -26,7 +26,7 @@ export class UtilsService {
   register(data: any) {
     const body = data;
     console.log(body);
-    this.http.put<any>('https://localhost:4200/user/register', body)
+    this.http.put<any>('http://5.181.217.147:3000/user/register', body)
         .subscribe({
             next: data => {
               console.log(data);

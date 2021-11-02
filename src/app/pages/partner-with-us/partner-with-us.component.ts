@@ -19,6 +19,9 @@ export class PartnerWithUsComponent implements OnInit {
   formValues: any;
   showSpecifyField: boolean = false;
   showFullForm: boolean = true;
+
+  captcha: string = '';
+
   partnerFormGrp =  new FormGroup({
     type: new FormControl('', Validators.required),
     description: new FormControl(''),
@@ -56,14 +59,25 @@ export class PartnerWithUsComponent implements OnInit {
     this.isPage = this.router.url === '/partnerWithUs';
 
     const data = localStorage.getItem('data');
-    if (data === 'undefined') {
+    console.log(data);
+    if (data === 'undefined' || data == '""') {
       this.showFullForm = true;
     } else {
       this.showFullForm = false;
-      this.prefillFullForm(data);
     }
+
+    this.prefillFullForm(data);
   }
 
+  resolved(captchaResponse: string) {
+    this.captcha = captchaResponse;
+    if(this.showFullForm) {
+      this.partnerFormGrp.get('recaptcha')?.setValue(this.captcha)
+    } else {
+      this.infoFormGrp.get('recaptcha')?.setValue(this.captcha)
+    }
+  }
+ 
   setFormControl(value: any) {
     if(value.value === 'true') {
       this.partnerFormGrp.addControl('current_technology', new FormControl('', Validators.required))
@@ -71,19 +85,21 @@ export class PartnerWithUsComponent implements OnInit {
   }
 
   prefillFullForm(data: any){
-    let formValue = JSON.parse(data);
-    this.partnerFormGrp.patchValue({
-      company_size: formValue['company_size'],
-      contact_number: "",
-      description: "none",
-      email: "",
-      has_technology: formValue['has_technology'],
-      industry: formValue['industry'],
-      name: "",
-      service: formValue['service'],
-      subscription: false,
-      type: formValue['type']
-    });
+    if(data != 'undefined') {
+      let formValue = JSON.parse(data);
+      this.partnerFormGrp.patchValue({
+        company_size: formValue['company_size'],
+        contact_number: "",
+        description: "none",
+        email: "",
+        has_technology: formValue['has_technology'],
+        industry: formValue['industry'],
+        name: "",
+        service: formValue['service'],
+        subscription: false,
+        type: formValue['type']
+      });
+    }
   }
 
   showTermsAndConditions(){
@@ -113,7 +129,7 @@ export class PartnerWithUsComponent implements OnInit {
       name: "",
       email: "",
       contact_number: "",
-      subscrtiption: false,
+      subscription: false,
     }
 
     if (this.isPage) {
@@ -122,13 +138,13 @@ export class PartnerWithUsComponent implements OnInit {
         industry: this.partnerFormGrp.value['industry'],
         service: this.partnerFormGrp.value['service'],
         company_size: this.partnerFormGrp.value['company_size'],
-        has_technology: this.partnerFormGrp.value['has_technology'],
+        has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
         current_technology: this.partnerFormGrp.value['technology_name'],
-        description: this.partnerFormGrp.value['description'],
+        description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
         name: this.partnerFormGrp.value['name'],
         email: this.partnerFormGrp.value['email'],
         contact_number: this.partnerFormGrp.value['contact_number'],
-        subscrtiption: this.partnerFormGrp.value['subscription'],
+        subscription: this.partnerFormGrp.value['subscription'],
       }
       this.util.register(finalData)
     } else {
@@ -137,13 +153,13 @@ export class PartnerWithUsComponent implements OnInit {
         industry: this.partnerFormGrp.value['industry'],
         service: this.partnerFormGrp.value['service'],
         company_size: this.partnerFormGrp.value['company_size'],
-        has_technology: this.partnerFormGrp.value['has_technology'],
+        has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
         current_technology: this.partnerFormGrp.value['technology_name'],
-        description: this.partnerFormGrp.value['description'],
+        description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
         name: this.infoFormGrp.value['name'],
         email: this.infoFormGrp.value['email'],
         contact_number: this.infoFormGrp.value['contact_number'],
-        subscrtiption: this.infoFormGrp.value['subscription'],
+        subscription: this.infoFormGrp.value['subscription'],
       }
 
       this.util.register(finalData)

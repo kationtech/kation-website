@@ -96,10 +96,7 @@
                             </div>
                             <div class="display-flex recaptcha-container">
                                 <div class="recaptcha">
-                                    <ngx-recaptcha2 #captchaElem
-                                        [siteKey]="siteKey"
-                                        formControlName="recaptcha">
-                                    </ngx-recaptcha2>
+                                    <re-captcha (resolved)="resolved($event)" siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u"></re-captcha>
                                 </div>
                                 <div class="submit-btn">
                                     <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid" (click)="submitForm()">Submit</button>
@@ -135,10 +132,7 @@
                             </div>
                             <div class="display-flex recaptcha-container">
                                 <div class="recaptcha">
-                                    <ngx-recaptcha2 #captchaElem
-                                        [siteKey]="siteKey"
-                                        formControlName="recaptcha">
-                                    </ngx-recaptcha2>
+                                    <re-captcha (resolved)="resolved($event)" siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u"></re-captcha>
                                 </div>
                                 <div class="submit-btn">
                                     <button class="btn btn-orange btn-slide" [disabled]="infoFormGrp.invalid" (click)="submitForm()">Submit</button>
@@ -176,10 +170,7 @@
                         <div class="display-flex">
                             <div class="recaptcha">
                                 <div class="recaptcha recaptcha-container">
-                                    <ngx-recaptcha2 #captchaElem
-                                        [siteKey]="siteKey"
-                                        formControlName="recaptcha">
-                                    </ngx-recaptcha2>
+                                    <re-captcha (resolved)="resolved($event)" siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u"></re-captcha>
                                 </div>
                             </div>
                             <div class="submit-btn">

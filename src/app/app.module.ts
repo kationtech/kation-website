@@ -24,9 +24,9 @@ import { HumaneSubServiceComponent } from './pages/humane-service/humane-sub-ser
 import { HybridServiceComponent } from './pages/hybrid-service/hybrid-service.component';
 import { TermsAndConditionsModalComponent } from './pages/modal/terms-and-conditions-modal/terms-and-conditions-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgxCaptchaModule } from 'ngx-captcha';
 import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 
 @NgModule({
@@ -59,8 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
-    NgxCaptchaModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
