@@ -16,10 +16,10 @@
         </div>
         <div id="main-menu">
             <ul class="menu display-flex">
-                <li><a href="" [routerLink]="['/aboutus']">About Us</a></li>
-                <li><a href="" [routerLink]="['/team']">Our Team</a></li>
+                <li><a href="" [routerLink]="['/aboutus']" [ngClass]="{'isActive': currentPage === 'aboutus'}">About Us</a></li>
+                <li><a href="" [routerLink]="['/team']" [ngClass]="{'isActive': currentPage === 'team'}">Our Team</a></li>
                 <li>
-                    <a href="" [routerLink]="['/services']">Services</a>
+                    <a href="" [routerLink]="['/services']" [ngClass]="{'isActive': currentPage === 'services'}">Services</a>
                     <ul class="sub-menu">
                         <li><a href="" [routerLink]="['/businessapp']">Business Apps</a></li>
                         <li><a href="" [routerLink]="['/humaneapp']">Humane Apps</a></li>

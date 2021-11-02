@@ -61,7 +61,6 @@
                         .image {
                             width: 300px;
                             height: 300px;
-                            background: red;
                         }
 
                         .border {
@@ -598,14 +597,14 @@
                     .content {
                         .image {
                             img {
-                                width: 360px;
-                                height: 360px;
+                                width: 300px;
+                                height: 300px;
                             }
                         }
 
                         .border {
-                            width: 360px;
-                            height: 360px;
+                            width: 300px;
+                            height: 300px;
                             right: 0;
                         }
                     }
@@ -614,6 +613,7 @@
         }
 
         .section-6 {
+            
             .plain {
                 .image-border {
                     margin-top: -1rem;
@@ -933,7 +933,7 @@
                             .border {
                                 width: 200px;
                                 height: 200px;
-                                right: 100px;
+                                right: 50px;
                             }
                         }
                     }
@@ -990,10 +990,11 @@
 
                         .image {
                             overflow: hidden;
+                            margin-right: -12px;
                         }
 
                         .border {
-                            right: 10px;
+                            right: -3px;
                             clear: both;
                         }
                     }

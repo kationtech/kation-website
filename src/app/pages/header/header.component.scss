@@ -84,6 +84,16 @@ header {
                         left: 0; 
                     }
                 }
+
+                &.isActive {
+                    border-bottom: 3px solid $dark-blue;
+                    padding-bottom: 7px;
+
+                    &:hover:after { 
+                        width: 0; 
+                        left: 0; 
+                    }
+                }
             }
 
             ul {

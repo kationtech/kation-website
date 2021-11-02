@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
+import { environment } from '../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +27,9 @@ export class UtilsService {
   register(data: any) {
     const body = data;
     console.log(body);
-    this.http.put<any>('http://5.181.217.147:3000/user/register', body)
-        .subscribe({
+    this.http.put<any>(environment.api, body, {
+      headers: {'Access-Control-Allow-Origin': '*'}
+    }).subscribe({
             next: data => {
               console.log(data);
               const dialogRef = this.dialog.open(PromptModalComponent, {
@@ -36,9 +38,10 @@ export class UtilsService {
             },
             error: error => {
                 // this.errorMessage = error.message;
-                const dialogRef = this.dialog.open(PromptModalComponent, {
-                  width: '500px'
-                });
+                // const dialogRef = this.dialog.open(PromptModalComponent, {
+                //   width: '500px'
+                // });
+                console.log('error!');
             }
         });
   }

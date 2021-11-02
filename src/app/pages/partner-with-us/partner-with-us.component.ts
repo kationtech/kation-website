@@ -59,14 +59,13 @@ export class PartnerWithUsComponent implements OnInit {
     this.isPage = this.router.url === '/partnerWithUs';
 
     const data = localStorage.getItem('data');
-    console.log(data);
-    if (data === 'undefined' || data == '""') {
+    if (!data || data === 'undefined' || data == '""') {
       this.showFullForm = true;
     } else {
       this.showFullForm = false;
+      this.prefillFullForm(data);
     }
 
-    this.prefillFullForm(data);
   }
 
   resolved(captchaResponse: string) {
@@ -85,21 +84,19 @@ export class PartnerWithUsComponent implements OnInit {
   }
 
   prefillFullForm(data: any){
-    if(data != 'undefined') {
-      let formValue = JSON.parse(data);
-      this.partnerFormGrp.patchValue({
-        company_size: formValue['company_size'],
-        contact_number: "",
-        description: "none",
-        email: "",
-        has_technology: formValue['has_technology'],
-        industry: formValue['industry'],
-        name: "",
-        service: formValue['service'],
-        subscription: false,
-        type: formValue['type']
-      });
-    }
+    let formValue = JSON.parse(data);
+    this.partnerFormGrp.patchValue({
+      company_size: formValue['company_size'],
+      contact_number: "",
+      description: "none",
+      email: "",
+      has_technology: formValue['has_technology'],
+      industry: formValue['industry'],
+      name: "",
+      service: formValue['service'],
+      subscription: false,
+      type: formValue['type']
+    });
   }
 
   showTermsAndConditions(){
@@ -154,7 +151,7 @@ export class PartnerWithUsComponent implements OnInit {
         service: this.partnerFormGrp.value['service'],
         company_size: this.partnerFormGrp.value['company_size'],
         has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
-        current_technology: this.partnerFormGrp.value['technology_name'],
+        current_technology: this.partnerFormGrp.value['technology_name'] ? this.partnerFormGrp.value['technology_name'] : 'none',
         description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
         name: this.infoFormGrp.value['name'],
         email: this.infoFormGrp.value['email'],
