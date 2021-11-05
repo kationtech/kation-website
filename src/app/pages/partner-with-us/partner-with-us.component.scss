@@ -191,7 +191,6 @@
         }
 
         .partner-with-us-form {
-            padding: 2rem 4rem;
             box-sizing: border-box;
 
             .select-list {
@@ -263,11 +262,35 @@
     }
 }
 
+#pwu-form.view {
+    .display-flex {
+        .partner-with-us-form {
+            padding: 2rem 4rem;
+        }
+    }
+}
+
 .termsAndConditon {
     text-decoration: underline;
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+    #pwu-form ,#pwu-form.fullpage {
+        .display-flex {
+            .partner-with-us-left {
+                div {
+                    background-size: 80px 70px;
+
+                    h1 {
+                        padding-top: 75px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: $large-screen) {
@@ -277,6 +300,31 @@
                 div {
                     width: 50%;
                     padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1078px) {
+    #pwu-form ,#pwu-form.fullpage {
+        .display-flex {
+            .partner-with-us-left {
+                div {
+                    width: 60%;
+
+                    h1 {
+                        background-image: 80px 70px;
+                        padding-top: 70px;
+                    }
+                }
+            }
+
+            .partner-with-us-form {
+                .select-list {
+                    div.recaptcha-container {
+                        flex-direction: column;
+                    }
                 }
             }
         }
@@ -306,6 +354,18 @@
                     div.recaptcha-container {
                         flex-direction: column;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 845px) {
+    #pwu-form ,#pwu-form.fullpage {
+        .display-flex {
+            .partner-with-us-left {
+                &::after {
+                    display: none;
                 }
             }
         }
@@ -359,6 +419,29 @@
                         .with-input {
                             display: block;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    #pwu-form, #pwu-form.fullPage {
+        .display-flex {
+            flex-direction: column;
+        }
+
+        .partner-with-us-form {
+            .select-list {
+                div.recaptcha-container {
+                    flex-direction: column;
+
+                    .recaptcha {
+                        transform: scale(0.77) !important;
+                        -webkit-transform: scale(0.77) !important;
+                        transform-origin: 0 0 !important;
+                        -webkit-transform-origin: 0 0 !important;
                     }
                 }
             }
