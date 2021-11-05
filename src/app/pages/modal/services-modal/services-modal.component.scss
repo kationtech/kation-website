@@ -1,7 +1,11 @@
 @import '../../../constants.scss';
 
-h2 {
+h2, p {
     text-align: center;
+}
+
+p {
+    margin: 10px 0 5px 0;
 }
 
 .mat-dialog-content {

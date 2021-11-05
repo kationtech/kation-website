@@ -79,7 +79,7 @@ export class PartnerWithUsComponent implements OnInit {
  
   setFormControl(value: any) {
     if(value.value === 'true') {
-      this.partnerFormGrp.addControl('current_technology', new FormControl('', Validators.required))
+      this.partnerFormGrp.addControl('technology_name', new FormControl('', Validators.required))
     }
   }
 

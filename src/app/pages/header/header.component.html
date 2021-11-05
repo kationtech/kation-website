@@ -1,6 +1,6 @@
 <header>
     <div class="display-flex">
-        <div class="logo"><a href="" [routerLink]="['']"><img src="assets/images/about-us-logo.png"></a></div>
+        <div class="logo"><a href="" [routerLink]="['']"><img src="assets/images/logo.png"></a></div>
         <div id="menu-mobile">
             <input type="checkbox" id="active">
             <label for="active" class="menu-btn"><span></span></label>
@@ -18,7 +18,7 @@
             <ul class="menu display-flex">
                 <li><a href="" [routerLink]="['/aboutus']" [ngClass]="{'isActive': currentPage === 'aboutus'}">About Us</a></li>
                 <li><a href="" [routerLink]="['/team']" [ngClass]="{'isActive': currentPage === 'team'}">Our Team</a></li>
-                <li>
+                <li class="services">
                     <a href="" [routerLink]="['/services']" [ngClass]="{'isActive': currentPage === 'services'}">Services</a>
                     <ul class="sub-menu">
                         <li><a href="" [routerLink]="['/businessapp']">Business Apps</a></li>
@@ -26,7 +26,7 @@
                         <li><a href="" [routerLink]="['/hybridapp']">Hybrid Apps</a></li>
                     </ul>
                 </li>
-                <li><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide">Partner with us</a></li>
+                <li class="partnerButton"><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide" [ngClass]="{'isActive': currentPage === 'partnerWithUs'}">Partner with us</a></li>
             </ul>
         </div>
     </div>

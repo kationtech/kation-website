@@ -23,7 +23,10 @@
             position: relative;
 
             .landing-details {
-                padding-top: 100px;
+                position: absolute;
+                top: 40%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
                 width: 70%;
 
                 .content-image-1 {
@@ -94,12 +97,12 @@
                 position: absolute;
                 bottom: 0;
                 background-image: url('../../../assets/images/landing-image-2.png');
-                width: 300px;
-                height: 300px;
+                width: 320px;
+                height: 320px;
                 background-position: bottom;
                 background-repeat: no-repeat;
                 background-size: 80% 100%;
-                left: -52px;
+                left: -100px;
             }
 
             &::after {
@@ -107,8 +110,8 @@
                 position: absolute;
                 bottom: 0;
                 background-image: url('../../../assets/images/landing-image-3.png');
-                width: 260px;
-                height: 400px;
+                width: 250px;
+                height: 420px;
                 background-position: bottom;
                 background-repeat: no-repeat;
                 background-size: 80% 100%;
@@ -144,6 +147,16 @@
                         }
                     }
                 }
+
+                &:before {
+                    height: 250px;
+                    width: 250px;
+                }
+
+                &:after {
+                    height: 300px;
+                    width: 180px;
+                }
             }
         }
     }
@@ -154,36 +167,167 @@
         padding-top: 80px;
 
         .content-wrapper {
-            flex-direction: column;
+            display: block;
 
             .logo-wrapper {
+                height: 50vh;
+
                 .logo {
                     width: 40%;
                 }
             }
 
             .content {
+                height: 50vh;
+
                 .landing-details {
-                    width: 73%;
-                    padding-top: 5rem;
+                    position: relative;
+                    width: 70%;
+                    transform: none;
+                    top: 0;
 
                     .content-image-1 {
-                        max-width: 50px;
+                        max-width: 60px;
                     }
 
                     .tagline{
                         p {
-                            font-size: 3rem;
+                            font-size: 2rem;
+
+                            span {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        span {
+                            font-size: 1rem;
                         }
                     }
                 }
 
                 &::before {
                     z-index: -1;
+                    left: -50px;
+                    width: 250px;
+                    height: 250px;
+                }
+
+            }
+        }
+    }
+}
+
+// Lumia
+@media screen and (max-width: 640px)
+       and (max-height: 360px) 
+       and (orientation : landscape) {
+
+    #landing {
+        .content-wrapper {
+            display: block;
+            
+            .logo-wrapper {
+                height: 100vh;
+
+                .logo {
+                    width: 50%;
+                }
+            }
+
+            .content {
+                height: 100vh;
+
+                .landing-details {
+                    width: 90%;
+                    padding-top: 20px;
+
+                    .content-image-1 {
+                        max-width: 50px;
+                    }
+
+                    .tagline {
+                        p {
+                            font-size: 2rem;
+
+                            span {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                
+                &::before {
+                    z-index: -1;
+                    left: -50px;
+                    width: 300px;
+                    height: 300px;
+                }
+                
+                &::after {
+                    display: none;
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 540px)
+       and (max-height: 720px) 
+       and (orientation : portrait) {
+        #landing {
+            .content-wrapper {
+                .logo-wrapper {
+                    height: 50vh;
+
+                    .logo {
+                        width: 50%;
+                        padding-bottom: 20px;
+                    }
+                }
+
+                .content {
+                    height: 50vh;
+
+                    .landing-details {
+                        width: 90%;
+                        
+                        .content-image-1 {
+                            max-width: 50px;
+                        }
+
+                        .tagline {
+                            p {
+                                font-size: 2rem;
+
+                                span {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            span {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+
+                    &::before {
+                        z-index: -1;
+                        width: 250px;
+                        height: 250px;
+                        left: -40px;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
 }
 
 @media (max-width: $mobile) {
@@ -191,14 +335,32 @@
         .content-wrapper {
             flex-direction: column;
 
+            .logo-wrapper {
+                .logo {
+                    width: 60%;
+                }
+            }
+
             .content {
                 .landing-details {
                     width: 90%;
                     padding-top: 20px;
 
+                    .content-image-1 {
+                        max-width: 60px;
+                    }
+
                     .tagline{
                         p {
                             font-size: 1.5rem;
+
+                            span {
+                                font-size: .90rem;
+                            }
+                        }
+
+                        span {
+                            font-size: .90rem;
                         }
                     }
                     
@@ -210,10 +372,56 @@
 
                 &::before {
                     z-index: -1;
+                    width: 200px;
+                    height: 200px;
+                    left: -40px;
                 }
 
                 &::after {
                     display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-small) {
+    #landing {
+        .content-wrapper {
+            .logo-wrapper {
+                .logo {
+                    width: 60%;
+                }
+            }
+
+            .content {
+                .landing-details {
+                    padding-top: 1rem;
+
+                    .content-image-1 {
+                        max-width: 50px;
+                    }
+
+                    .tagline {
+                        p {
+                            font-size: 1rem;
+
+                            span {
+                                font-size: .75rem;
+                            }
+                        }
+
+                        span {
+                            font-size: .75rem;
+                        }
+                    }
+                }
+
+                &::before {
+                    z-index: -1;
+                    width: 200px;
+                    height: 200px;
+                    left: -50px;
                 }
             }
         }

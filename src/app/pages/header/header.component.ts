@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentPage = this.route.url.split('/')[1];
-    console.log(this.currentPage);
   }
 
   showMenu(){

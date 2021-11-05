@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-services-modal',
@@ -11,48 +14,35 @@ export class ServicesModalComponent implements OnInit {
   formValues:any;
   showSpecifyField: boolean = false;
 
-  constructor() {
-    this.formValues = {
-      type: '',
-      industry: '',
-      service: '',
-      company_size: null,
-      has_technology: false,
-      technology_name: ''
-    }
-  }
+  surveyFormGrp =  new FormGroup({
+    type: new FormControl('', Validators.required),
+    description: new FormControl('none'),
+    industry: new FormControl('', Validators.required),
+    service: new FormControl('', Validators.required),
+    company_size: new FormControl('', Validators.required),
+    has_technology: new FormControl('', Validators.required),
+    current_technology: new FormControl('')
+  });
+
+  private destroy$ = new Subject();
+
+  constructor() {}
 
   ngOnInit(): void {
-  }
-
-  getType(value: string){
-    this.formValues['type'] = value;
-    this.validateForm();
-  }
-  
-  setValueForm(type: string, value: any){
-    if(type === 'select') {
-      this.formValues[value.source._id] = value.value;
-      this.showSpecifyField = this.formValues['has_technology'] && this.formValues['has_technology'] === 'true';
-    } else {
-      this.formValues['current_technology'] = value.target.value;
-    }
-    
-    this.validateForm();
-  }
-
-  validateForm(){
-    let data = this.formValues;
-    console.log(data);
-    if (data['type'] && data['industry'] && data['service'] && data['company_size'] && data['has_technology']) {
-      if (data['has_technology'] === 'true') {
-        this.isDisabled = !data['technology_name'];
+    const current_tech_control = this.surveyFormGrp.get('current_technology');
+    this.surveyFormGrp.get('has_technology')?.valueChanges.pipe(takeUntil(this.destroy$)).subscribe(value => {
+      if(value === 'true') {
+        current_tech_control?.setValidators([Validators.required]);
       } else {
-        this.isDisabled = false;
+        current_tech_control?.clearValidators();
       }
-    } else {
-      this.isDisabled = true;
-    }
+      current_tech_control?.updateValueAndValidity();
+    })
+  }
+
+  ngOnDestroy(){
+    this.destroy$.next();
+    this.destroy$.complete(); 
   }
 
 }

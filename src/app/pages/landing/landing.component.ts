@@ -16,6 +16,12 @@ export class LandingComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem('popupState')) {
+      setTimeout(() => {
+        this.showModal();
+        localStorage.setItem('popupState', 'true')
+      }, 3000);
+    }
   }
 
   showModal() {
@@ -25,8 +31,6 @@ export class LandingComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      // SUBMIT API HERE
-      console.log(result);
       let finalData = {
         type: result.type,
         description: '',
