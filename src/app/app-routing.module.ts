@@ -38,7 +38,7 @@ const routes: Routes = [{
   path: 'hybridapp', 
   component: HybridServiceComponent,
 },{
-  path: '**', redirectTo: 'landing', pathMatch: 'full'
+  path: '**', redirectTo: '',
 }];
 
 @NgModule({

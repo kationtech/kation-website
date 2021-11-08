@@ -92,6 +92,7 @@ header {
                 &.isActive {
                     border-bottom: 3px solid $dark-blue;
                     padding-bottom: 7px;
+                    color: $dark-blue;
 
                     &:hover:after { 
                         width: 0; 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServicesModalComponent } from '../modal/services-modal/services-modal.component';
 import { UtilsService } from 'src/app/utils.service';
@@ -8,7 +8,7 @@ import { UtilsService } from 'src/app/utils.service';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, AfterViewInit {
 
   constructor(
     public dialog: MatDialog,
@@ -22,6 +22,12 @@ export class LandingComponent implements OnInit {
         localStorage.setItem('popupState', 'true')
       }, 3000);
     }
+
+    this.showModal();
+  }
+
+  ngAfterViewInit() {
+    console.log('page loaded!');
   }
 
   showModal() {
@@ -33,7 +39,7 @@ export class LandingComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       let finalData = {
         type: result.type,
-        description: '',
+        description: 'none',
         industry: result.industry,
         service: result.service,
         company_size: result.company_size,

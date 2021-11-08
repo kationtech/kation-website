@@ -63,6 +63,11 @@ form {
     }
 }
 
+.select-divider {
+    width: 95%;
+    margin: auto;
+}
+
 
 @media (max-width: $mobile) {
     .mat-dialog-content {

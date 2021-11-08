@@ -10,6 +10,7 @@
         <div class="partner-with-us-form">
             <div *ngIf="showFullForm">
                 <h1>PARTNER WITH US!</h1>
+                <span>I am a ...</span>
                 <form [formGroup]="partnerFormGrp">
                     <div class="display-flex type-container">
                         <div class="radio-wrapper">
@@ -41,6 +42,8 @@
                                 <mat-option value="realEstate"> Real Estate </mat-option>
                                 <mat-option value="humanResources"> Human Resources </mat-option>
                                 <mat-option value="others"> Others </mat-option>
+                                <hr class="select-divider">
+                                <mat-option value="inquiry"> Inquiry for Careers </mat-option>
                             </mat-select>
                         </div>
                         <div>

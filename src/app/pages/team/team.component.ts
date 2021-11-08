@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { UtilsService } from 'src/app/utils.service';
 import { CareersModalComponent } from '../modal/careers-modal/careers-modal.component';
 
@@ -105,7 +106,8 @@ export class TeamComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    public utils: UtilsService
+    public utils: UtilsService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -122,7 +124,13 @@ export class TeamComponent implements OnInit {
   }
 
   showCareerDetails(data: any){
-    this.dialog.open(CareersModalComponent, {data});
+    const dialogRef = this.dialog.open(CareersModalComponent, {data});
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.router.navigate(['/partnerWithUs']);
+      }
+    });
   }
 
 }

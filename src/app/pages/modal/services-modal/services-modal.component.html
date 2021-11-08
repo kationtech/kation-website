@@ -32,6 +32,8 @@
                     <mat-option value="realEstate"> Real Estate </mat-option>
                     <mat-option value="humanResources"> Human Resources </mat-option>
                     <mat-option value="others"> Others </mat-option>
+                    <hr class="select-divider">
+                    <mat-option value="inquiry"> Inquiry for Careers </mat-option>
                 </mat-select>
             </div>
             <div>
@@ -68,5 +70,5 @@
 </form>
 <mat-dialog-actions align="center">
   <div class="close" mat-dialog-close><img src="assets/images/icons/close.png"></div>
-  <button [mat-dialog-close]="formValues" [disabled]="surveyFormGrp.invalid" cdkFocusInitial>Submit</button>
+  <button type="submit" (keydown.enter)="'cdkFocusInitial'" [mat-dialog-close]="surveyFormGrp.value" [disabled]="surveyFormGrp.invalid" cdkFocusInitial>Submit</button>
 </mat-dialog-actions>

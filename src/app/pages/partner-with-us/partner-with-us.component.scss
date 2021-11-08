@@ -245,7 +245,7 @@
                 .type-container {
                     .radio-wrapper {
                         .customer {
-                            border: 2px solid white;
+                            border: 2px solid #133A6f;
                         }
                     }
                 }
@@ -275,6 +275,11 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+.select-divider {
+    width: 95%;
+    margin: auto;
 }
 
 @media screen and (max-width: 1300px) {

@@ -327,17 +327,17 @@ img {
 
         #customer:checked ~ .customer {
             box-shadow: inset 400px 0 0 0 white;
-            color: #18488A;
+            color: $dark-blue;
         }
 
         #supplier:checked ~ .supplier {
             box-shadow: inset 400px 0 0 0 white;
-            color: #18488A;
+            color: $yellow;
         }
 
         #reseller:checked ~ .reseller {
             box-shadow: inset 400px 0 0 0 white;
-            color: #18488A;
+            color: $green-blue;
         }
     }
 }
