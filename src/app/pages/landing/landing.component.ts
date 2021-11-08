@@ -22,14 +22,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
         localStorage.setItem('popupState', 'true')
       }, 3000);
     }
-
-    this.showModal();
   }
-
-  ngAfterViewInit() {
-    console.log('page loaded!');
-  }
-
+  
   showModal() {
     const dialogRef = this.dialog.open(ServicesModalComponent, {
       width: '800px',
