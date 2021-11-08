@@ -8,7 +8,7 @@ import { UtilsService } from 'src/app/utils.service';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent implements OnInit, AfterViewInit {
+export class LandingComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
@@ -23,7 +23,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
       }, 3000);
     }
   }
-  
+
   showModal() {
     const dialogRef = this.dialog.open(ServicesModalComponent, {
       width: '800px',
