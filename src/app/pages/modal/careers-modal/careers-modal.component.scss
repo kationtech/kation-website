@@ -60,7 +60,7 @@ mat-dialog-actions {
 }
 
 .scrollable-content {
-    height: 300px;
+    height: calc(300px - 55px);
     overflow-y: scroll;
     text-align: left;
     width: 90%;

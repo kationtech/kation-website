@@ -1,8 +1,6 @@
 @import '../../constants.scss';
 
 #pwu-form {
-    height: 670px;
-
     .display-flex {
         height: 100%;
 
@@ -182,7 +180,6 @@
 }
 
 #pwu-form.fullPage {
-    height: 100%;
 
     .display-flex {
         & > div {

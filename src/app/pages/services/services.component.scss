@@ -112,10 +112,15 @@
 
             .humane {
                 background-color: $yellow;
+                color: black;
 
                 .desc {
                     button {
                         border: 2px solid black;
+                        color: black;
+                    }
+
+                    p {
                         color: black;
                     }
                 }
@@ -139,6 +144,20 @@
 
 .partner-with-us-wrapper{
     margin-top: -9rem;
+}
+
+@media screen and (max-width: 1280px) {
+    #services {
+        .section-2 {
+            .services-list {
+                li {
+                    .shadow {
+                        font-size: 6rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: $large-screen) {
@@ -228,6 +247,36 @@
             }
         }
     }
+
+    .partner-with-us-wrapper {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .partner-with-us-wrapper {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #services {
+        .section-2 {
+            .services-list {
+                li {
+                    .shadow {
+                        font-size: 6rem;
+                    }
+
+                    &.hybrid {
+                        .shadow {
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: $mobile) {
@@ -264,6 +313,56 @@
     }
 
     .partner-with-us-wrapper {
-        margin-top: -5rem;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #services {
+        .section-2 {
+            .services-list {
+                li {
+                    .shadow {
+                        font-size: 4.5rem;
+                    }
+
+                    &.hybrid {
+                        .shadow {
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .partner-with-us-wrapper {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #services {
+        .section-2 {
+            .services-list {
+                li {
+                    width: 100%;
+
+                    .shadow {
+                        font-size: 3rem;
+                        top: 28%;
+                    }
+
+                    &.hybrid {
+                        .shadow {
+                            top: 30%;
+                            font-size: 1.6rem;
+                        }
+                    }                    
+                }
+            }
+        }
     }
 }

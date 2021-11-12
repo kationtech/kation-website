@@ -27,7 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecaptchaModule } from 'ng-recaptcha';
-import { LazyLoadImageDirective, LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 @NgModule({
@@ -53,7 +52,6 @@ import { LazyLoadImageDirective, LazyLoadImageModule } from 'ng-lazyload-image';
   ],
   imports: [
     BrowserModule,
-    LazyLoadImageModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
