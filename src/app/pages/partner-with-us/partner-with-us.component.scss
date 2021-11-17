@@ -1,9 +1,17 @@
 @import '../../constants.scss';
 
-#pwu-form {
-    .display-flex {
-        height: 100%;
+// .wrapper {
+//     height: 100vh;
+// }
 
+#pwu-form {
+    height: 100vh;
+
+    .isNotFullFormContainer{
+        height: 100%;
+    }
+
+    .display-flex {
         .partner-with-us-left {
             flex: 1;
             display: flex;
@@ -53,10 +61,12 @@
                 right: -30px;
                 height: 320px;
                 width: 150px;
+                z-index: 2;
             }
         }
         
         .partner-with-us-form {
+            position: relative;
             flex: 1;
             background-color: #18488A;
             padding-top: 10rem;
@@ -175,6 +185,18 @@
                     }
                 }
             }
+
+            .isNotFullForm {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                right: 20px;
+
+                &.onPage {
+                    width: 85%;
+                    margin: auto;
+                }
+            }
         }
     } 
 }
@@ -242,6 +264,7 @@
                 .type-container {
                     .radio-wrapper {
                         .customer {
+                            background-color: #133A6f;
                             border: 2px solid #133A6f;
                         }
                     }
@@ -277,6 +300,15 @@
 .select-divider {
     width: 95%;
     margin: auto;
+}
+
+::ng-deep .mat-checkbox-frame {
+    border-color: white;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #18488A !important;
+    border: 2px solid white;
 }
 
 @media screen and (max-width: 1300px) {
@@ -398,6 +430,12 @@
                         padding: 0;
                         margin: 2rem 0;
                     }
+                }
+
+                .isNotFullForm {
+                    position: relative;
+                    left: 0;
+                    right: 0;
                 }
             }
         }

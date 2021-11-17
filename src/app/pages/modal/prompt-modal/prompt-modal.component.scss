@@ -2,7 +2,7 @@
     text-align: center;
 
     .icon {
-        width: 80px;
+        width: 50px;
         margin: auto;
     }
 
@@ -17,6 +17,13 @@
         margin: auto;
         line-height: 1.5;
     }
+
+    .success {
+        h1 {
+            margin: 20px 0;
+            text-transform: none;
+        }
+    }
 }
 
 mat-dialog-actions {
@@ -26,5 +33,10 @@ mat-dialog-actions {
         letter-spacing: 1px;
         text-transform: uppercase;
         width: 150px;
+    }
+
+    &.isSuccessPrompt {
+        height: 0;
+        min-height: 0;
     }
 }

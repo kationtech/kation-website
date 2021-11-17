@@ -24,9 +24,9 @@
                     currentPage === 'humaneapp' ||
                     currentPage === 'hybridapp'}">Services</a>
                     <ul class="sub-menu">
-                        <li><a href="" [routerLink]="['/businessapp']">Business Apps</a></li>
-                        <li><a href="" [routerLink]="['/humaneapp']">Humane Apps</a></li>
-                        <li><a href="" [routerLink]="['/hybridapp']">Hybrid Apps</a></li>
+                        <li><a href="" [routerLink]="['/businessapp']" [ngClass]="{'isActiveSub': currentPage === 'businessapp'}">Business Apps</a></li>
+                        <li><a href="" [routerLink]="['/humaneapp']" [ngClass]="{'isActiveSub': currentPage === 'humaneapp'}">Humane Apps</a></li>
+                        <li><a href="" [routerLink]="['/hybridapp']" [ngClass]="{'isActiveSub': currentPage === 'hybridapp'}">Hybrid Apps</a></li>
                     </ul>
                 </li>
                 <li class="partnerButton"><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide" [ngClass]="{'isActive': currentPage === 'partnerWithUs'}">Partner with us</a></li>

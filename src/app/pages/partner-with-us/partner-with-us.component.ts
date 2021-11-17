@@ -23,36 +23,27 @@ export class PartnerWithUsComponent implements OnInit {
   captcha: string = '';
 
   partnerFormGrp =  new FormGroup({
-    type: new FormControl('', Validators.required),
+    type: new FormControl(''),
     description: new FormControl(''),
-    industry: new FormControl('', Validators.required),
-    service: new FormControl('', Validators.required),
-    company_size: new FormControl('', Validators.required),
-    has_technology: new FormControl(false, Validators.required),
+    industry: new FormControl(''),
+    service: new FormControl(''),
+    company_size: new FormControl(''),
+    has_technology: new FormControl(false),
     name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
     contact_number: new FormControl('', Validators.required),
-    subscription: new FormControl(false, Validators.required),
+    subscription: new FormControl(false),
+    termsAndConditon: new FormControl(null, Validators.required),
     recaptcha: new FormControl ('', Validators.required)
   });
 
-  infoFormGrp = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    contact_number: new FormControl('', Validators.required),
-    subscription: new FormControl(''),
-    terms: new FormControl('', Validators.required),
-    recaptcha: new FormControl('', Validators.required)
-  });
-
-  siteKey: string = '6Lf_H-EcAAAAAFWKp2oyTXOJN2RYxgCnlIsCt0tI'
   destroy$ = new Subject();
 
   constructor(
     private router: Router,
     public dialog: MatDialog,
     private fb: FormBuilder,
-    private util: UtilsService
+    private util: UtilsService,
   ) {}
 
   ngOnInit(): void {
@@ -60,26 +51,31 @@ export class PartnerWithUsComponent implements OnInit {
 
     const data = localStorage.getItem('data');
     if (!data || data === 'undefined' || data == '""') {
+      this.partnerFormGrp.get('type')?.setValidators([Validators.required]);
+      this.partnerFormGrp.get('industry')?.setValidators([Validators.required]);
+      this.partnerFormGrp.get('company_size')?.setValidators([Validators.required]);
+      this.partnerFormGrp.get('has_technology')?.setValidators([Validators.required]);
       this.showFullForm = true;
     } else {
       this.showFullForm = false;
       this.prefillFullForm(data);
     }
-
   }
 
   resolved(captchaResponse: string) {
     this.captcha = captchaResponse;
-    if(this.showFullForm) {
-      this.partnerFormGrp.get('recaptcha')?.setValue(this.captcha)
-    } else {
-      this.infoFormGrp.get('recaptcha')?.setValue(this.captcha)
+    this.partnerFormGrp.get('recaptcha')?.setValue(this.captcha)
+  }
+
+  resetValidator(event: any){
+    if(!event.checked) {
+      this.partnerFormGrp.get('termsAndConditon')?.setValue(null);
     }
   }
  
   setFormControl(value: any) {
     if(value.value === 'true') {
-      this.partnerFormGrp.addControl('technology_name', new FormControl('', Validators.required))
+      this.partnerFormGrp.addControl('current_technology', new FormControl('', Validators.required))
     }
   }
 
@@ -116,51 +112,26 @@ export class PartnerWithUsComponent implements OnInit {
   submitForm() {
 
     let finalData = {
-      type: "",
-      industry: "",
-      service: "",
-      company_size: 0,
-      has_technology: false,
-      current_technology: "",
-      description: "none",
-      name: "",
-      email: "",
-      contact_number: "",
-      subscription: false,
+      company_size: this.partnerFormGrp.value['company_size'],
+      contact_number: this.partnerFormGrp.value['contact_number'],
+      description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
+      email: this.partnerFormGrp.value['email'],
+      has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
+      current_technology: this.partnerFormGrp.value['current_technology'],
+      industry: this.partnerFormGrp.value['industry'],
+      name: this.partnerFormGrp.value['name'],
+      service: this.partnerFormGrp.value['service'],
+      subscription: this.partnerFormGrp.value['subscription'],
+      type: this.partnerFormGrp.value['type']
     }
 
-    if (this.isPage) {
-      finalData = {
-        type: this.partnerFormGrp.value['type'],
-        industry: this.partnerFormGrp.value['industry'],
-        service: this.partnerFormGrp.value['service'],
-        company_size: this.partnerFormGrp.value['company_size'],
-        has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
-        current_technology: this.partnerFormGrp.value['technology_name'],
-        description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
-        name: this.partnerFormGrp.value['name'],
-        email: this.partnerFormGrp.value['email'],
-        contact_number: this.partnerFormGrp.value['contact_number'],
-        subscription: this.partnerFormGrp.value['subscription'],
+    this.util.showSpinner();
+    this.util.register(finalData).pipe(takeUntil(this.destroy$)).subscribe(value => {
+      if(value['status'] === 201) {
+        this.util.closeSpinner();
+        this.successModal();
       }
-      this.util.register(finalData)
-    } else {
-      finalData = {
-        type: this.partnerFormGrp.value['type'],
-        industry: this.partnerFormGrp.value['industry'],
-        service: this.partnerFormGrp.value['service'],
-        company_size: this.partnerFormGrp.value['company_size'],
-        has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
-        current_technology: this.partnerFormGrp.value['technology_name'] ? this.partnerFormGrp.value['technology_name'] : 'none',
-        description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
-        name: this.infoFormGrp.value['name'],
-        email: this.infoFormGrp.value['email'],
-        contact_number: this.infoFormGrp.value['contact_number'],
-        subscription: this.infoFormGrp.value['subscription'],
-      }
-
-      this.util.register(finalData)
-    }
+    })
   }
 
   successModal(){

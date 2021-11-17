@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Tell us what you need by filling out this form.</h2>
 <p>I am a...</p>
 <form [formGroup]="surveyFormGrp">
-    <mat-dialog-content class="mat-typography">
+    <div class="mat-typography">
         <div class="display-flex type-container">
             <div class="radio-wrapper">
                 <input type="radio" id="customer" name="type" value="customer" formControlName="type">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </form>
-    </mat-dialog-content>
+    </div>
 </form>
 <mat-dialog-actions align="center">
   <div class="close" mat-dialog-close><img src="assets/images/icons/close.png"></div>

@@ -70,6 +70,10 @@ form {
 
 
 @media (max-width: $mobile) {
+    .mat-dialog-container {
+        height: 90vh;
+    }
+
     .mat-dialog-content {
         padding: 0;
         width: 100%;
@@ -78,4 +82,5 @@ form {
     .type-container {
         flex-direction: column;
     }
+
 }

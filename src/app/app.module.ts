@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PromptModalComponent } from './pages/modal/prompt-modal/prompt-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -58,11 +61,15 @@ import { RecaptchaModule } from 'ng-recaptcha';
     MatButtonModule,
     MatDialogModule,
     MatSelectModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RecaptchaModule
+    RecaptchaModule,
+    NgxSpinnerModule
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy , useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

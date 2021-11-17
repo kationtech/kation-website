@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServicesModalComponent } from '../modal/services-modal/services-modal.component';
 import { UtilsService } from 'src/app/utils.service';
+import { PromptModalComponent } from '../modal/prompt-modal/prompt-modal.component';
 
 @Component({
   selector: 'app-landing',
@@ -16,10 +17,10 @@ export class LandingComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (!localStorage.getItem('popupState')) {
+    const data = localStorage.getItem('data');
+    if (!data || data === 'undefined' || data == '""') {
       setTimeout(() => {
         this.showModal();
-        localStorage.setItem('popupState', 'true')
       }, 3000);
     }
   }
@@ -27,7 +28,8 @@ export class LandingComponent implements OnInit {
   showModal() {
     const dialogRef = this.dialog.open(ServicesModalComponent, {
       width: '800px',
-      height: 'auto'
+      height: 'auto',
+      maxHeight: '90vh'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -38,6 +40,7 @@ export class LandingComponent implements OnInit {
         service: result.service,
         company_size: result.company_size,
         has_technology: JSON.parse(result.has_technology),
+        current_technology: result.current_technology,
         name: '',
         email: '',
         contact_number: '',
@@ -45,6 +48,10 @@ export class LandingComponent implements OnInit {
       }
 
       localStorage.setItem('data', JSON.stringify(finalData))
+      let handleSuccess = this.dialog.open(PromptModalComponent, {
+        width: '500px',
+        data: 'successPrompt'
+      });
     });
   }
 
