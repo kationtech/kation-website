@@ -18,6 +18,7 @@ export class UtilsService {
 
   register(data: any) {
     const body = data;
+    console.log(environment.api);
     return this.http.post<any>(environment.api, body, {
       headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}
     });
