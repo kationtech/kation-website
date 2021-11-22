@@ -131,6 +131,9 @@ export class PartnerWithUsComponent implements OnInit {
         this.util.closeSpinner();
         this.successModal();
       }
+    }, error => {
+      this.util.closeSpinner();
+      console.log(error)
     })
   }
 
