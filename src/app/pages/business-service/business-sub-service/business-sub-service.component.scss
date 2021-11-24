@@ -23,6 +23,7 @@
             li {
                 button {
                     background: $yellow;
+                    cursor: pointer;
 
                     p {
                         color: black;
@@ -87,6 +88,7 @@ section {
                         padding: 5px 15px;
                         border: 3px solid white;
                         background-color: $orange;
+                        cursor: pointer;
     
                         p {
                             color: white;
@@ -109,5 +111,13 @@ section {
             }
         }
         
+    }
+}
+
+@media (max-width: $mobile) {
+    #customer-engagement, #finance {
+        height: auto;
+        background-position: 200% 99%;
+        background-size: 80%;
     }
 }

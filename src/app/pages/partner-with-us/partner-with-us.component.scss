@@ -251,6 +251,12 @@
                             background-color: transparent;
                             border-color: white;
                             flex: 1;
+                            color: white;
+
+                            &:focus-visible {
+                                outline: none;
+                            }
+
                         }
                     }
                 }
@@ -302,6 +308,10 @@
     margin: auto;
 }
 
+.footer-wrapper {
+    margin-top: 4rem;
+}
+
 ::ng-deep .mat-checkbox-frame {
     border-color: white;
 }
@@ -309,6 +319,10 @@
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
     background-color: #18488A !important;
     border: 2px solid white;
+}
+
+::ng-deep .mat-checkbox-layout .mat-checkbox-label {
+    white-space: normal;
 }
 
 @media screen and (max-width: 1300px) {

@@ -49,7 +49,7 @@
             }
 
             .btn-container {
-                margin-top: 50px;
+                margin-top: 25px;
             }
         }
     }
@@ -93,6 +93,42 @@
         .btn-container {
             button {
                 background-color: $teal;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .view {
+        height: auto;
+        background-position: 200% 99%;
+        background-size: 80%;
+
+        .service {
+            .content {
+                h2 {
+                    width: 100%;
+                }
+
+                .image-container {
+                    & > div {
+                        max-width: 100%;
+                    }
+                }
+
+                .btn-container {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    #kioskart {
+        .content {
+            .image-container {
+                & > div {
+                    max-width: 100%;
+                }
             }
         }
     }

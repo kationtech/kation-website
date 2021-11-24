@@ -128,7 +128,7 @@ export class TeamComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.router.navigate(['/partnerWithUs']);
+        this.router.navigate(['/partnerWithUs', 'career']);
       }
     });
   }

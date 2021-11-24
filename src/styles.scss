@@ -481,3 +481,13 @@ img {
         max-height: 100% !important;
     }
 }
+
+@media (max-width: $mobile) {
+    .view {
+        .service {
+            .section-title {
+                width: 100%;
+            }
+        }
+    }
+}

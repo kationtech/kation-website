@@ -418,6 +418,10 @@
     z-index: 2;
 }
 
+.footer-wrapper {
+    margin-top: 4rem;
+}
+
 @media screen and (max-width: 1460px) {
     #team {
         .section-5, .section-6, .section-7 {
@@ -1157,6 +1161,10 @@
                 }
             }
         }
+    }
+
+    .footer-wrapper {
+        margin-top: 0 !important;
     }
 }
 

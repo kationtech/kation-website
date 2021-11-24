@@ -33,25 +33,27 @@ export class LandingComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      let finalData = {
-        type: result.type,
-        description: 'none',
-        industry: result.industry,
-        service: result.service,
-        company_size: result.company_size,
-        has_technology: JSON.parse(result.has_technology),
-        current_technology: result.current_technology,
-        name: '',
-        email: '',
-        contact_number: '',
-        subscription: false
+      if (result) {
+        let finalData = {
+          type: result.type,
+          description: 'none',
+          industry: result.industry,
+          service: result.service,
+          company_size: result.company_size,
+          has_technology: JSON.parse(result.has_technology),
+          current_technology: result.current_technology,
+          name: '',
+          email: '',
+          contact_number: '',
+          subscription: false
+        }
+  
+        localStorage.setItem('data', JSON.stringify(finalData))
+        let handleSuccess = this.dialog.open(PromptModalComponent, {
+          width: '500px',
+          data: 'successPrompt'
+        });
       }
-
-      localStorage.setItem('data', JSON.stringify(finalData))
-      let handleSuccess = this.dialog.open(PromptModalComponent, {
-        width: '500px',
-        data: 'successPrompt'
-      });
     });
   }
 

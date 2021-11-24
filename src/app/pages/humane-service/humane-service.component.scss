@@ -81,3 +81,23 @@
         }
     }
 }
+
+@media (max-width: $mobile) {
+    #humane {
+        height: auto;
+        background-position: 200% 99%;
+        background-size: 80%;
+
+        section {
+            .content {
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

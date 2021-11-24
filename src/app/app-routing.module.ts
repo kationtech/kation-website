@@ -35,6 +35,9 @@ const routes: Routes = [{
   path: 'partnerWithUs',
   component: PartnerWithUsComponent
 },{
+  path: 'partnerWithUs/:page',
+  component: PartnerWithUsComponent
+},{
   path: 'hybridapp', 
   component: HybridServiceComponent,
 },{

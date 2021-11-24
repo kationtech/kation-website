@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
 import { takeUntil} from 'rxjs/operators'
 import { UtilsService } from 'src/app/utils.service';
@@ -16,6 +16,7 @@ import { TermsAndConditionsModalComponent } from '../modal/terms-and-conditions-
 export class PartnerWithUsComponent implements OnInit {
 
   isPage: boolean = false;
+  forCareer: boolean = false;
   formValues: any;
   showSpecifyField: boolean = false;
   showFullForm: boolean = true;
@@ -47,7 +48,9 @@ export class PartnerWithUsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.isPage = this.router.url === '/partnerWithUs';
+    this.forCareer = this.router.url.split('/')[2] ? true : false;
+
+    this.isPage = this.router.url === '/partnerWithUs' || this.forCareer;
 
     const data = localStorage.getItem('data');
     if (!data || data === 'undefined' || data == '""') {
@@ -81,18 +84,33 @@ export class PartnerWithUsComponent implements OnInit {
 
   prefillFullForm(data: any){
     let formValue = JSON.parse(data);
-    this.partnerFormGrp.patchValue({
-      company_size: formValue['company_size'],
-      contact_number: "",
-      description: "none",
-      email: "",
-      has_technology: formValue['has_technology'],
-      industry: formValue['industry'],
-      name: "",
-      service: formValue['service'],
-      subscription: false,
-      type: formValue['type']
-    });
+    if(this.forCareer) {
+      this.partnerFormGrp.patchValue({
+        company_size: "",
+        contact_number: "",
+        description: "none",
+        email: "",
+        has_technology: false,
+        industry: "inquiry",
+        name: "",
+        service: "",
+        subscription: false,
+        type: "customer"
+      });
+    } else {
+      this.partnerFormGrp.patchValue({
+        company_size: formValue['company_size'],
+        contact_number: "",
+        description: "none",
+        email: "",
+        has_technology: formValue['has_technology'],
+        industry: formValue['industry'],
+        name: "",
+        service: formValue['service'],
+        subscription: false,
+        type: formValue['type']
+      });
+    }
   }
 
   showTermsAndConditions(){

@@ -146,6 +146,10 @@
     margin-top: -9rem;
 }
 
+.footer-wrapper {
+    margin-top: 4rem;
+}
+
 @media screen and (max-width: 1280px) {
     #services {
         .section-2 {
@@ -253,6 +257,26 @@
     }
 }
 
+@media screen and (max-width: 640px) {
+    #services {
+        .section-2 {
+            .services-list {
+                li {
+                    .shadow {
+                        font-size: 7rem;
+                    }
+
+                    &.hybrid {
+                        .shadow {
+                            font-size: 3.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
     .partner-with-us-wrapper {
         margin: 0;
@@ -298,13 +322,13 @@
                     width: 90%;
 
                     .shadow {
-                        font-size: 5.5rem;
+                        font-size: 5rem;
                         text-align: center;
                     }
 
                     &.hybrid {
                         .shadow {
-                            font-size: 2.8rem;
+                            font-size: 2.5rem;
                         }
                     }
                 }
