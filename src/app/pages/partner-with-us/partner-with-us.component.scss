@@ -26,7 +26,7 @@
                 background-position: top right;
                 background-size: 80px 80px;
                 padding-bottom: 80px;
-                width: 60%;
+                width: 70%;
 
                 h1 {
                     margin: 0;
@@ -74,6 +74,12 @@
             padding-right: 3rem;
             box-sizing: border-box;
             color: white;
+
+            .iam {
+                text-align: center;
+                display: block;
+                margin-bottom: 10px;
+            }
 
             h1, h2 {
                 margin: 0 0 10px 0;
@@ -197,6 +203,20 @@
                     margin: auto;
                 }
             }
+
+            .input-container {
+                height: 65px;
+                position: relative;
+
+                .error-msg {
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 0.70rem;
+                    color: red;
+                    font-weight: bold;
+                    padding-left: 10px;
+                }
+            }
         }
     } 
 }
@@ -285,6 +305,15 @@
                 }
             }
         }
+
+        .terms-container {
+            display: flex;
+            align-items: center;
+
+            span {
+                margin-left: 5px;
+            }
+        }
     }
 }
 
@@ -323,6 +352,10 @@
 
 ::ng-deep .mat-checkbox-layout .mat-checkbox-label {
     white-space: normal;
+}
+
+::ng-deep .mat-select-disabled {
+    background-color: #e1e1e1 !important;
 }
 
 @media screen and (max-width: 1300px) {
@@ -484,20 +517,41 @@
     #pwu-form, #pwu-form.fullPage {
         .display-flex {
             flex-direction: column;
-        }
 
-        .partner-with-us-form {
-            .select-list {
-                div.recaptcha-container {
-                    flex-direction: column;
-
-                    .recaptcha {
-                        transform: scale(0.77) !important;
-                        -webkit-transform: scale(0.77) !important;
-                        transform-origin: 0 0 !important;
-                        -webkit-transform-origin: 0 0 !important;
+            .partner-with-us-form {
+                .select-list {
+                    div.recaptcha-container {
+                        flex-direction: column;
+    
+                        .recaptcha {
+                            transform: scale(0.77) !important;
+                            -webkit-transform: scale(0.77) !important;
+                            transform-origin: 0 0 !important;
+                            -webkit-transform-origin: 0 0 !important;
+                        }
                     }
                 }
+
+                form {
+                    .type-container {
+                        .radio-wrapper {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            .terms-container {
+                flex-direction: column;
+                align-items: normal;
+
+                span {
+                    margin-left: 20px;
+                }
+            }
+
+            ::ng-deep .mat-checkbox-inner-container {
+                margin: 8px 5px 0 0;
             }
         }
     }

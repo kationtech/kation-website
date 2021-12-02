@@ -41,18 +41,37 @@
                         align-items: flex-end;
                         padding: 20px 15px;
                         border: 3px solid white;
+                        text-align: left;
 
                         &.sales {
                             background-color: $dark-blue;
+                            display: block;
+                            text-align: center;
+
+                            img {
+                                max-width: 80px;
+                                margin: auto;
+                                pointer-events: none;
+                            }
     
                             p {
                                 color: white;
                                 font-weight: bold;
+                                pointer-events: none;
+                                text-align: left;
                             }
                         }
     
                         &.kiosk {
                             background-color: $green-blue;
+                            display: block;
+                            text-align: center;
+
+                            img {
+                                max-width: 120px;
+                                margin: 13px auto;
+                                pointer-events: none;
+                            }
     
                             p {
                                 color: white;
@@ -62,6 +81,19 @@
 
                         &.moo {
                             background-color: $teal;
+                            display: block;
+                            text-align: center;
+
+                            img {
+                                max-width: 68px;
+                                margin: auto;
+                                pointer-events: none;
+                            }
+
+                            p {
+                                color: white;
+                                font-weight: bold;
+                            }
                         }
                     }
 

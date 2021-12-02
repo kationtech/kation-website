@@ -1,11 +1,16 @@
 @import '../../../constants.scss';
 
+h2 {
+    font-size: 1.5rem;
+}
+
 h2, p {
     text-align: center;
 }
 
 p {
-    margin: 10px 0 5px 0;
+    margin: 0;
+    font-size: .90rem;
 }
 
 .mat-dialog-content {
@@ -13,9 +18,18 @@ p {
     margin: auto;
 }
 
-form {
-    & > div {
-        margin-top: 20px;
+#survey {
+    width: 80%;
+    margin: 5px auto;
+
+    .type-container {
+        margin-bottom: 20px;
+    }
+
+    form {
+        & > div {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -27,6 +41,7 @@ form {
     .input {
         padding: 10px;
         box-sizing: border-box;
+        flex: 1;
 
         label {
             margin-top: 5px;
@@ -42,23 +57,51 @@ form {
             padding: 5px 0;
             flex: 1;
         }
+
+        .has-tech {
+            label {
+                flex: auto;
+                width: 55%;
+                text-align: right;
+                padding-right: 10px;
+                box-sizing: border-box;
+            }
+
+            input {
+                flex: auto;
+                width: 45%;
+            }
+        }
     }
 }
 
-.mat-dialog-actions {
-    button {
-        width: 180px;
-        border-radius: 25px;
-        background-color: #ED672C;
-        color: white;
-        text-transform: uppercase;
-        padding: 10px;
-        appearance: none;
+.submit-btn {
+    text-align: center;
+    margin: 20px 0 0 0;
+    
+    .btn {
         border: 0;
-        cursor: pointer;
+        width: 100%;
+        max-width: 200px;
+        background-color: #ED672C;
+        border: 2px solid #ED672C;
+        box-shadow: inset 0 0 0 0 #ED672C;
+        text-transform: uppercase;
+
+        &:hover {
+            box-shadow: inset 400px 0 0 0 #18488A;
+            color: white;
+            border: 2px solid #18488A;
+        }
 
         &:disabled {
             background-color: #A8A8A8;
+            border: 2px solid #A8A8A8;
+
+            &:hover {
+                box-shadow: none;
+                color: white;
+            }
         }
     }
 }
@@ -81,6 +124,9 @@ form {
 
     .type-container {
         flex-direction: column;
-    }
 
+        .radio-wrapper {
+            margin-bottom: 10px;
+        }
+    }
 }

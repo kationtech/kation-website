@@ -1,0 +1,104 @@
+.view {
+  background-color: #F4BA6D;
+  height: 100vh;
+  background-image: url("../../../../assets/images/humane-image-2.png");
+  background-repeat: no-repeat;
+  background-position: 107% 90%;
+}
+
+.view .back a {
+  color: black;
+}
+
+.view .back::before {
+  background-image: url("../../../../assets/images/icons/back-dark.png");
+}
+
+.view .service {
+  position: relative;
+}
+
+.view .service .content {
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.view .service .content h2 {
+  background-color: #18488A;
+  padding: 10px;
+  width: 400px;
+  display: inline-block;
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.view .service .content p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.view .service .content .image-container > div {
+  max-width: 40%;
+  margin: auto;
+}
+
+.view .service .content .btn-container {
+  margin-top: 25px;
+}
+
+#kioskart {
+  background-image: url("../../../../assets/images/humane-image-5.png");
+  background-position: 112% 90%;
+}
+
+#kioskart .content h2 {
+  background-color: #466F7A;
+}
+
+#kioskart .content .image-container > div {
+  max-width: 25%;
+}
+
+#kioskart .content .btn-container button {
+  background-color: #466F7A;
+}
+
+#moocentral {
+  background-image: url("../../../../assets/images/humane-image-6.png");
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+}
+
+#moocentral .content h2 {
+  background-color: transparent;
+  width: 120px;
+}
+
+#moocentral .content .btn-container button {
+  background-color: #23B1E6;
+}
+
+@media (max-width: 480px) {
+  .view {
+    height: auto;
+    background-position: 200% 99%;
+    background-size: 80%;
+  }
+  .view .service .content h2 {
+    width: 100%;
+  }
+  .view .service .content .image-container > div {
+    max-width: 100%;
+  }
+  .view .service .content .btn-container {
+    padding-bottom: 20px;
+  }
+  #kioskart .content .image-container > div {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=humane-sub-service.component.css.map */

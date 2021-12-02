@@ -1,0 +1,41 @@
+#hybrid {
+  background-color: #466F7A;
+  background-image: url("../../../assets/images/humane-image-6.png");
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+}
+
+#hybrid .content {
+  width: 90%;
+  margin: auto;
+}
+
+#hybrid .content h2 {
+  width: 120px;
+  margin: 2rem auto 1rem auto;
+}
+
+#hybrid .content p {
+  color: white;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#hybrid .content .image-container {
+  width: 40%;
+  margin: auto;
+}
+
+#hybrid .content .btn-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#hybrid .content .btn-container button {
+  background-color: #23B1E6;
+  color: white;
+  border: 2px solid white;
+}
+/*# sourceMappingURL=hybrid-service.component.css.map */

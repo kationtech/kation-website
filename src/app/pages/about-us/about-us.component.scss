@@ -13,11 +13,9 @@
                     background-color: $dark-blue;
                     padding: 20px 0;
                     text-align: center;
-                    font-size: 1rem;
-                    color: white;
+                    color: rgb(170, 165, 165);
                     font-weight: bold;
                     letter-spacing: 2px;
-                    font-size: 1.5rem;
                 }
 
                 .see-more-wrapper {
@@ -48,12 +46,12 @@
 
                     .bubble-wrapper {
                         position: absolute;
-                        bottom: -5rem;
+                        bottom: -6rem;
                         right: 4rem;
                         background-image: url('../../../assets/images/bubble.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
-                        height: 150px;
+                        height: 170px;
                         width: 300px;
                         padding: 30px 20px 0 15px;
                         z-index: 3;
@@ -63,13 +61,12 @@
                         p {
                             width: 90%;
                             float: right;
-                            font-size: .85rem;
                             font-style: italic;
                             margin-top: 20px;
                         }
 
                         span {
-                            font-size: .80rem;
+                            font-size: .90rem;
                         }
 
                         &:before {
@@ -165,7 +162,6 @@
             }
 
             .award-desc {
-                font-size: .85rem;
                 line-height: 1.8;
                 text-align: center;
                 width: 80%;

@@ -57,7 +57,6 @@ header {
 
             a {
                 text-transform: uppercase;
-                font-size: .85rem;
                 position: relative;
 
                 &::after {
@@ -91,7 +90,7 @@ header {
 
                 &.isActive {
                     border-bottom: 3px solid $dark-blue;
-                    padding-bottom: 7px;
+                    padding-bottom: 10px;
                     color: $dark-blue;
 
                     &:hover:after { 
@@ -111,16 +110,16 @@ header {
                 border: 1px solid $dark-blue;
                 top: 70px;
                 padding: 10px 15px 0 15px;
-                width: 120px;
+                width: 130px;
                 text-align: left;
 
                 li {
                     margin: 0;
                     line-height: normal;
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
 
                     a {
-                        font-size: .75rem;
+                        font-size: .90rem;
                         text-transform: none;
                     }
                     

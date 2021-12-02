@@ -5,14 +5,31 @@
         <div class="section-title">Business Apps</div>
         <div class="content">
             <p>Our business application experts deliver advisory and system design solutions in the areas of process transformation, operational performance, customer engagement, and workforce productivity. Choose from the selected below.</p>
-            <ul>
-                <li>
-                    <a href="" [routerLink]="['/businessapp', 'customer-engagement']" class="cust-engagement"><p>D365 Customer Engagement</p></a>
-                </li>
-                <li>
-                    <a href="" [routerLink]="['/businessapp', 'finance']" class="finance"><p>D365 Finance and Supply Chain</p></a>
-                </li>
-            </ul>
+            <div class="services-container">
+                <h2>Services</h2>
+                <ul>
+                    <li *ngFor="let service of services">
+                        <button (click)="showDetails(service)"><p>{{service.title}}</p></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="products-container">
+                <h2>Products</h2>
+                <ul>
+                    <li>
+                        <a href="" [routerLink]="['/businessapp', 'customer-engagement']" class="cust-engagement">
+                            <img class="icon" src="assets/images/icons/cust-engagement.png" loading="lazy">
+                            <p>D365 Customer Engagement</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" [routerLink]="['/businessapp', 'finance']" class="finance">
+                            <img class="icon" src="assets/images/icons/finance.png" loading="lazy">
+                            <p>D365 Finance and Supply Chain</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </div>

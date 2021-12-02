@@ -57,15 +57,15 @@ section {
         p {
             text-align: center;
             color: white;
-            font-size: .85rem;
             line-height: 1.5;
         }
 
         .product-list {
             & > p {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 margin-top: 30px;
                 margin-bottom: 0;
+                font-weight: bold;
             }
 
             ul {

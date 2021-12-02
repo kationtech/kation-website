@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Tell us what you need by filling out this form.</h2>
 <p>I am a...</p>
-<form [formGroup]="surveyFormGrp">
+<form [formGroup]="surveyFormGrp" id="survey">
     <div class="mat-typography">
         <div class="display-flex type-container">
             <div class="radio-wrapper">
@@ -33,7 +33,7 @@
                     <mat-option value="humanResources"> Human Resources </mat-option>
                     <mat-option value="others"> Others </mat-option>
                     <hr class="select-divider">
-                    <mat-option value="inquiry"> Inquiry for Careers </mat-option>
+                    <mat-option value="inquiry"> Inquiry about Careers </mat-option>
                 </mat-select>
             </div>
             <div>
@@ -44,10 +44,10 @@
             </div>
             <div>
                 <mat-select class="company" placeholder="How big is your company?" id="company_size" formControlName="company_size">
-                    <mat-option value="<10"> Less than 10 </mat-option>
+                    <mat-option value="Less than 10"> Less than 10 </mat-option>
                     <mat-option value="10-49"> 10-49 </mat-option>
                     <mat-option value="50-249"> 50-249 </mat-option>
-                    <mat-option value=">250"> 250 and more </mat-option>
+                    <mat-option value="250 and more"> 250 and more </mat-option>
                 </mat-select>
             </div>
             <div class="display-flex with-input">
@@ -59,16 +59,15 @@
                 </div>
                 <div class="input">
                     <div *ngIf="surveyFormGrp.value.has_technology != 'true'">&nbsp;</div>
-                    <div class="display-flex" *ngIf="surveyFormGrp.value.has_technology == 'true'">
+                    <div class="has-tech" *ngIf="surveyFormGrp.value.has_technology == 'true'">
                         <label>If YES, please specify</label>
                         <input type="text" formControlName="current_technology">
                     </div>
                 </div>
             </div>
+            <div class="submit-btn">
+                <button class="btn btn-orange btn-slide" [disabled]="surveyFormGrp.invalid" [mat-dialog-close]="surveyFormGrp.value">Submit</button>
+            </div>
         </form>
     </div>
 </form>
-<mat-dialog-actions align="center">
-  <div class="close" mat-dialog-close><img src="assets/images/icons/close.png"></div>
-  <button type="submit" (keydown.enter)="'cdkFocusInitial'" [mat-dialog-close]="surveyFormGrp.value" [disabled]="surveyFormGrp.invalid" cdkFocusInitial>Submit</button>
-</mat-dialog-actions>

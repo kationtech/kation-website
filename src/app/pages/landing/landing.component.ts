@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ServicesModalComponent } from '../modal/services-modal/services-modal.component';
 import { UtilsService } from 'src/app/utils.service';
 import { PromptModalComponent } from '../modal/prompt-modal/prompt-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -13,7 +14,8 @@ export class LandingComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    public utils: UtilsService
+    public utils: UtilsService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -49,12 +51,23 @@ export class LandingComponent implements OnInit {
         }
   
         localStorage.setItem('data', JSON.stringify(finalData))
-        let handleSuccess = this.dialog.open(PromptModalComponent, {
-          width: '500px',
-          data: 'successPrompt'
-        });
+        this.promptSuccess();
       }
     });
+  }
+
+  promptSuccess(){
+    console.log('asd');
+    let handleSuccess = this.dialog.open(PromptModalComponent, {
+      width: '500px',
+      data: 'successPrompt'
+    });
+  }
+
+  goToCareers() {
+    console.log('asad');
+    // this.router.navigate(['/team'], {queryParams: {section: 'careers'}});
+    this.router.navigate(['/team'], { fragment: "careerSection" })
   }
 
 }

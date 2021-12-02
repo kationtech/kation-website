@@ -1,0 +1,105 @@
+#humane {
+  background-color: #F4BA6D;
+  height: 100vh;
+  background-image: url("../../../assets/images/humane-image-1.png");
+  background-repeat: no-repeat;
+  background-position: 107% 90%;
+}
+
+#humane section {
+  display: block;
+}
+
+#humane section .content {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  padding-top: 30px;
+}
+
+#humane section .content p {
+  text-align: left;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#humane section .content ul {
+  margin: 5rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#humane section .content ul li {
+  margin: 0 30px;
+}
+
+#humane section .content ul li a {
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 15px;
+  border: 3px solid white;
+}
+
+#humane section .content ul li a.sales {
+  background-color: #18488A;
+}
+
+#humane section .content ul li a.sales p {
+  color: white;
+  font-weight: bold;
+}
+
+#humane section .content ul li a.kiosk {
+  background-color: #466F7A;
+}
+
+#humane section .content ul li a.kiosk p {
+  color: white;
+  font-weight: bold;
+}
+
+#humane section .content ul li a.moo {
+  background-color: #23B1E6;
+}
+
+#humane .back a {
+  color: black;
+}
+
+#humane .back:before {
+  background-image: url("../../../assets/images/icons/back-dark.png");
+}
+
+@media (max-width: 480px) {
+  #humane {
+    height: auto;
+    background-position: 200% 99%;
+    background-size: 80%;
+  }
+  #humane section .content ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #humane section .content ul li {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=humane-service.component.css.map */

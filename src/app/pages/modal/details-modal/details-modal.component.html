@@ -13,5 +13,6 @@
 </mat-dialog-content>
 <mat-dialog-actions align="center">
     <div class="close" mat-dialog-close><img src="assets/images/icons/close.png"></div>
-    <button [mat-dialog-close]="true" cdkFocusInitial [style.background-color]="data.color">KNOW MORE ABOUT THIS CAREER</button>
+    <button *ngIf="data.type !== 'subservice-details'" [mat-dialog-close]="true" cdkFocusInitial [style.background-color]="data.color">KNOW MORE ABOUT THIS CAREER</button>
+    <button *ngIf="data.type === 'subservice-details'" [mat-dialog-close]="true" cdkFocusInitial [style.background-color]="data.color" [style.color]="data.text">KNOW MORE ABOUT {{data.title}}</button>
 </mat-dialog-actions>

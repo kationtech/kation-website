@@ -1,0 +1,24 @@
+.wrapper h3 {
+  color: #656565;
+  text-align: center;
+}
+
+.wrapper p {
+  font-size: .85rem;
+  line-height: 1.8;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+mat-dialog-actions label {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .mat-dialog-actions {
+    height: 0;
+    min-height: 0;
+  }
+}
+/*# sourceMappingURL=terms-and-conditions-modal.component.css.map */

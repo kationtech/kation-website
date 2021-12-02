@@ -1,0 +1,305 @@
+#services .section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 500px;
+  position: relative;
+}
+
+#services .section-1 h1, #services .section-1 p {
+  margin: 0;
+}
+
+#services .section-1 h1 {
+  font-size: 4rem;
+}
+
+#services .section-1 > div {
+  padding-top: 8rem;
+  padding-right: 10rem;
+}
+
+#services .section-1:before, #services .section-1:after {
+  position: absolute;
+  bottom: 0;
+}
+
+#services .section-1:before {
+  content: '';
+  left: 8rem;
+  background-image: url("../../../assets/images/services-image-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 350px;
+  width: 130px;
+}
+
+#services .section-1:after {
+  content: '';
+  right: 8rem;
+  background-image: url("../../../assets/images/services-image-2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 350px;
+  width: 300px;
+}
+
+#services .section-2 {
+  display: block;
+}
+
+#services .section-2 .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#services .section-2 .services-list > li {
+  border-radius: 25px;
+  height: 500px;
+  width: calc(33.3% - 20px);
+  background-color: #DAE1E5;
+  padding: 20px 30px;
+  position: relative;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+}
+
+#services .section-2 .services-list > li h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#services .section-2 .services-list > li p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#services .section-2 .services-list > li .desc {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  left: 30px;
+  right: 30px;
+}
+
+#services .section-2 .services-list > li .desc p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+#services .section-2 .services-list > li .desc button {
+  border: 2px solid white;
+  margin-bottom: 10px;
+}
+
+#services .section-2 .services-list > li .desc .business-list {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+#services .section-2 .services-list > li .desc .business-list li {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#services .section-2 .services-list > li .shadow {
+  position: absolute;
+  font-size: 7rem;
+  opacity: 0.1;
+  top: 30%;
+}
+
+#services .section-2 .services-list .business {
+  background-color: #18488A;
+}
+
+#services .section-2 .services-list .humane {
+  background-color: #F4BA6D;
+  color: black;
+}
+
+#services .section-2 .services-list .humane .desc button {
+  border: 2px solid black;
+  color: black;
+}
+
+#services .section-2 .services-list .humane .desc p {
+  color: black;
+}
+
+#services .section-2 .services-list .humane .shadow {
+  color: black;
+}
+
+#services .section-2 .services-list .hybrid {
+  background-color: #466F7A;
+}
+
+#services .section-2 .services-list .hybrid .shadow {
+  font-size: 3.5rem;
+  top: 40%;
+}
+
+.partner-with-us-wrapper {
+  margin-top: -9rem;
+}
+
+.footer-wrapper {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 1280px) {
+  #services .section-2 .services-list li .shadow {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  #services .section-2 .services-list li .shadow {
+    font-size: 6rem;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #services .section-1:before {
+    left: 1rem;
+  }
+  #services .section-1:after {
+    right: 2rem;
+  }
+  #services .section-2 .services-list li .shadow {
+    font-size: 4.5rem;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 805px) {
+  #services .section-1 {
+    height: auto;
+    padding-bottom: 3rem;
+  }
+  #services .section-1 > div {
+    padding: 10px;
+  }
+  #services .section-1:before, #services .section-1:after {
+    display: none;
+  }
+  #services .section-2 .services-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #services .section-2 .services-list li {
+    width: 80%;
+    margin: 10px auto;
+  }
+  #services .section-2 .services-list li .shadow {
+    font-size: 9.5rem;
+    text-align: center;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 4.8rem;
+  }
+  .partner-with-us-wrapper {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #services .section-2 .services-list li .shadow {
+    font-size: 7rem;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .partner-with-us-wrapper {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #services .section-2 .services-list li .shadow {
+    font-size: 6rem;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #services .section-1 > div {
+    padding: 10px;
+  }
+  #services .section-1 > div h1, #services .section-1 > div p {
+    text-align: center;
+  }
+  #services .section-2 .services-list li {
+    width: 90%;
+  }
+  #services .section-2 .services-list li .shadow {
+    font-size: 5rem;
+    text-align: center;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 2.5rem;
+  }
+  .partner-with-us-wrapper {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #services .section-2 .services-list li .shadow {
+    font-size: 4.5rem;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .partner-with-us-wrapper {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #services .section-2 .services-list li {
+    width: 100%;
+  }
+  #services .section-2 .services-list li .shadow {
+    font-size: 3rem;
+    top: 28%;
+  }
+  #services .section-2 .services-list li.hybrid .shadow {
+    top: 30%;
+    font-size: 1.6rem;
+  }
+}
+/*# sourceMappingURL=services.component.css.map */

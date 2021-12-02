@@ -65,6 +65,7 @@ body {
     min-height: 100vh;
     font-family: "Helvetica Neue", sans-serif;
     max-width: 1500px;
+    font-size: 1rem;
 }
 
 ul {
@@ -129,7 +130,6 @@ img {
             }
 
             p {
-                font-size: .85rem;
                 line-height: 1.5;
                 width: 80%;
             }
@@ -276,6 +276,7 @@ img {
 
         input {
             visibility: hidden;
+            position: absolute;
         }
 
         label {
@@ -290,6 +291,7 @@ img {
             padding: 10px 0;
             text-transform: uppercase;
             color: white;
+            font-size: 1rem;
         }
 
         .customer {

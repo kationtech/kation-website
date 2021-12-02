@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAEI,QAFI,CAEJ,EAAE,CAAC;EACC,KAAK,ECCH,OAAO;EDAT,UAAU,EAAE,MAAM;CACrB;;AALL,AAOI,QAPI,CAOJ,CAAC,CAAC;EACE,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,IAAI;CACtB;;AAGL,AACI,kBADc,CACd,KAAK,CAAC;EACF,MAAM,EAAE,OAAO;CAClB;;AAGL,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,mBAAmB,CAAC;IAChB,MAAM,EAAE,CAAC;IACT,UAAU,EAAE,CAAC;GAChB",
+    "sources": [
+        "terms-and-conditions-modal.component.scss",
+        "../../../constants.scss"
+    ],
+    "names": [],
+    "file": "terms-and-conditions-modal.component.css"
+}

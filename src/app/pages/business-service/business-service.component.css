@@ -1,0 +1,117 @@
+#business {
+  background-color: #18488A;
+  background-image: url("../../../assets/images/business-image-1.png");
+  background-repeat: no-repeat;
+  background-position: 107% 90%;
+}
+
+#business section {
+  display: block;
+}
+
+#business section .content {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  padding-top: 30px;
+}
+
+#business section .content h2 {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#business section .content p {
+  text-align: left;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#business section .content ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#business section .content ul li {
+  margin: 0 30px;
+}
+
+#business section .content ul li a, #business section .content ul li button {
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 15px;
+  border: 3px solid white;
+}
+
+#business section .content ul li a.cust-engagement, #business section .content ul li button.cust-engagement {
+  background-color: #ED672C;
+}
+
+#business section .content ul li a.cust-engagement p, #business section .content ul li button.cust-engagement p {
+  color: white;
+  font-weight: bold;
+}
+
+#business section .content ul li a.finance, #business section .content ul li button.finance {
+  background-color: #F4BA6D;
+}
+
+#business section .content ul li a.finance p, #business section .content ul li button.finance p {
+  color: black;
+  font-weight: bold;
+}
+
+#business section .content ul li button {
+  background-color: #dae1e5;
+  cursor: pointer;
+}
+
+#business section .content ul li button p {
+  color: black;
+  font-weight: bold;
+}
+
+#business section .content .products-container {
+  margin-top: 5rem;
+}
+
+#business section .content .products-container ul li {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 480px) {
+  #business {
+    height: auto;
+    background-position: 200% 99%;
+    background-size: 80%;
+  }
+  #business section .content ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #business section .content ul li {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=business-service.component.css.map */

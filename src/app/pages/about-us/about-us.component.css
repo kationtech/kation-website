@@ -1,0 +1,637 @@
+#aboutUs section .with-bg .testimonial-video {
+  width: 80%;
+  margin: auto;
+}
+
+#aboutUs section .with-bg .testimonial-video .customer-testimonial {
+  background-color: #18488A;
+  padding: 20px 0;
+  text-align: center;
+  color: #aaa5a5;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#aboutUs section .with-bg .testimonial-video .see-more-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#aboutUs section .with-bg .testimonial-video .see-more-wrapper button {
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+
+#aboutUs section .plain .image-border {
+  position: absolute;
+  right: 30px;
+}
+
+#aboutUs section .plain .image-border .content {
+  position: relative;
+  z-index: 2;
+}
+
+#aboutUs section .plain .image-border .content .image {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+#aboutUs section .plain .image-border .content .bubble-wrapper {
+  position: absolute;
+  bottom: -6rem;
+  right: 4rem;
+  background-image: url("../../../assets/images/bubble.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 170px;
+  width: 300px;
+  padding: 30px 20px 0 15px;
+  z-index: 3;
+  color: white;
+  text-align: right;
+}
+
+#aboutUs section .plain .image-border .content .bubble-wrapper p {
+  width: 90%;
+  float: right;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+#aboutUs section .plain .image-border .content .bubble-wrapper span {
+  font-size: .90rem;
+}
+
+#aboutUs section .plain .image-border .content .bubble-wrapper:before {
+  content: '\201C';
+  position: absolute;
+  left: 10px;
+  font-size: 5rem;
+  top: 25px;
+  font-style: normal;
+}
+
+#aboutUs section .plain .design-image {
+  width: 180px;
+  height: 180px;
+}
+
+#aboutUs .section-1 .with-bg p {
+  width: 45%;
+  line-height: 1.8;
+}
+
+#aboutUs .section-1 .plain .image-border .image {
+  width: 900px;
+  height: 480px;
+}
+
+#aboutUs .section-1 .plain .image-border .border {
+  width: 900px;
+  height: 480px;
+}
+
+#aboutUs .section-2 .with-bg p {
+  width: 45%;
+  line-height: 1.8;
+}
+
+#aboutUs .section-2 .plain .design-image {
+  margin-left: -10rem;
+  margin-top: -13rem;
+  width: 300px;
+}
+
+#aboutUs .section-3 .with-bg p {
+  width: 90%;
+  line-height: 1.8;
+}
+
+#aboutUs .section-3 .award .award-image {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#aboutUs .section-3 .award .award-image img {
+  height: 100%;
+  width: auto;
+  border-radius: 25px;
+}
+
+#aboutUs .section-3 .award .award-title {
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#aboutUs .section-3 .award .award-desc {
+  line-height: 1.8;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+#aboutUs .section-3 .plain .image-border {
+  top: -2.5rem;
+}
+
+#aboutUs .section-3 .plain .image-border .image {
+  width: 600px;
+  height: 500px;
+}
+
+#aboutUs .section-3 .plain .image-border .border {
+  width: 600px;
+  height: 500px;
+}
+
+#aboutUs .section-3 .plain .image-border .award-caption {
+  text-align: right;
+  float: right;
+  margin: 30px;
+  line-height: normal;
+  color: #466F7A;
+  font-weight: bold;
+}
+
+#aboutUs .section-4, #aboutUs .section-5, #aboutUs .section-6 {
+  height: 920px;
+}
+
+#aboutUs .section-4 .with-bg .testimonial-video, #aboutUs .section-5 .with-bg .testimonial-video, #aboutUs .section-6 .with-bg .testimonial-video {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 600px;
+}
+
+#aboutUs .section-4 .with-bg .testimonial-video .testimonial, #aboutUs .section-5 .with-bg .testimonial-video .testimonial, #aboutUs .section-6 .with-bg .testimonial-video .testimonial {
+  width: 80%;
+  margin: auto;
+}
+
+#aboutUs .section-4 .with-bg .testimonial-video .testimonial p, #aboutUs .section-5 .with-bg .testimonial-video .testimonial p, #aboutUs .section-6 .with-bg .testimonial-video .testimonial p {
+  margin: 20px auto;
+  width: 50%;
+  line-height: 1.8;
+}
+
+#aboutUs .section-4 .plain .image-border, #aboutUs .section-5 .plain .image-border, #aboutUs .section-6 .plain .image-border {
+  right: 7rem;
+}
+
+#aboutUs .section-4 .plain .image-border .content .image, #aboutUs .section-5 .plain .image-border .content .image, #aboutUs .section-6 .plain .image-border .content .image {
+  width: 400px;
+  height: 400px;
+}
+
+#aboutUs .section-4 .plain .image-border .content .border, #aboutUs .section-5 .plain .image-border .content .border, #aboutUs .section-6 .plain .image-border .content .border {
+  width: 400px;
+  height: 400px;
+}
+
+#aboutUs .section-4 .plain .image-border .content .bubble-wrapper, #aboutUs .section-5 .plain .image-border .content .bubble-wrapper, #aboutUs .section-6 .plain .image-border .content .bubble-wrapper {
+  right: -2rem;
+}
+
+#aboutUs .section-4 {
+  background-image: url("../../../assets/images/section-4-bg.png");
+  background-repeat: no-repeat;
+  background-position: 91% 97%;
+  background-size: 200px 150px;
+}
+
+#aboutUs .section-5 {
+  height: 850px;
+  background-image: url("../../../assets/images/section-5-bg.png");
+  background-repeat: no-repeat;
+  background-position: 91% 90%;
+  background-size: 200px 150px;
+}
+
+#aboutUs .section-6 .with-bg {
+  padding-bottom: 10rem;
+}
+
+#aboutUs .section-6 .plain .image-border {
+  top: -1rem;
+}
+
+.partner-with-us-wrapper {
+  margin-top: -4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-wrapper {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 1300px) {
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 850px;
+  }
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 850px;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 550px;
+    height: 550px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 550px;
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 800px;
+  }
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 800px;
+    height: 450px;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 550px;
+    height: 550px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 550px;
+    height: 550px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #aboutUs .section-1 .with-bg p {
+    width: 60%;
+    line-height: 1.8;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 700px;
+    height: 350px;
+  }
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 700px;
+    height: 350px;
+  }
+  #aboutUs .section-3 .plain .image-border {
+    top: -2.5rem;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 500px;
+    height: 500px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 650px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 1078px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 630px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 630px;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 450px;
+  }
+  #aboutUs .section-3 .plain .image-border .image img {
+    border-radius: 25px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 600px;
+    height: 330px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 600px;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 430px;
+  }
+  #aboutUs .section-3 .plain .image-border .image img {
+    border-radius: 25px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 430px;
+    height: 470px;
+  }
+  #aboutUs .section-3 .plain .image-border .award-caption {
+    margin: 10px 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #aboutUs section .with-bg .section-title {
+    width: 60%;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 600px;
+    height: 300px;
+  }
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 600px;
+    height: 300px;
+  }
+  #aboutUs .section-2 .with-bg p {
+    width: 60%;
+  }
+  #aboutUs .section-3 .plain .image-border {
+    top: -1rem;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 420px;
+    height: 420px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 580px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 580px;
+  }
+  #aboutUs .section-3 .plain .image-border .award-caption {
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 550px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 520px;
+    height: 280px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 520px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 380px;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 380px;
+  }
+  #aboutUs .section-3 .plain .image-border .award-caption {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 500px;
+    height: 270px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    width: 480px;
+    height: 260px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    width: 480px;
+  }
+  #aboutUs .section-3 .plain .image-border .border {
+    width: 350px;
+    height: 380px;
+    right: 30px;
+  }
+  #aboutUs .section-3 .plain .image-border .image {
+    width: 350px;
+    margin: auto;
+  }
+  #aboutUs .section-3 .plain .image-border .award-caption {
+    width: 70%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 805px) {
+  #aboutUs section .with-bg .section-title {
+    width: 60%;
+  }
+  #aboutUs section .plain {
+    position: relative;
+  }
+  #aboutUs section .plain .image-border {
+    position: relative;
+    right: 0;
+  }
+  #aboutUs section .plain .image-border .border {
+    top: 10px;
+    right: 10px;
+  }
+  #aboutUs section .plain .image-border .content .bubble-wrapper {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    float: right;
+  }
+  #aboutUs .section-1 .with-bg p, #aboutUs .section-2 .with-bg p {
+    width: 100%;
+  }
+  #aboutUs .section-1 .plain .image-border .image, #aboutUs .section-2 .plain .image-border .image {
+    width: 100%;
+    height: 300px;
+  }
+  #aboutUs .section-1 .plain .image-border .border, #aboutUs .section-2 .plain .image-border .border {
+    width: 100%;
+    height: 300px;
+  }
+  #aboutUs .section-2 .plain .design-image {
+    margin: -4rem auto 0 auto;
+    width: 100px;
+    height: auto;
+  }
+  #aboutUs .section-3 .plain {
+    display: none;
+  }
+  #aboutUs .section-4, #aboutUs .section-5 {
+    height: 600px;
+  }
+  #aboutUs .section-4 .with-bg .testimonial-video .testimonial p, #aboutUs .section-5 .with-bg .testimonial-video .testimonial p {
+    width: 100%;
+  }
+  #aboutUs .section-4 iframe, #aboutUs .section-5 iframe {
+    height: 250px;
+  }
+  #aboutUs .section-4 .plain, #aboutUs .section-5 .plain {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  #aboutUs section .with-bg .section-title {
+    width: 100%;
+  }
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 280px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 270px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 250px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 230px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 210px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 210px;
+  }
+  #aboutUs .section-4 {
+    height: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+  #aboutUs section .with-bg .section-title {
+    width: 110%;
+  }
+  #aboutUs .section-1 .plain .image-border .image, #aboutUs .section-2 .plain .image-border .image {
+    width: 100%;
+    height: 200px;
+  }
+  #aboutUs .section-1 .plain .image-border .border, #aboutUs .section-2 .plain .image-border .border {
+    width: 100%;
+    height: 200px;
+  }
+  #aboutUs .section-2 .plain .design-image {
+    margin: -4rem auto 0 auto;
+    width: 100px;
+    height: auto;
+  }
+  #aboutUs .section-3 .award .award-desc {
+    width: 100%;
+  }
+  #aboutUs .section-3 .plain {
+    display: none;
+  }
+  #aboutUs .section-4, #aboutUs .section-5 {
+    height: 600px;
+  }
+  #aboutUs .section-4 .with-bg .testimonial-video .testimonial p, #aboutUs .section-5 .with-bg .testimonial-video .testimonial p {
+    width: 100%;
+  }
+  #aboutUs .section-4 iframe, #aboutUs .section-5 iframe {
+    height: 250px;
+  }
+  #aboutUs .section-4 .plain, #aboutUs .section-5 .plain {
+    display: none;
+  }
+  #aboutUs .section-4 {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 180px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #aboutUs .section-1 .plain {
+    padding: 30px 10px;
+  }
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 150px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 150px;
+  }
+  #aboutUs .section-4 {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  #aboutUs .section-1 .plain .image-border .border {
+    height: 150px;
+  }
+  #aboutUs .section-1 .plain .image-border .image {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #aboutUs section .plain .image-border .content .bubble-wrapper {
+    height: 160px;
+    width: 250px;
+  }
+  #aboutUs .section-4 {
+    height: 750px;
+  }
+}
+/*# sourceMappingURL=about-us.component.css.map */

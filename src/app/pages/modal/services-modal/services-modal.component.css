@@ -1,0 +1,99 @@
+h2 {
+  font-size: 1.5rem;
+}
+
+h2, p {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  font-size: .90rem;
+}
+
+.mat-dialog-content {
+  width: 90%;
+  margin: auto;
+}
+
+#survey {
+  width: 80%;
+  margin: 5px auto;
+}
+
+#survey > div {
+  margin-bottom: 10px;
+}
+
+.with-input div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.with-input .input {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.with-input .input label {
+  margin-top: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.with-input .input input {
+  margin-left: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 5px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mat-dialog-actions button {
+  width: 180px;
+  border-radius: 25px;
+  background-color: #ED672C;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.mat-dialog-actions button:disabled {
+  background-color: #A8A8A8;
+}
+
+.select-divider {
+  width: 95%;
+  margin: auto;
+}
+
+@media (max-width: 480px) {
+  .mat-dialog-container {
+    height: 90vh;
+  }
+  .mat-dialog-content {
+    padding: 0;
+    width: 100%;
+  }
+  .type-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=services-modal.component.css.map */

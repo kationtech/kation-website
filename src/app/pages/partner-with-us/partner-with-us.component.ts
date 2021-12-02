@@ -20,6 +20,7 @@ export class PartnerWithUsComponent implements OnInit {
   formValues: any;
   showSpecifyField: boolean = false;
   showFullForm: boolean = true;
+  acceptedTerms: boolean = false;
 
   captcha: string = '';
 
@@ -54,10 +55,16 @@ export class PartnerWithUsComponent implements OnInit {
 
     const data = localStorage.getItem('data');
     if (!data || data === 'undefined' || data == '""') {
-      this.partnerFormGrp.get('type')?.setValidators([Validators.required]);
-      this.partnerFormGrp.get('industry')?.setValidators([Validators.required]);
-      this.partnerFormGrp.get('company_size')?.setValidators([Validators.required]);
-      this.partnerFormGrp.get('has_technology')?.setValidators([Validators.required]);
+      if(this.forCareer) {
+        this.partnerFormGrp.get('industry')?.setValue('inquiry');
+        this.partnerFormGrp.get('type')?.disabled;
+      } else {
+        this.partnerFormGrp.get('type')?.setValidators([Validators.required]);
+        this.partnerFormGrp.get('industry')?.setValidators([Validators.required]);
+        this.partnerFormGrp.get('company_size')?.setValidators([Validators.required]);
+        this.partnerFormGrp.get('has_technology')?.setValidators([Validators.required]);
+      }
+      
       this.showFullForm = true;
     } else {
       this.showFullForm = false;
@@ -111,6 +118,8 @@ export class PartnerWithUsComponent implements OnInit {
         type: formValue['type']
       });
     }
+
+    console.log(this.partnerFormGrp);
   }
 
   showTermsAndConditions(){
@@ -119,11 +128,9 @@ export class PartnerWithUsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      // SUBMIT API HERE
-      console.log(result);
-
-      localStorage.setItem('data', JSON.stringify(result))
-
+      if (result) {
+        this.acceptedTerms = true;
+      }
     });
   }
 
@@ -148,6 +155,7 @@ export class PartnerWithUsComponent implements OnInit {
       if(value['status'] === 201) {
         this.util.closeSpinner();
         this.successModal();
+        localStorage.clear();
       }
     }, error => {
       this.util.closeSpinner();

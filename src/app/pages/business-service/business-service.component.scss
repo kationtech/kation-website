@@ -2,7 +2,6 @@
 
 #business {
     background-color: $dark-blue;
-    height: 100vh;
     background-image: url('../../../assets/images/business-image-1.png');
     background-repeat: no-repeat;
     background-position: 107% 90%;
@@ -16,15 +15,22 @@
             width: 90%;
             padding-top: 30px;
 
+            h2 {
+                color: white;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
             p {
                 text-align: left;
                 color: white;
                 font-size: 1rem;
-                line-height: 1.8;
+                line-height: 1.5;
             }
 
             ul {
-                margin: 5rem 0;
+                margin: 20px 0 0 0;
                 padding: 0;
                 display: flex;
                 align-items: center;
@@ -33,7 +39,7 @@
                 li {
                     margin: 0 30px;
                     
-                    a {
+                    a, button {
                         width: 200px;
                         height: 200px;
                         border-radius: 25px;
@@ -44,23 +50,59 @@
 
                         &.cust-engagement {
                             background-color: $orange;
+                            flex-direction: column;
+
+                            img {
+                                max-width: 100px;
+                                margin: auto;
+                                pointer-events: none;
+                            }
     
                             p {
                                 color: white;
                                 font-weight: bold;
+                                pointer-events: none;
                             }
                         }
     
                         &.finance {
                             background-color: $yellow;
+                            flex-direction: column;
+
+                            img {
+                                max-width: 80px;
+                                margin: auto;
+                                pointer-events: none;
+                            }
     
                             p {
                                 color: black;
                                 font-weight: bold;
+                                pointer-events: none;
                             }
                         }
                     }
 
+                    button {
+                        background-color: #dae1e5;
+                        cursor: pointer;
+                        
+                        p {
+                            color: black;
+                            font-weight: bold;
+                        }
+                    }
+
+                }
+            }
+
+            .products-container {
+                margin-top: 5rem;
+
+                ul {
+                    li {
+                        margin-bottom: 3rem;
+                    }
                 }
             }
             

@@ -111,6 +111,12 @@ export class TeamComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    let isCareerSection = this.router.url.split('#')[1];
+    if(isCareerSection) {
+      setTimeout(() => {
+        document.querySelector('#careerSection')?.scrollIntoView({ behavior: 'smooth'});
+      }, 100);
+    }
   }
 
   getCareerDetails(id: string) {

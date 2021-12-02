@@ -1,0 +1,121 @@
+#customer-engagement, #finance {
+  background-color: #18488A;
+  height: 100vh;
+  background-image: url("../../../../assets/images/business-image-2.png");
+  background-repeat: no-repeat;
+  background-position: 105% 90%;
+}
+
+#finance {
+  background-image: url("../../../../assets/images/business-image-3.png");
+}
+
+#finance .content h2 {
+  background-color: #F4BA6D;
+  color: black;
+}
+
+#finance .product-list ul li button {
+  background: #F4BA6D;
+  cursor: pointer;
+}
+
+#finance .product-list ul li button p {
+  color: black;
+}
+
+section {
+  display: block;
+}
+
+section .content {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  padding-top: 30px;
+}
+
+section .content h2 {
+  background-color: #ED672C;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+section .content p {
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+}
+
+section .content .product-list > p {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+section .content .product-list ul {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section .content .product-list ul li {
+  margin: 0 30px 10px 30px;
+}
+
+section .content .product-list ul li button {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 5px 15px;
+  border: 3px solid white;
+  background-color: #ED672C;
+  cursor: pointer;
+}
+
+section .content .product-list ul li button p {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+}
+
+section .content .product-list ul li button.finance {
+  background-color: #F4BA6D;
+}
+
+section .content .product-list ul li button.finance p {
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  #customer-engagement, #finance {
+    height: auto;
+    background-position: 200% 99%;
+    background-size: 80%;
+  }
+}
+/*# sourceMappingURL=business-sub-service.component.css.map */

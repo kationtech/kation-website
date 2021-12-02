@@ -4,14 +4,13 @@
     <div class="display-flex" [ngClass]="{'isNotFullFormContainer' : !showFullForm}">
         <div class="partner-with-us-left">
             <div>
-                <h1>Bringing opportunities and co-creation <br>to unlimit</h1>
-                <p>the world’s digital workforce.</p>
+                <h1>Bringing opportunities <br>and co-creation to unlimit <br>the world’s digital workforce.</h1>
             </div>
         </div>
         <div class="partner-with-us-form">
             <div>
                 <h1 *ngIf="showFullForm">PARTNER WITH US!</h1>
-                <span *ngIf="showFullForm">I am a ...</span>
+                <span *ngIf="showFullForm" class="iam">I am a ...</span>
                 <form [formGroup]="partnerFormGrp">
                     <div *ngIf="showFullForm">
                         <div class="display-flex type-container">
@@ -45,17 +44,17 @@
                                     <mat-option value="humanResources"> Human Resources </mat-option>
                                     <mat-option value="others"> Others </mat-option>
                                     <hr class="select-divider">
-                                    <mat-option value="inquiry"> Inquiry for Careers </mat-option>
+                                    <mat-option value="inquiry"> Inquiry about Careers </mat-option>
                                 </mat-select>
                             </div>
                             <div>
-                                <mat-select class="looking" placeholder="Are you looking for a service or a product?" id="isServiceorProduct" formControlName="service">
+                                <mat-select [disabled]="forCareer" class="looking" placeholder="Are you looking for a service or a product?" id="isServiceorProduct" formControlName="service">
                                     <mat-option value="service"> Service </mat-option>
                                     <mat-option value="product"> Product </mat-option>
                                 </mat-select>
                             </div>
                             <div>
-                                <mat-select class="company" placeholder="How big is your company?" id="companySize" formControlName="company_size">
+                                <mat-select [disabled]="forCareer" class="company" placeholder="How big is your company?" id="companySize" formControlName="company_size">
                                     <mat-option value="less than 10"> Less than 10 </mat-option>
                                     <mat-option value="10-49"> 10-49 </mat-option>
                                     <mat-option value="50-249"> 50-249 </mat-option>
@@ -64,7 +63,7 @@
                             </div>
                             <div class="display-flex with-input">
                                 <div class="select">
-                                    <mat-select class="tech" placeholder="Do you have a current technology?" id="technology" formControlName="has_technology" (selectionChange)="setFormControl($event)">
+                                    <mat-select class="tech" [disabled]="forCareer" placeholder="Do you have a current technology?" id="technology" formControlName="has_technology" (selectionChange)="setFormControl($event)">
                                         <mat-option value="true"> Yes </mat-option>
                                         <mat-option value="false"> No </mat-option>
                                     </mat-select>
@@ -85,10 +84,13 @@
                             <input type="text" placeholder="Full Name" formControlName="name"/>
                         </div>
                         <div class="display-flex">
-                            <div class="email">
+                            <div class="email input-container">
                                 <input type="text" placeholder="Email" formControlName="email"/>
+                                <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.email">
+                                    Please enter a valid email address
+                                </div>
                             </div>
-                            <div class="number">
+                            <div class="number input-container">
                                 <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
                             </div>
                         </div>
@@ -96,8 +98,9 @@
                             <div class="checkbox-wrapper">
                                 <mat-checkbox id="subs">I allow KATION TECHNOLOGIES to reach out to me.</mat-checkbox>
                             </div>
-                            <div class="checkbox-wrapper">
-                                <mat-checkbox id="temrs" formControlName="termsAndConditon" (change)="resetValidator($event)"> I have read and understood the <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>. </mat-checkbox>
+                            <div class="checkbox-wrapper terms-container">
+                                <mat-checkbox id="terms" formControlName="termsAndConditon" (change)="resetValidator($event)" [checked]="acceptedTerms"> I have read and understood the</mat-checkbox>
+                                <span class="termsAndConditon" (click)="showTermsAndConditions()"> Terms and Conditions</span>
                             </div>
                         </div>
                         <div class="display-flex recaptcha-container">
