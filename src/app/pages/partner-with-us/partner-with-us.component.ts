@@ -32,7 +32,7 @@ export class PartnerWithUsComponent implements OnInit {
     company_size: new FormControl(''),
     has_technology: new FormControl(false),
     name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)]),
     contact_number: new FormControl('', Validators.required),
     subscription: new FormControl(false),
     termsAndConditon: new FormControl(null, Validators.required),
@@ -156,6 +156,7 @@ export class PartnerWithUsComponent implements OnInit {
         this.util.closeSpinner();
         this.successModal();
         localStorage.clear();
+        this.partnerFormGrp.reset();
       }
     }, error => {
       this.util.closeSpinner();

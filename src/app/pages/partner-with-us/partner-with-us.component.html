@@ -86,7 +86,7 @@
                         <div class="display-flex">
                             <div class="email input-container">
                                 <input type="text" placeholder="Email" formControlName="email"/>
-                                <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.email">
+                                <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.pattern">
                                     Please enter a valid email address
                                 </div>
                             </div>

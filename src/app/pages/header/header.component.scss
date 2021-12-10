@@ -149,6 +149,7 @@ header {
                 a {
                     &.isActive {
                         border-bottom: 3px solid $orange;
+                        color: $orange;
 
                         &:hover {
                             box-shadow: none;
@@ -507,6 +508,7 @@ header {
                     right: 7px;
                     display: flex;
                     align-items: center;
+                    border: 0;
                   }
                   
                   #active:checked ~ .wrapper ul li a{
