@@ -91,6 +91,7 @@
                         background-color: $blue-grey;
                         margin: auto;
                         border-radius: 25px;
+                        overflow: hidden;
                     }
     
                     .border {
@@ -337,7 +338,7 @@
         }
 
         .plain {
-            padding-top: 11rem;
+            padding-top: 9rem;
 
             .image-border {
                 .content {
@@ -363,6 +364,8 @@
     }
 
     .section-6 {
+        margin-top: -1rem;
+        
         .with-bg {
             padding-top: 2rem;
             padding-bottom: 6rem;
@@ -416,10 +419,6 @@
     margin-top: -3rem;
     position: relative;
     z-index: 2;
-}
-
-.footer-wrapper {
-    margin-top: 4rem;
 }
 
 @media screen and (max-width: 1460px) {

@@ -5,7 +5,7 @@
 // }
 
 #pwu-form {
-    height: 100vh;
+    height: auto;
 
     .isNotFullFormContainer{
         height: 100%;
@@ -335,10 +335,6 @@
 .select-divider {
     width: 95%;
     margin: auto;
-}
-
-.footer-wrapper {
-    margin-top: 4rem;
 }
 
 ::ng-deep .mat-checkbox-frame {

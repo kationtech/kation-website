@@ -130,7 +130,7 @@ export class TeamComponent implements OnInit {
   }
 
   showCareerDetails(data: any){
-    const dialogRef = this.dialog.open(CareersModalComponent, {data});
+    const dialogRef = this.dialog.open(CareersModalComponent, {data, width: '700px'});
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
