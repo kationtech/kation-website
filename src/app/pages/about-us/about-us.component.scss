@@ -557,6 +557,40 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    #aboutUs {
+        .section-4, .section-5 {
+            background-image: none;
+
+            .with-bg {
+                .testimonial-video {
+                    .testimonial {
+                        p {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-4 {
+            height: 1000px;
+
+            .testimonial-video {
+                padding-top: 2rem;
+            }
+        }
+
+        .section-5 {
+            height: 800px;
+
+           .with-bg {
+               padding-top: 0;
+           } 
+        }
+    }
+}
+
 @media screen and (max-width: 1000px) {
     #aboutUs {
         .section-1 {
