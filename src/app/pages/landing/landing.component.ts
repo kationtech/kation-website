@@ -19,12 +19,12 @@ export class LandingComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // const data = localStorage.getItem('data');
-    // if (!data || data === 'undefined' || data == '""') {
-    //   setTimeout(() => {
-    //     this.showModal();
-    //   }, 3000);
-    // }
+    const data = localStorage.getItem('data');
+    if (!data || data === 'undefined' || data == '""') {
+      setTimeout(() => {
+        this.showModal();
+      }, 3000);
+    }
   }
 
   showModal() {

@@ -3,12 +3,15 @@
 // .wrapper {
 //     height: 100vh;
 // }
+.isNotFullFormContainer{
+    height: 100%;
 
-#pwu-form {
-
-    .isNotFullFormContainer{
+    .display-flex {
         height: 100%;
     }
+}
+
+#pwu-form {
 
     .display-flex {
         .partner-with-us-left {
