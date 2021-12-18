@@ -22,6 +22,11 @@ mat-dialog-actions {
     }
 }
 
+mat-dialog-content {
+    overflow: auto !important;
+    padding-bottom: 10px;
+}
+
 ::ng-deep .mat-checkbox-inner-container {
     border: 1px solid gray;
 }

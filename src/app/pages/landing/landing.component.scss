@@ -187,6 +187,12 @@
     }
 }
 
+@media screen and (max-width: 1366px) {
+    #landing {
+        height: 120vh;
+    }
+}
+
 @media (max-width: $large-screen) {
     #landing {
         .content-wrapper {

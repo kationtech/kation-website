@@ -67,7 +67,7 @@ mat-dialog-actions button {
   text-align: left;
   width: 90%;
   margin: 10px auto;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

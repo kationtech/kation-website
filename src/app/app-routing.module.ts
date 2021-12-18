@@ -23,7 +23,10 @@ const routes: Routes = [{
   path: 'businessapp', 
   component: BusinessServiceComponent,
 },{
-  path: 'businessapp/:subservice', 
+  path: 'businessapp/:id', 
+  component: BusinessServiceComponent,
+},{
+  path: 'businessapp/subservice/:type', 
   component: BusinessSubServiceComponent
 },{
   path: 'humaneapp', 

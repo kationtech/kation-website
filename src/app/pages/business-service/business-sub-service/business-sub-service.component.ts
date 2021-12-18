@@ -79,7 +79,7 @@ export class BusinessSubServiceComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.page = this.route.snapshot.params['subservice'];
+    this.page = this.route.snapshot.params['type'];
     this.data = this.page === 'customer-engagement' ? this.subService[0] : this.subService[1];
   }
 

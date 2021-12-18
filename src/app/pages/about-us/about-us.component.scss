@@ -13,9 +13,10 @@
                     background-color: $dark-blue;
                     padding: 20px 0;
                     text-align: center;
-                    color: rgb(170, 165, 165);
+                    color: white;
                     font-weight: bold;
                     letter-spacing: 2px;
+                    font-size: 1.3rem;
                 }
 
                 .see-more-wrapper {
@@ -175,12 +176,17 @@
 
                 .image {
                     width: 600px;
-                    height: 500px;
+                    height: 600px;
+
+                    img {
+                        height: 100%;
+                        width: 600px;
+                    }
                 }
 
                 .border {
                     width: 600px;
-                    height: 500px;
+                    height: 600px;
                 }
 
                 .award-caption {
@@ -199,6 +205,7 @@
         height: 920px;
         
         .with-bg {
+            padding-top: 8rem;
 
             .testimonial-video {
                 position: absolute;
