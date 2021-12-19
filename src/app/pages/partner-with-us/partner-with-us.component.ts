@@ -56,7 +56,7 @@ export class PartnerWithUsComponent implements OnInit {
     const data = localStorage.getItem('data');
     if (!data || data === 'undefined' || data == '""') {
       if(this.forCareer) {
-        this.partnerFormGrp.get('industry')?.setValue('inquiry');
+        this.partnerFormGrp.get('industry')?.setValue('Inquiry about Careers');
         this.partnerFormGrp.get('type')?.disabled;
       } else {
         this.partnerFormGrp.get('type')?.setValidators([Validators.required]);

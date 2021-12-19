@@ -39,8 +39,8 @@
 
             .design-image {
                 img {
-                    width: 200px;
-                    height: 200px;
+                    width: 185px;
+                    height: 160px;
                 }
             }
 
@@ -120,7 +120,7 @@
                 img {
                     margin-top: -50px;
                     margin-left: 10rem;
-                    width: 150px;
+                    width: 135px;
                 }
             }
         }
@@ -180,6 +180,17 @@
 
                 span {
                     font-weight: normal;
+                }
+            }
+        }
+    }
+
+    .section-2 {
+        .with-bg {
+            .design-image {
+                img {
+                    width: 170px;
+                    height: 145px;
                 }
             }
         }
@@ -363,6 +374,18 @@
         }
     }
 
+    .section-5 {
+        .with-bg {
+            .sub-content {
+                .design-image {
+                    img {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+
     .section-6 {
         margin-top: -1rem;
         
@@ -378,7 +401,7 @@
                     img {
                         margin-left: 13rem;
                         margin-top: -6rem;
-                        height: 180px;
+                        height: 155px;
                     }
                 }
             }
@@ -402,7 +425,7 @@
 
                 .design-image {
                     img {
-                        width: 180px;
+                        width: 160px;
                         margin-left: 15rem;
                     }
                 }
