@@ -324,8 +324,9 @@
 
         .section-2 {
             .services-list {
-                li {
+                & > li {
                     width: 90%;
+                    height: 550px;
 
                     .shadow {
                         font-size: 5rem;
@@ -335,6 +336,13 @@
                     &.hybrid {
                         .shadow {
                             font-size: 2.5rem;
+                        }
+
+                    }
+
+                    .business-list {
+                        li {
+                            width: 100%;
                         }
                     }
                 }

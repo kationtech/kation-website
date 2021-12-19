@@ -950,6 +950,15 @@
         }
 
         .section-2 {
+            .with-bg {
+                .design-image {
+                    img {
+                        width: 100px;
+                        height: 90px;
+                    }   
+                }
+            }
+
             .plain {
                 .design-image {
                     margin: -4rem auto 0 auto;
@@ -1037,7 +1046,7 @@
         }
 
         .section-4 {
-            height: 700px;
+            height: 950px;
         }
     }
 }
