@@ -2,41 +2,35 @@
 
 #hybrid {
     background-color: $green-blue;
-    background-image: url('../../../assets/images/humane-image-6.png');
-    background-position: center;
-    background-size: contain;
-    height: 100vh;
 
-    .content {
-        width: 90%;
-        margin: auto;
+    .section {
+        padding: 4rem 0 0 0;
+        display: block;
 
-        h2 {
-            width: 120px;
-            margin: 2rem auto 1rem auto;
+        .section-title {
+            width: 30%;
         }
 
-        p {
-            color: white;
-            line-height: 1.8;
-            font-size: 1rem;
-            text-align: center;
-        }
+        .content {
+            padding: 3rem;
+            height: 400px;
 
-        .image-container {
-            width: 40%;
-            margin: auto;
-        }
-
-        .btn-container {
-            margin-top: 20px;
-            text-align: center;
-
-            button {
-                background-color: $teal;
+            p {
+                font-size: 1.4rem;
                 color: white;
-                border: 2px solid white;
             }
         }
     }
+}
+
+.design-image-1 {
+    background-image: url('../../../assets/images/hybrid-image-2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    margin-top: -9rem;
 }

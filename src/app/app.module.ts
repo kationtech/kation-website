@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { CareersComponent } from './pages/careers/careers.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HumaneSubServiceComponent,
     HybridServiceComponent,
     TermsAndConditionsModalComponent,
-    PromptModalComponent
+    PromptModalComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,

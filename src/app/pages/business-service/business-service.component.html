@@ -1,35 +1,115 @@
 <app-header></app-header>
 <div id="business" class="view">
-    <div class="back"><a href="" [routerLink]="['/services']">Back</a></div>
     <section class="service">
-        <div class="section-title">Business Apps</div>
+        <div class="section-title">Business App Consulting</div>
         <div class="content">
             <p>Our business application experts deliver advisory and system design solutions in the areas of process transformation, operational performance, customer engagement, and workforce productivity. Choose from the selected below.</p>
-            <div class="services-container">
-                <h2>Services</h2>
-                <ul>
-                    <li *ngFor="let service of services">
-                        <button (click)="showDetails(service)"><p>{{service.title}}</p></button>
-                    </li>
-                </ul>
-            </div>
-            <div class="products-container">
-                <h2>Products</h2>
-                <ul>
-                    <li>
-                        <a href="" [routerLink]="['/businessapp/subservice', 'customer-engagement']" class="cust-engagement">
-                            <img class="icon" src="assets/images/icons/cust-engagement.png" loading="lazy">
-                            <p>D365 Customer Engagement</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" [routerLink]="['/businessapp/subservice', 'finance']" class="finance">
-                            <img class="icon" src="assets/images/icons/finance.png" loading="lazy">
-                            <p>D365 Finance and Supply Chain</p>
-                        </a>
-                    </li>
-                </ul>
+            <div class="row margin-top-5rem">
+                <div class="col-lg-6 col-md-6 bus-app-consulting-item">
+                    <div class="border">
+                        <div class="content-icon w-90-px"><img src="assets/images/icons/cust-engagement.png" /></div>
+                        <h1>D365 Customer Engagement</h1>
+                        <p>Dynamics 365’s Customer engagement applications are Microsoft’s first party applications built on the Microsoft Power Platform. Your organization can leverage these applications individually or together to create powerful end-to-end relationships with your customers. While each application provides a specific solution, they share common elements that are the same regardless of the application you are using. This module focuses on the common elements that are used across all the Dynamics 365 customer engagement applications.
+                        </p>
+                        <ul>
+                            <li>
+                                <p>Microsoft Dynamics 365 Sales: Go beyond sales force automation to better understand customer needs, engage more effectively, and win more deals.</p>
+                            </li>
+                            <li>
+                                <p>Microsoft Dynamics 365 Customer Service: Built-in intelligence delivers faster, more personalized service and adds value to every interaction.</p>
+                            </li>
+                            <li>
+                                <p>Microsoft Dynamics 365 Field Service: Built-in intelligence helps you resolve service issues before they occur, reduce operational costs, and deliver positive on-site experiences.</p>
+                            </li>
+                            <li>
+                                <p>Microsoft Dynamics 365 Project Operations: Build trusted customer relationships and deliver outstanding project experiences by delivering profitable projects on time and within budget, while increasing employee productivity.</p>
+                            </li>
+                            <li>
+                                <p>Microsoft Dynamics 365 for Marketing: Find and nurture more sales-ready leads by moving beyond basic email marketing. Connect sales and marketing, automate processes, and make smarter decisions to maximize your marketing Return on Investment (ROI).</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 bus-app-consulting-item">
+                    <div class="border">
+                        <div class="content-icon"><img src="assets/images/icons/finance.png" /></div>
+                        <h1>D365 Finance and Supply Chain</h1>
+                        <p>Microsoft Dynamics 365 Finance and Supply Chain Management is a cloud Enterprise Resource Planning (ERP) service for enterprises, built on and for Microsoft Azure. It can provide your organization with ERP functionality that supports your unique requirements and help you adjust to constantly changing business environments, without the hassle of managing infrastructure. Finance and Supply Chain Management brings together a set of ERP, business intelligence, infrastructure, compute, and database services in a single offering that enables organizations to run industry-specific and operational business processes that are extendable with specific solutions.
+                        </p>
+                        <ul>
+                            <li>
+                                <p>ERP for Finance, Accounting and Treasury
+                                    Manage the finances of your business with ready-to-use financial dashboards, personalized analytical workspaces and many more. Increase corporate governance and insights while ensuring operational excellence with the ERP for Finance, Accounting and Treasury.</p>
+                            </li>
+                            <li>
+                                <p>ERP for Manufacturing, Procurement, Supply Chain, Sales Operations, Logistics, Workflow Management
+                                    Supply chain management has never been this easy. Increase visibility while reducing cycle time and maintaining operational excellence with the ERP for Manufacturing, Procurement, Supply Chain, Sales Operations, Logistics, Workflow Management.</p>
+                            </li>
+                            <li>
+                                <p>Microsoft Dynamics Customer Engagement
+                                    Foster long-lasting relationships with your customers through the Dynamics 365 Customer Engagement. Drive your business higher while providing outstanding customer service.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </div>
+<div class="image-divider-1"></div>
+<div id="humane" class="view">
+    <section class="service">
+        <div class="section-title">Humane Apps</div>
+        <div class="content">
+            <p>Manage your business with real-world applications that will enable and support your organization’s frontliners and other critical players in your value chain. </p>
+
+            <div class="row margin-top-5rem py-3rem">
+                <div class="col-lg-5 col-md-5">
+                    <div class="humane-item">
+                        <div class="content-icon"><img src="assets/images/icons/sales.png" /></div>
+                        <h1>SALES COACH APP</h1>
+                        <p>Manage your marketing campaigns more efficiently and build stronger relationships between your sales team and your customers with the Sales Coach App. This solution is designed specifically for field sales, helping you manage your sales force through call management, agent portal, expense tracking, product monitoring, sales coverage report, attendance and leave management. We can also help you enhance the design and interface of this app to best suit your needs. Nurture your sales from lead to order, monitor marketing lists and campaigns, and  get real-time reports anytime, anywhere. </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="humane-img-1"><img src="assets/images/humane-image-3.png" /></div>
+                </div>
+            </div>
+
+            <div class="row margin-top-8rem py-3rem">
+                <div class="col-lg-5 col-md-5">
+                    <div class="humane-item h-2">
+                        <div class="content-icon"><img src="assets/images/icons/kiosk.png" /></div>
+                        <h1>KIOSKART APP</h1>
+                        <p>Manage your business more efficiently with KIOSKart,  the enterprise-grade POS and store management solution for your business. KIOSKart Terminal App can help you track your sales and inventory online or offline, handle actual product orders, deliveries, returns and damaged goods, enable staff attendance and timekeeping, manage cash, deposits, and reimbursement, and receive employee and user feedback. </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="humane-img-2"><img src="assets/images/humane-image-4.png" /></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hybrid service">
+        <div class="section-title">Hybrid Apps</div>
+        <div class="content">
+            <p>Power your digital transformation and get robust support and connectivity for the complex, multi-level, multi-channel, and multi-platform ecosystem of today’s marketplaces and workplaces.</p>
+
+            <div class="row margin-top-5rem py-3rem">
+                <div class="col-lg-5 col-md-5">
+                    <div class="hybrid-item">
+                        <div class="content-icon"><img src="assets/images/humane-image-7.png" /></div>
+                        <h1>MOO CENTRAL</h1>
+                        <p>Power up your business with Moo Central App. Bring traffic back to your stores through meaningful, individualized marketing on email and chat. Get to know your customers better through smart analytics from all your online customer transactions. This platform can help you interact directly with your customers to increase sales and brand loyalty for online experience up to the return to the new in-store experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="humane-img-1"><img src="assets/images/humane-image-8.png" /></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="image-divider-2"></div>
+<app-partner-with-us></app-partner-with-us>

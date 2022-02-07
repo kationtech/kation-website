@@ -7,8 +7,8 @@
             <label for="active" class="close"></label>
             <div class="wrapper">
                 <ul>
+                    <li><a href="" [routerLink]="['/landing']">Home</a></li>
                     <li><a href="" [routerLink]="['/aboutus']">About Us</a></li>
-                    <li><a href="" [routerLink]="['/team']">Our Team</a></li>
                     <li><a href="" [routerLink]="['/services']">Services</a></li>
                     <li><a href="" [routerLink]="['/partnerWithUs']">Partner with us</a></li>
                 </ul>
@@ -16,19 +16,20 @@
         </div>
         <div id="main-menu">
             <ul class="menu display-flex">
+                <li><a href="" [routerLink]="['/landing']" [ngClass]="{'isActive': currentPage === 'ladning'}">Home</a></li>
                 <li><a href="" [routerLink]="['/aboutus']" [ngClass]="{'isActive': currentPage === 'aboutus'}">About Us</a></li>
-                <li><a href="" [routerLink]="['/team']" [ngClass]="{'isActive': currentPage === 'team'}">Our Team</a></li>
                 <li class="services">
                     <a href="" [routerLink]="['/services']" [ngClass]="{'isActive': currentPage === 'services' || 
                     currentPage === 'businessapp' || 
-                    currentPage === 'humaneapp' ||
-                    currentPage === 'hybridapp'}">Services</a>
+                    currentPage === 'partnership' ||
+                    currentPage === 'design'}">Services</a>
                     <ul class="sub-menu">
-                        <li><a href="" [routerLink]="['/businessapp']" [ngClass]="{'isActiveSub': currentPage === 'businessapp'}">Business Apps</a></li>
-                        <li><a href="" [routerLink]="['/humaneapp']" [ngClass]="{'isActiveSub': currentPage === 'humaneapp'}">Humane Apps</a></li>
-                        <li><a href="" [routerLink]="['/hybridapp']" [ngClass]="{'isActiveSub': currentPage === 'hybridapp'}">Hybrid Apps</a></li>
+                        <li><a href="" [routerLink]="['/businessapp']" [ngClass]="{'isActiveSub': currentPage === 'businessapp'}">Business App Consulting</a></li>
+                        <li><a href="" [routerLink]="['/partnership']" [ngClass]="{'isActiveSub': currentPage === 'humaneapp'}">Co-Strategic Partnerships</a></li>
+                        <li><a href="" [routerLink]="['/design']" [ngClass]="{'isActiveSub': currentPage === 'hybridapp'}">Design Thinking Solutioning</a></li>
                     </ul>
                 </li>
+                <li><a href="" [routerLink]="['/careers']" [ngClass]="{'isActive': currentPage === 'careers'}">Careers</a></li>
                 <li class="partnerButton"><a href="" [routerLink]="['/partnerWithUs']" class="btn btn-orange btn-slide" [ngClass]="{'isActive': currentPage === 'partnerWithUs'}">Partner with us</a></li>
             </ul>
         </div>

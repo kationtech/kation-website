@@ -118,7 +118,8 @@ header {
                 border: 1px solid $dark-blue;
                 top: 70px;
                 padding: 10px 15px 0 15px;
-                width: 130px;
+                width: 200px;
+                z-index: 2;
                 text-align: left;
 
                 li {
@@ -127,7 +128,7 @@ header {
                     margin-bottom: 20px;
 
                     a {
-                        font-size: .90rem;
+                        font-size: 1.2rem;
                         text-transform: none;
                     }
                     
@@ -191,12 +192,6 @@ header {
     }
 }
 
-@media (max-width: $large-screen) {
-    header {
-        max-width: 1200px;
-    }
-}
-
 @media screen and (max-width: 1085px) {
     header {
         padding-left: 10px;
@@ -213,150 +208,7 @@ header {
                 box-sizing: border-box;
                 max-width: 90%;
             }
-
-            #menu-mobile {
-                display: flex;
-                align-items: center;
-
-                .wrapper{
-                    position: fixed;
-                    top: 0;
-                    right: -100%;
-                    height: 100%;
-                    width: 100%;
-                    background: $dark-blue;
-                    transition: all 0.6s ease-in-out;
-
-                    ul {
-                        height: 100vh;
-                        list-style: none;
-                        text-align: left;
-                        width: 80%;
-                        margin: 80px auto 0 auto;
-                        padding: 0;
-
-                        li {
-                            height: 10%;
-                            margin: 15px 0;
-
-                            a {
-                                text-decoration: none;
-                                font-size: 30px;
-                                font-weight: 500;
-                                padding: 0;
-                                color: #fff;
-                                border-radius: 50px;
-                                position: absolute;
-                                line-height: 50px;
-                                margin: 0;
-                                opacity: 0;
-                                transition: all 0.3s ease;
-
-                                &:after {
-                                    position: absolute;
-                                    content: "";
-                                    background: #fff;
-                                    width: 100%;
-                                    height: 100%;
-                                    left: 0;
-                                    top: 0;
-                                    border-radius: 50px;
-                                    transform: scaleY(0);
-                                    z-index: -1;
-                                    transition: transform 0.3s ease;
-                                }
-                            }
-                        }
-                    }
-                  }
-                  
-                  #active:checked ~ .wrapper{
-                    right:0;
-                  }
-
-                  .menu-btn{
-                    position: absolute;
-                    z-index: 2;
-                    right: 0;
-                    top: 50%;
-                    width: 50px;
-                    text-align: center;
-                    line-height: 50px;
-                    border-radius: 50%;
-                    font-size: 20px;
-                    cursor: pointer;
-                    transition: all 0.3s ease-in-out;
-                    pointer-events: none;
-
-                    span, &:before, &:after {
-                        content: "";
-                        position: absolute;
-                        top: calc(50% - 1px);
-                        left: 30%;
-                        width: 40%;
-                        border-bottom: 2px solid $dark-blue;
-                        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-                        pointer-events: none;
-                    }
-
-                    &:before {
-                        transform: translateY(-8px);
-                        pointer-events: none;
-                    }
-
-                    &:after {
-                        transform: translateY(8px);
-                        pointer-events: none;
-                    }
-                  }
-                  
-                  .close {
-                      z-index: 1;
-                      width: 100%;
-                      height: 100%;
-                      pointer-events: none;
-                      transition: background .6s;
-                  }
-                  
-                  #active:checked + .menu-btn span {
-                      transform: scaleX(0);
-                  }
-
-                  #active:checked + .menu-btn:before {
-                      transform: rotate(45deg);
-                      border-color: #fff;
-                  }
-
-                  #active:checked + .menu-btn:after {
-                      transform: rotate(-45deg);
-                      border-color: #fff;
-                  }
-
-                  input[type="checkbox"]{
-                    appearance: none;
-                    width: 30px;
-                    height: 30px;
-                    z-index: 3;
-                    cursor: pointer;
-                  }
-                  
-                  #active:checked ~ .wrapper ul li a{
-                    opacity: 1;
-                  }
-
-                  #active:checked ~ .wrapper ul li a{
-                    transform: none;
-                    transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
-                    transition-delay: .2s;
-                  }
-            }
-
-        }
-
-        #main-menu {
-            display: none;
-        }
-          
+        } 
     }
 }
 

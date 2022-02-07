@@ -1,126 +1,72 @@
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-triangle-path" [fullScreen] = "true"></ngx-spinner>
 <app-header *ngIf="isPage"></app-header>
-<div class="wrapper fullPage" [ngClass]="{'view' : isPage, onfooter: !isPage, 'isNotFullFormContainer' : !showFullForm}" id="pwu-form">
-    <div class="display-flex">
-        <div class="partner-with-us-left">
+<div class="wrapper" [ngClass]="{'view' : isPage, onfooter: !isPage, 'isNotFullFormContainer' : !showFullForm}" id="pwu-form">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 left-content">
             <div>
                 <h1>Bringing opportunities <br>and co-creation to unlimit <br>the world’s digital workforce.</h1>
             </div>
         </div>
-        <div class="partner-with-us-form">
+        <div class="col-lg-6 col-md-6 right-content">
             <div>
-                <h1 *ngIf="showFullForm">PARTNER WITH US!</h1>
-                <span *ngIf="showFullForm" class="iam">I am a ...</span>
                 <form [formGroup]="partnerFormGrp">
-                    <div *ngIf="showFullForm">
-                        <div class="display-flex type-container">
-                            <div class="radio-wrapper">
-                                <input type="radio" id="customer" name="type" value="customer" formControlName="type">
-                                <label for="customer" class="customer">Customer</label>
-                            </div>
-                            <div class="radio-wrapper">
-                                <input type="radio" id="supplier" name="type" value ="supplier" formControlName="type">
-                                <label for="supplier" class="supplier">Supplier</label>
-                            </div>
-                            <div class="radio-wrapper">
-                                <input type="radio" id="reseller" name="type" value="reseller" formControlName="type">
-                                <label for="reseller" class="reseller">Reseller</label>
+                    <h1>PARTNER WITH US!</h1>
+                    <div class="fullname">
+                        <input type="text" placeholder="Full Name" formControlName="name"/>
+                    </div>
+                    <div class="display-flex">
+                        <div class="email input-container">
+                            <input type="text" placeholder="Email" formControlName="email"/>
+                            <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.pattern">
+                                Please enter a valid email address
                             </div>
                         </div>
-                        <div class="select-list">
-                            <div>
-                                <mat-select class="business" placeholder="What business industry are you in?" id="industry" formControlName="industry">
-                                    <mat-option value="Finance"> Finance </mat-option>
-                                    <mat-option value="Manufacturing"> Manufacturing </mat-option>
-                                    <mat-option value="Retail"> Retail </mat-option>
-                                    <mat-option value="Investment"> Investment </mat-option>
-                                    <mat-option value="Sales"> Sales </mat-option>
-                                    <mat-option value="Marketing"> Marketing </mat-option>
-                                    <mat-option value="Agriculture"> Agriculture </mat-option>
-                                    <mat-option value="Food"> Food </mat-option>
-                                    <mat-option value="Advertising"> Advertising </mat-option>
-                                    <mat-option value="E-Commerce"> E-Commerce </mat-option>
-                                    <mat-option value="Real Estate"> Real Estate </mat-option>
-                                    <mat-option value="Human Resources"> Human Resources </mat-option>
-                                    <mat-option value="Others"> Others </mat-option>
-                                    <hr class="select-divider">
-                                    <mat-option value="Inquiry about Careers"> Inquiry about Careers </mat-option>
-                                </mat-select>
-                            </div>
-                            <div>
-                                <mat-select [disabled]="forCareer" class="looking" placeholder="Are you looking for a service or a product?" id="isServiceorProduct" formControlName="service">
-                                    <mat-option value="service"> Service </mat-option>
-                                    <mat-option value="product"> Product </mat-option>
-                                </mat-select>
-                            </div>
-                            <div>
-                                <mat-select [disabled]="forCareer" class="company" placeholder="How big is your company?" id="companySize" formControlName="company_size">
-                                    <mat-option value="less than 10"> Less than 10 </mat-option>
-                                    <mat-option value="10-49"> 10-49 </mat-option>
-                                    <mat-option value="50-249"> 50-249 </mat-option>
-                                    <mat-option value="250 and more"> 250 and more </mat-option>
-                                </mat-select>
-                            </div>
-                            <div class="display-flex with-input">
-                                <div class="select">
-                                    <mat-select class="tech" [disabled]="forCareer" placeholder="Do you have a current technology?" id="technology" formControlName="has_technology" (selectionChange)="setFormControl($event)">
-                                        <mat-option value="true"> Yes </mat-option>
-                                        <mat-option value="false"> No </mat-option>
-                                    </mat-select>
-                                </div>
-                                <div class="input">
-                                    <div *ngIf="!partnerFormGrp.value.has_technology">&nbsp;</div>
-                                    <div class="display-flex" *ngIf="partnerFormGrp.value.has_technology == 'true'">
-                                        <label>If YES, please specify</label>
-                                        <input type="text" formControlName="current_technology">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="number input-container">
+                            <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
                         </div>
                     </div>
-                    <div class="select-list" [ngClass]="{'isNotFullForm' : !showFullForm, 'onPage': isPage}">
-                        <h1 *ngIf="!showFullForm" style="padding-top: 4rem;">PARTNER WITH US!</h1>
-                        <div class="fullname">
-                            <input type="text" placeholder="Full Name" formControlName="name"/>
+                    <div class="subs-and-terms-wrapper">
+                        <div class="checkbox-wrapper">
+                            <mat-checkbox id="subs">I allow KATION TECHNOLOGIES to reach out to me.</mat-checkbox>
                         </div>
-                        <div class="display-flex">
-                            <div class="email input-container">
-                                <input type="text" placeholder="Email" formControlName="email"/>
-                                <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.pattern">
-                                    Please enter a valid email address
-                                </div>
-                            </div>
-                            <div class="number input-container">
-                                <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
-                            </div>
+                        <div class="checkbox-wrapper terms-container">
+                            <mat-checkbox id="terms" formControlName="termsAndConditon" (change)="resetValidator($event)" [checked]="acceptedTerms"> I have read and understood the</mat-checkbox>
+                            <span class="termsAndConditon" (click)="showTermsAndConditions()"> Terms and Conditions</span>
                         </div>
-                        <div class="subs-and-terms-wrapper">
-                            <div class="checkbox-wrapper">
-                                <mat-checkbox id="subs">I allow KATION TECHNOLOGIES to reach out to me.</mat-checkbox>
-                            </div>
-                            <div class="checkbox-wrapper terms-container">
-                                <mat-checkbox id="terms" formControlName="termsAndConditon" (change)="resetValidator($event)" [checked]="acceptedTerms"> I have read and understood the</mat-checkbox>
-                                <span class="termsAndConditon" (click)="showTermsAndConditions()"> Terms and Conditions</span>
-                            </div>
+                    </div>
+                    <div class="display-flex recaptcha-container">
+                        <div class="recaptcha">
+                            <re-captcha 
+                                class="recaptcha-box"
+                                (resolved)="resolved($event)" 
+                                siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u">
+                            </re-captcha>
                         </div>
-                        <div class="display-flex recaptcha-container">
-                            <div class="recaptcha">
-                                <re-captcha 
-                                    class="recaptcha-box"
-                                    (resolved)="resolved($event)" 
-                                    siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u">
-                                </re-captcha>
-                            </div>
-                            <div class="submit-btn">
-                                <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid" (click)="submitForm()">Submit</button>
-                            </div>
+                        <div class="submit-btn">
+                            <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid" (click)="submitForm()">Submit</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <div class="footer-wrapper">
-        <app-footer></app-footer>
-    </div>
 </div>
+<app-footer></app-footer>
+<!-- <div class="wrapper fullPage" [ngClass]="{'view' : isPage, onfooter: !isPage, 'isNotFullFormContainer' : !showFullForm}" id="pwu-form">
+    <div class="display-flex">
+        
+        <div class="">
+            <div>
+                
+                
+                    <div class="select-list" [ngClass]="{'isNotFullForm' : !showFullForm, 'onPage': isPage}">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        
+    </div>
+</div> -->
