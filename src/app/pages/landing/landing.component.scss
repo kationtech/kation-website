@@ -342,6 +342,12 @@
                 .wwd-details {
                     .wwd-item {
                         height: 550px;
+
+                        .item-desc {
+                            &.res-margin {
+                                margin-top: 11rem;
+                            }
+                        }
                     }
                 }
             }
@@ -379,11 +385,15 @@
             background-image: none;
         }
 
+        .section-title {
+            width: 90%;
+        }
+
         .landing-details {
             #what-we-do {
                 .wwd-details {
                     .wwd-item {
-                        height: 480px;
+                        height: 580px;
                         margin-bottom: 10px;
                     }
                 }
@@ -406,6 +416,10 @@
     
         #carousel-wrapper {
             display: none;
+        }
+
+        iframe {
+            height: auto;
         }
     }
 

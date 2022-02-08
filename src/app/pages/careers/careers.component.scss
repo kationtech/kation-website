@@ -136,3 +136,33 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    #careers {
+        .section-title {
+            width: 90%;
+        }
+
+        #exp-container {
+            margin-top: 3rem;
+
+            .left-content {
+                .team-details {
+                    top: 2rem;
+
+                    &::after {
+                        right: 9rem;
+                    }
+                }
+
+                .exp-image-2 {
+                    margin: 15rem 0 0 20rem;
+                }
+
+                .exp-image-3 {
+                    margin-top: 18rem;
+                }
+            }
+        }
+    }
+}

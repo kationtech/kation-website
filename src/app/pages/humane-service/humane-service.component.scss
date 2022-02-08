@@ -34,6 +34,26 @@
     margin-top: -8rem;
 }
 
+@media (max-width: 1366px) {
+    #humane {
+        .section {
+            .section-title {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #humane {
+        .section {
+            .section-title {
+                width: 50%;
+            }
+        }
+    }
+}
+
 @media (max-width: $mobile) {
     #humane {
         height: auto;

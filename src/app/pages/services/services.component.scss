@@ -52,15 +52,9 @@
         display: block;
 
         .services-list {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            justify-content:space-between;
-
             & > li {
                 border-radius: 25px;
                 height: 500px;
-                width:calc(33.3% - 20px);
                 background-color: $blue-grey;
                 padding: 20px 30px;
                 position: relative;
@@ -168,39 +162,15 @@
         .section-2 {
             .services-list {
                 & > li {
-                    height: 600px;
-                }
-            }
-        }
-    }
-}
+                    height: 530px;
 
-@media screen and (max-width: 1280px) {
-    #services {
-        .section-2 {
-            .services-list {
-                li {
-                    .shadow {
-                        font-size: 6rem;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: $large-screen) {
-    #services {
-        .section-2 {
-            .services-list {
-                li {
-                    .shadow {
-                        font-size: 6rem;
+                    .item-desc {
+                        margin-top: 10rem;
                     }
 
-                    &.hybrid {
-                        .shadow {
-                            font-size: 3rem;
+                    &.humane {
+                        .item-desc {
+                            margin-top: 15rem;
                         }
                     }
                 }
@@ -209,216 +179,22 @@
     }
 }
 
-@media (max-width: $small-screen) {
+@media (max-width: 400px) {
     #services {
         .section-1 {
-            &:before {
-                left: 1rem;
-            }
-
-            &:after {
-                right: 2rem;
-            }
-        }
-
-        .section-2 {
-            .services-list {
-                li {
-                    .shadow {
-                        font-size: 4.5rem;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            font-size: 2.3rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: $tablet) {
-    #services {
-        .section-1 {
-            height: auto;
-            padding-bottom: 3rem;
-
             & > div {
-                padding: 10px;
+                width: 100%;
             }
 
-            &:before, &:after {
+            &::before, &::after {
                 display: none;
             }
         }
 
         .section-2 {
             .services-list {
-                flex-direction: column;
-
-                li {
-                    width: 80%;
-                    margin: 10px auto;
-
-                    .shadow {
-                        font-size: 9.5rem;
-                        text-align: center;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            font-size: 4.8rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .partner-with-us-wrapper {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    #services {
-        .section-2 {
-            .services-list {
-                li {
-                    .shadow {
-                        font-size: 7rem;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            font-size: 3.5rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .partner-with-us-wrapper {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    #services {
-        .section-2 {
-            .services-list {
-                li {
-                    .shadow {
-                        font-size: 6rem;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            font-size: 3.2rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: $mobile) {
-    #services {
-        .section-1 {
-            padding-bottom: 0;
-            
-            & > div {
-                padding: 10px;
-
-                h1, p {
-                    text-align: center;
-                }
-            }
-        }
-
-        .section-2 {
-            .services-list {
                 & > li {
-                    width: 90%;
-                    height: 550px;
-
-                    .shadow {
-                        font-size: 5rem;
-                        text-align: center;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            font-size: 2.5rem;
-                        }
-
-                    }
-
-                    .business-list {
-                        li {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .partner-with-us-wrapper {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    #services {
-        .section-2 {
-            .services-list {
-                li {
-                    .shadow {
-                        font-size: 4.5rem;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            font-size: 2.3rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .partner-with-us-wrapper {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 280px) {
-    #services {
-        .section-2 {
-            .services-list {
-                li {
-                    width: 100%;
-
-                    .shadow {
-                        font-size: 3rem;
-                        top: 28%;
-                    }
-
-                    &.hybrid {
-                        .shadow {
-                            top: 30%;
-                            font-size: 1.6rem;
-                        }
-                    }                    
+                    margin-bottom: 20px;
                 }
             }
         }

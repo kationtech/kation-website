@@ -84,7 +84,7 @@
                     input {
                         width: 100%;
                         padding: 10px;
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                         font-size: 1.4rem;
                     }
                 }
@@ -443,210 +443,22 @@
     background-color: #e1e1e1 !important;
 }
 
-// @media screen and (max-width: 1300px) {
-//     #pwu-form ,#pwu-form.fullpage {
-//         .display-flex {
-//             .partner-with-us-left {
-//                 div {
-//                     background-size: 80px 70px;
+@media (max-width: 400px) {
+    #pwu-form {
+        .left-content {
+            &::after {
+                display: none;
+            }
+        }
 
-//                     h1 {
-//                         padding-top: 75px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media (max-width: $large-screen) {
-//     #pwu-form {
-//         .display-flex {
-//             .partner-with-us-left {
-//                 div {
-//                     width: 50%;
-//                     padding-bottom: 0;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 1078px) {
-//     #pwu-form ,#pwu-form.fullpage {
-//         .display-flex {
-//             .partner-with-us-left {
-//                 div {
-//                     width: 60%;
-
-//                     h1 {
-//                         background-image: 80px 70px;
-//                         padding-top: 70px;
-//                     }
-//                 }
-//             }
-
-//             .partner-with-us-form {
-//                 .select-list {
-//                     div.recaptcha-container {
-//                         flex-direction: column;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media (max-width: $small-screen) {
-//     #pwu-form {
-//         .display-flex {
-//             .partner-with-us-left {
-//                 div {
-//                     width: 60%;
-//                     padding-bottom: 30px;
-
-//                     h1 {
-//                         font-size: 1.5rem;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-//     #pwu-form ,#pwu-form.fullpage {
-//         .display-flex {
-//             .partner-with-us-form {
-//                 .select-list {
-//                     div.recaptcha-container {
-//                         flex-direction: column;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 845px) {
-//     #pwu-form ,#pwu-form.fullpage {
-//         .display-flex {
-//             .partner-with-us-left {
-//                 &::after {
-//                     display: none;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media (max-width: $tablet) {
-//     #pwu-form, #pwu-form.fullPage {
-//         .display-flex {
-//             .partner-with-us-left {
-//                 display: none;
-//             }
-
-//             .partner-with-us-form {
-//                 padding: 20px;
-
-//                 form {
-//                     & > div {
-//                         display: block;
-//                         margin: 0 auto;
-//                     }
-
-//                     .email {
-//                         padding: 0;
-//                     }
-
-//                     .submit-btn {
-//                         padding: 0;
-//                         margin: 2rem 0;
-//                     }
-//                 }
-
-//                 .isNotFullForm {
-//                     position: relative;
-//                     left: 0;
-//                     right: 0;
-//                 }
-//             }
-//         }
-//     }
-
-//     #pwu-form.fullPage {
-//         height: auto;
-        
-//         .display-flex {
-//             & > div {
-//                 width: 100%;
-//             }
-
-//             .partner-with-us-form {
-//                 padding: 20px;
-
-//                 form {
-//                     .select-list {
-//                         margin-top: 20px;
-
-//                         .with-input {
-//                             display: block;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media (max-width: $mobile) {
-//     #pwu-form, #pwu-form.fullPage {
-//         .display-flex {
-//             flex-direction: column;
-
-//             .partner-with-us-form {
-//                 .select-list {
-//                     div.recaptcha-container {
-//                         flex-direction: column;
-    
-//                         .recaptcha {
-//                             transform: scale(0.77) !important;
-//                             -webkit-transform: scale(0.77) !important;
-//                             transform-origin: 0 0 !important;
-//                             -webkit-transform-origin: 0 0 !important;
-//                         }
-//                     }
-//                 }
-
-//                 form {
-//                     .type-container {
-//                         .radio-wrapper {
-//                             margin-bottom: 10px;
-//                         }
-//                     }
-//                 }
-
-//                 .input-container {
-    
-//                     .error-msg {
-//                         position: relative;
-//                         margin: 3px 0 0 0;
-//                         padding: 0;
-//                     }
-//                 }
-//             }
-
-//             .terms-container {
-//                 flex-direction: column;
-//                 align-items: normal;
-
-//                 span {
-//                     margin-left: 20px;
-//                 }
-//             }
-
-//             ::ng-deep .mat-checkbox-inner-container {
-//                 margin: 8px 5px 0 0;
-//             }
-//         }
-//     }
-// }
+        .right-content {
+            & > div {
+                form {
+                    div {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

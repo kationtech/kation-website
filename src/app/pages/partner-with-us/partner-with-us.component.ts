@@ -25,12 +25,6 @@ export class PartnerWithUsComponent implements OnInit {
   captcha: string = '';
 
   partnerFormGrp =  new FormGroup({
-    type: new FormControl(''),
-    description: new FormControl(''),
-    industry: new FormControl(''),
-    service: new FormControl(''),
-    company_size: new FormControl(''),
-    has_technology: new FormControl(false),
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)]),
     contact_number: new FormControl('', Validators.required),
@@ -49,27 +43,7 @@ export class PartnerWithUsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.forCareer = this.router.url.split('/')[2] ? true : false;
-
-    this.isPage = this.router.url === '/partnerWithUs' || this.forCareer;
-
-    const data = localStorage.getItem('data');
-    if (!data || data === 'undefined' || data == '""') {
-      if(this.forCareer) {
-        this.partnerFormGrp.get('industry')?.setValue('Inquiry about Careers');
-        this.partnerFormGrp.get('type')?.disabled;
-      } else {
-        this.partnerFormGrp.get('type')?.setValidators([Validators.required]);
-        this.partnerFormGrp.get('industry')?.setValidators([Validators.required]);
-        this.partnerFormGrp.get('company_size')?.setValidators([Validators.required]);
-        this.partnerFormGrp.get('has_technology')?.setValidators([Validators.required]);
-      }
-      
-      this.showFullForm = true;
-    } else {
-      this.showFullForm = false;
-      this.prefillFullForm(data);
-    }
+    this.isPage = this.router.url === '/partnerWithUs';
   }
 
   resolved(captchaResponse: string) {
@@ -89,39 +63,6 @@ export class PartnerWithUsComponent implements OnInit {
     }
   }
 
-  prefillFullForm(data: any){
-    let formValue = JSON.parse(data);
-    if(this.forCareer) {
-      this.partnerFormGrp.patchValue({
-        company_size: "",
-        contact_number: "",
-        description: "none",
-        email: "",
-        has_technology: false,
-        industry: "inquiry",
-        name: "",
-        service: "",
-        subscription: false,
-        type: "customer"
-      });
-    } else {
-      this.partnerFormGrp.patchValue({
-        company_size: formValue['company_size'],
-        contact_number: "",
-        description: "none",
-        email: "",
-        has_technology: formValue['has_technology'],
-        industry: formValue['industry'],
-        name: "",
-        service: formValue['service'],
-        subscription: false,
-        type: formValue['type']
-      });
-    }
-
-    console.log(this.partnerFormGrp);
-  }
-
   showTermsAndConditions(){
     const dialogRef = this.dialog.open(TermsAndConditionsModalComponent, {
       width: '900px'
@@ -137,17 +78,10 @@ export class PartnerWithUsComponent implements OnInit {
   submitForm() {
 
     let finalData = {
-      company_size: this.partnerFormGrp.value['company_size'],
       contact_number: this.partnerFormGrp.value['contact_number'],
-      description: this.partnerFormGrp.value['description'] ? this.partnerFormGrp.value['description'] : "none",
       email: this.partnerFormGrp.value['email'],
-      has_technology: JSON.parse(this.partnerFormGrp.value['has_technology']),
-      current_technology: this.partnerFormGrp.value['current_technology'],
-      industry: this.partnerFormGrp.value['industry'],
       name: this.partnerFormGrp.value['name'],
-      service: this.partnerFormGrp.value['service'],
-      subscription: this.partnerFormGrp.value['subscription'],
-      type: this.partnerFormGrp.value['type']
+      subscription: this.partnerFormGrp.value['subscription']
     }
 
     this.util.showSpinner();

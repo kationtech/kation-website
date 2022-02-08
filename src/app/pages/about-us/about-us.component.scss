@@ -291,31 +291,101 @@
             }
         }
     }
+}
 
-    // #about-us {
-    //     #wwa {
-    //         .right-content {
-    //             .with-border {
-    //                 position: relative;
-    //                 margin: auto;
+@media (max-width: 400px) {
+    .view .inner-content {
+        padding: 0 2rem;
+    }
 
-    //                 .wwa-image-1 {
-    //                     margin: auto;
-    //                 }
-    //             }
-    //         }
-    //     }
+    #about-us {
+        background-image: none;
+        padding-right: 0;
 
-    //     #hww {
-    //         margin-top: 3rem;
+        .section-title {
+            width: 90% !important;
+        }
+        
+        .row {
+            & > div {
+                padding: 0;
+            }
+        }
 
-    //         .right-content {
-    //             .hww-image-1 {
-    //                 position: relative;
-    //                 margin: auto;
-    //                 top: 0;
-    //             }
-    //         }
-    //     }
-    // }
+        #wwa {
+            .right-content {
+                padding: 0;
+                display: flex;
+                align-items: center;
+
+                .with-border {
+                    position: relative;
+                    text-align: center;
+
+                    .wwa-image-1 {
+                        width: 100%;
+                        padding: 0 2rem;
+                    }
+                }
+            }
+        }
+
+        #hww {
+            .right-content {
+                .hww-image-1 {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+        }
+
+        #awards {
+            .right-content {
+                .awards-image-1 {
+                    width: 300px;
+                    height: 300px;
+                    margin: auto;
+
+                }
+            }
+        }
+
+        #ot {
+            .team-name {
+                float: none;
+                margin: auto;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .left-content {
+                .team-details {
+                    margin: 2rem;
+                    padding: 2rem;
+
+                    p {
+                        text-align: left;
+                    }
+                }
+
+                .ot-image-2, .ot-image-3, .ot-image-4 {
+                    display: none;
+                }
+            }
+
+            .right-content {
+                margin-top: 0;
+
+                .with-border {
+                    margin: auto;
+                    float: none;
+                }
+            }
+        }
+    }
 }
