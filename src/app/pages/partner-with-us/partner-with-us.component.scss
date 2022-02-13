@@ -445,17 +445,28 @@
 
 @media (max-width: 400px) {
     #pwu-form {
+        height: auto;
+
         .left-content {
+            padding: 15rem 0;
+
             &::after {
                 display: none;
             }
         }
 
         .right-content {
+            position: relative;
+            height: 120vh;
+
             & > div {
                 form {
                     div {
                         margin-top: 10px;
+                    }
+
+                    .display-flex {
+                        flex-direction: column;
                     }
                 }
             }

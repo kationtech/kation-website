@@ -2,56 +2,33 @@
 
 footer {
     padding: 1.5rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
 
-    .links {
-        flex: 1.5;
+    .logo-socials {
+        display: flex;
 
-        ul {
-            list-style: none;
-            padding: 0 0 0 10px;
-            margin: 0;
-
-            li {
-                margin-right: 10px;
-                display: inline-block;
-
-
-                div {
-                    text-align: center;
-
-                    a {
-                        font-size: 1.4rem;
-                        text-align: center;
-                    }
-                }
-            }
+        .logo {
+            max-width: 300px;
+            margin-right: 20px;
         }
 
         .socials {
             display: flex;
-            justify-content: center;
-            align-content: center;
 
-            & > div {
-                flex: 1;
-                align-content: center;
+            a {
+                color: #18488A;
+                 font-size: 4rem;
+                 margin-right: 10px;
             }
+        }
+    }
 
-            .icons {
-                padding-left: 20px;
-
-                & > div {
-                    display: inline-block;
-                    
-                    img {
-                        width: 50px;
-                        height: 50px;
-                    }
-                }
-            }
+    ul {
+        padding:  0;
+        margin: 0;
+        
+        li {
+            display: inline-flex;
+            margin-right: 10px;
         }
     }
 
@@ -67,30 +44,16 @@ footer {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 650px) {
     footer {
-        .links {
-            flex: 1;
+        ul {
+            text-align: center;
         }
-    }
-}
 
-@media (max-width: 400px) {
-    footer {
-        flex-direction: column;
-
-        .links {
-            .socials {
-                flex-direction: column;
-                
-                .icons {
-                    justify-content: center;
-                }
-            }
-
-            ul {
-                text-align: center;
-            }
+        .logo-socials {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .address {
@@ -102,3 +65,91 @@ footer {
         }
     }
 }
+
+// footer {
+//     padding: 1.5rem;
+//     box-sizing: border-box;
+//     display: flex;
+//     justify-content: space-between;
+
+//     .links {
+//         flex: 1.5;
+
+//         ul {
+//             list-style: none;
+//             padding: 0 0 0 10px;
+//             margin: 0;
+
+//             li {
+//                 margin-right: 10px;
+//                 display: inline-block;
+
+
+//                 div {
+//                     text-align: center;
+
+//                     a {
+//                         font-size: 1.4rem;
+//                         text-align: center;
+//                     }
+//                 }
+//             }
+//         }
+
+//         .socials {
+//             display: flex;
+//             justify-content: center;
+//             align-content: center;
+
+//             & > div {
+//                 flex: 1;
+//                 align-content: center;
+//             }
+
+//             .icons {
+//                 padding-left: 20px;
+
+//                 & > div {
+//                     display: inline-block;
+                    
+//                     img {
+//                         width: 50px;
+//                         height: 50px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+    
+// }
+
+// @media (max-width: 1024px) {
+//     footer {
+//         .links {
+//             flex: 1;
+//         }
+//     }
+// }
+
+// @media (max-width: 400px) {
+//     footer {
+//         flex-direction: column;
+
+//         .links {
+//             .socials {
+//                 flex-direction: column;
+                
+//                 .icons {
+//                     justify-content: center;
+//                 }
+//             }
+
+//             ul {
+//                 text-align: center;
+//             }
+//         }
+
+       
+//     }
+// }

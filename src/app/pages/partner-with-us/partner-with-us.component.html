@@ -1,13 +1,13 @@
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-triangle-path" [fullScreen] = "true"></ngx-spinner>
 <app-header *ngIf="isPage"></app-header>
-<div class="wrapper" [ngClass]="{'view' : isPage, onfooter: !isPage, 'isNotFullFormContainer' : !showFullForm}" id="pwu-form">
+<div class="wrapper" [ngClass]="{'view' : isPage}" id="pwu-form">
     <div class="row">
-        <div class="col-lg-6 col-md-6 left-content">
+        <div class="col-lg-6 col-md-6 col-sm-12 left-content">
             <div>
                 <h1>Bringing opportunities <br>and co-creation to unlimit <br>the world’s digital workforce.</h1>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 right-content">
+        <div class="col-lg-6 col-md-6 col-sm-12 right-content">
             <div>
                 <form [formGroup]="partnerFormGrp">
                     <h1>PARTNER WITH US!</h1>

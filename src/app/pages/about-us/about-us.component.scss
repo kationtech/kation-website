@@ -3,9 +3,10 @@
     background-size: 100%;
     padding-right: 20px;
 
-    .section-title {
-        padding: 10px 50px;
-        width: 91%;
+    .row {
+        & > div {
+            padding: 0;
+        }
     }
 
     p {
@@ -14,18 +15,25 @@
         line-height: 1.5;
         text-align: justify;
     }
+
+    .inner-content {
+        padding: 0 5rem 0 8rem;
+    }
     
     #wwa {
         margin-top: 3rem;
         padding-bottom: 4rem;
 
         .left-content {
+            .section-title {
+                width: 90%;
+            }
+
             p {
                 text-align: justify;
                 font-size: 1.5rem;
                 margin-top: 2rem;
                 line-height: 1.5;
-                padding-right: 4rem;
             }
         }
 
@@ -38,7 +46,7 @@
                 top: 0;
 
                 .wwa-image-1 {
-                    width: 800px;
+                    width: 930px;
                     height: 450px;
                 }
     
@@ -52,11 +60,11 @@
     }
 
     #hww {
-        margin-top: 8rem;
+        margin-top: 12rem;
 
         .left-content {
             .section-title {
-                width: 50%;
+                width: 52%;
             }
         }
 
@@ -77,7 +85,7 @@
 
         .left-content {
             .section-title {
-                width: 50%;
+                width: 52%;
             }
         }
     }
@@ -88,7 +96,7 @@
 
         .left-content {
             .section-title {
-                width: 50%;
+                width: 52%;
             }
 
             p {
@@ -129,7 +137,6 @@
         .right-content {
             .awards-image-1 {
                 width: 540px;
-                height: 600px;
                 
                 img {
                     border-radius: 20px;
@@ -165,7 +172,7 @@
 
         .left-content {
             .section-title {
-                width: 50%;
+                width: 52%;
             }
 
             .team-details {
@@ -225,19 +232,23 @@
             }
         }
     }
+
+    #ot.for-web {
+        display: block;
+    }
+
+    #ot.for-mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {
     #about-us {
-        .section-title {
-            width: 65% !important;
-        }
-
         #wwa {
             .right-content {
                 .with-border {
                     .wwa-image-1 {
-                        width: 550px;
+                        width: 575px;
                         height: auto;
                     }
                 }
@@ -245,20 +256,40 @@
 
             .left-content {
                 .section-title {
-                    width: 95% !important;
+                    width: 77%;
                 }
             }
         }
 
         #hww {
+            .left-content {
+                .section-title {
+                    width: 54%;
+                }
+            }
+
             margin-top: 1rem;
         }
 
+        #wwwu {
+            .left-content {
+                .section-title {
+                    width: 54%;
+                }
+            }
+        }
+
         #awards {
+            .left-content {
+                .section-title {
+                    width: 54%;
+                }
+            }
+
             .right-content {
                 .awards-image-1 {
-                    width: 400px;
-                    height: 400px;
+                    width: 375px;
+                    height: 375px;
                 }
             }
         }
@@ -272,6 +303,7 @@
                 .with-border {
                     width: 330px;
                     height: 330px;
+                    margin: 0;
                     float: right;
 
                     .ot-image-1 {
@@ -283,17 +315,123 @@
             .left-content {
                 .team-details {
                     margin-left: 70px;
+                    padding: 2rem 13rem 2rem 2rem;
                 }
 
                 .team-1 {
                     margin-top: 10rem;
+                }
+
+                .section-title {
+                    width: 54%;
                 }
             }
         }
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
+    #about-us {
+        background-image: none;
+        background-color: #DAE1E5;
+
+        .inner-content {
+            padding: 0 5rem;
+        }
+
+        #wwa {
+            .left-content {
+                .section-title {
+                    width: 60%;
+                }
+            }
+
+            .right-content {
+                padding: 0 5rem;
+                
+                .with-border {
+                    position: relative;
+                    padding: 0;
+
+                    .wwa-image-1 {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #hww {
+            .right-content {
+                display: none;
+            }
+        }
+
+        #awards {
+            .left-content {
+                .award-item {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .right-content {
+                .awards-image-1 {
+                    width: 60%;
+                    height: auto;
+                    margin: auto;
+                }
+
+                h4 {
+                    text-align: center;
+                }
+            }
+        }
+
+        #ot.for-web {
+            display: none;
+        }
+
+        #ot.for-mobile {
+            display: block;
+
+            .section-title {
+                width: 54%;
+            }
+            
+            .ot-content {
+                padding: 5rem;
+
+                .team-section {
+                    width: 80%;
+                    margin: 0 auto 5rem auto;
+
+                    .ot-desc {
+                        background-color: #18488A;
+                        padding: 2rem;
+                        margin-top: 2rem;
+                        border-radius: 20px;
+                        clear: both;
+
+                        p {
+                            color: white;
+                            text-align: right;
+                        }
+                    }
+
+                    .team-name {
+                        text-align: right;
+                        margin-bottom: 2rem;
+
+                        p {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
     .view .inner-content {
         padding: 0 2rem;
     }
@@ -353,37 +491,12 @@
             }
         }
 
-        #ot {
-            .team-name {
-                float: none;
-                margin: auto;
+        #ot.for-mobile {
+            .ot-content {
+                padding: 2rem;
 
-                p {
-                    text-align: center;
-                }
-            }
-
-            .left-content {
-                .team-details {
-                    margin: 2rem;
-                    padding: 2rem;
-
-                    p {
-                        text-align: left;
-                    }
-                }
-
-                .ot-image-2, .ot-image-3, .ot-image-4 {
-                    display: none;
-                }
-            }
-
-            .right-content {
-                margin-top: 0;
-
-                .with-border {
-                    margin: auto;
-                    float: none;
+                .team-section {
+                    width: 100%;
                 }
             }
         }
