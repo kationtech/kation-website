@@ -1,25 +1,21 @@
-@import '../../constants.scss';
-
 #services {
-    .section-1 {
+    .banner {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 500px;
         position: relative;
 
-        h1, p{
-            margin: 0;
-        }
-
         h1 {
-            font-size: 8rem;
-            font-weight: bold;
+            font-size: 6rem;
+            margin: 10px 0 0 0;
+            font-weight: bolder;
         }
 
-        & > div {
-            padding-top: 8rem;
-            padding-right: 10rem;
+        p {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
         }
 
         &:before, &:after {
@@ -29,7 +25,7 @@
 
         &:before {
             content: '';
-            left: 8rem;
+            left: 17rem;
             background-image: url('../../../assets/images/services-image-1.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -48,132 +44,124 @@
         }
     }
 
-    .section-2 {
-        display: block;
+    .service-list {
+        .service-item {
+            border: 3px solid white;
+            border-radius: 30px;
+            padding: 2rem 3rem;
+            height: 500px;
+            position: relative;
 
-        .services-list {
-            & > li {
-                border-radius: 25px;
-                height: 500px;
-                background-color: $blue-grey;
-                padding: 20px 30px;
-                position: relative;
+            .item-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            h2, p {
                 color: white;
-                box-sizing: border-box;
-                z-index: 2;
+            }
 
-                .item-icon {
-                    width: 50px;
-                }
+            h2 {
+                font-size: 4rem;
+            }
 
-                h2 {
-                    font-size: 4rem;
-                    margin: 10px 0 0 0;
-                }
+            p {
+                font-size: 1.5rem;
+                position: absolute;
+                top: 30rem;
+                left: 3rem;
+                right: 3rem;
+            }
 
-                .item-desc {
-                    font-size: 1.4rem;
-                    margin-top: 15rem;
-                }
+            .btn-wrapper {
+                position: absolute;
+                bottom: 2rem;
+                text-align: center;
+                left: 0;
+                right: 0;
 
-                p {
-                    margin: 0;
-                    font-size: 1rem;
-                }
-
-                .know-more {
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 20px;
+                .btn {
+                    background-color: transparent;
                     text-align: center;
-
-                    .btn {
-                        color: white;
-                        border: 1px solid white;
-                        width: 200px;
-                        margin: auto;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .shadow {
-                    position: absolute;
-                    font-size: 7rem;
-                    opacity: 0.1;
-                    top: 30%;
+                    width: 230px;
+                    border-color: white;
+                    text-transform: uppercase;
                 }
             }
+        }
 
-            .business {
-                background-color: $dark-blue;
-            }
+        #business {
+            background-color: #18488A;
+        }
 
-            .humane {
-                background-color: $yellow;
+        #partnership {
+            background-color: #F4BA6D;
+
+            h2, p {
                 color: black;
-
-                .desc {
-                    button {
-                        border: 2px solid black;
-                        color: black;
-                    }
-
-                    p {
-                        color: black;
-                    }
-                }
-
-                .shadow {
-                    color: black;
-                }
             }
 
-            .hybrid {
-                background-color: $green-blue;
-
-                .item-icon {
-                    width: 21px;
+            .btn-wrapper {
+                .btn {
+                    color: black;
+                    border-color: black;
                 }
+            }
+        }
+        
+        #design {
+            background-color: #466F7A;
 
-                .shadow {
-                    font-size: 3.5rem;
-                    top: 40%;
+            .item-icon {
+                width: 35px;
+
+                img {
+                    height: 100%;
                 }
             }
         }
     }
 }
 
-.partner-with-us-wrapper{
-    margin-top: -9rem;
-}
-
 @media (max-width: 1024px) {
     #services {
-        .section-1 {
+        .banner {
+            &::before {
+                left: 2rem;
+            }
 
-            & > div {
-                padding: 0;
-                width: 50%;
+            .wrapper {
+                margin-left: -13rem;
+            }
+
+            &::after {
+                right: 2rem;
+            }
+        }
+        .service-list {
+            .service-item {
+                height: 560px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #services {
+        .banner {
+            &::before, &::after {
+                display: none;
+            }
+
+            .wrapper {
+                margin: auto;
             }
         }
 
-        .section-2 {
-            .services-list {
-                & > li {
-                    height: 530px;
-
-                    .item-desc {
-                        margin-top: 10rem;
-                    }
-
-                    &.humane {
-                        .item-desc {
-                            margin-top: 15rem;
-                        }
-                    }
-                }
+        .service-list {
+            .service-item {
+                width: 60%;
+                margin: 0 auto 3rem auto;
             }
         }
     }
@@ -181,21 +169,14 @@
 
 @media (max-width: 400px) {
     #services {
-        .section-1 {
-            & > div {
-                width: 100%;
-            }
-
-            &::before, &::after {
-                display: none;
-            }
+        .banner {
+            padding: 0 2rem;
         }
-
-        .section-2 {
-            .services-list {
-                & > li {
-                    margin-bottom: 20px;
-                }
+        
+        .service-list {
+            .service-item {
+                width: 100%;
+                margin: 0 auto 3rem auto;
             }
         }
     }
