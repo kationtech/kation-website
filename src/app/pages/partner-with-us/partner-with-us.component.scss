@@ -243,3 +243,29 @@
 ::ng-deep .mat-select-disabled {
     background-color: #e1e1e1 !important;
 }
+
+@media (max-width: 480px) {
+    .mobile-d-none {
+        display: none;
+    }
+
+    #pwu {
+        .right-content {
+            .form-wrapper {
+                padding-top: 3rem;
+                position: relative;
+                left: revert;
+                right: revert;
+                bottom: revert;
+                padding-left: 2rem;
+                padding-right: 2rem;
+
+                form {
+                    .email, .number {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

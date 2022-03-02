@@ -135,3 +135,24 @@ img { width: 100%; }
         position: absolute;
     }
 }
+
+@media (max-width: 480px) {
+    .section-title, .sub-section-title {
+        width: 90%;
+        font-size: 2rem;
+        padding: 15px 0 15px 30px;
+    }
+
+    .sub-section-title {
+        font-size: 1.8rem;
+        padding: 10px 0 10px 30px;
+    }
+
+    .section {
+        .section-content {
+            &.empty {
+                padding: 20px 0 0 0;
+            }
+        }
+    }
+}

@@ -330,7 +330,7 @@
                         letter-spacing: 2px;
                         color: white;
                         background-color: #18488A;
-                        font-family: "Montserrat-Black";
+                        font-family: "Montserrat-Bold";
                         padding: 15px 0;
                         border-top-left-radius: 15px;
                         border-top-right-radius: 15px;
@@ -373,5 +373,169 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 480px) {
+    #landing {
+        #carousel-wrapper {
+            .slide-1, .slide-2 {
+                background-image: none;
+                background-color: #DAE1E5;
+                height: auto;
+                
+                .row {
+                    & > div {
+                        height: 50vh;
+                    }
+                }
+
+                .logo {
+                    img {
+                        max-width: 300px;
+                        max-height: 300px;
+                    }
+                }
+
+                .tagline-wrapper {
+                    top: 0;
+
+                    .tagline {
+                        p {
+                            font-size: 4rem;
+                        }
+
+                        &::before {
+                            left: -20px;
+                            bottom: -15px;
+                            height: 60px;
+                            width: 60px;
+                            top: revert;
+                        }
+
+                        &::after {
+                            right: -13px;
+                            bottom: -13px;
+                        }
+                    }
+
+                    hr {
+                        margin: 0 0 0 117px;
+                    }
+
+                    .purpose {
+                        margin: 0 0 0 117px;
+                    }
+                }
+            }
+
+            .hiring-btn {
+                bottom: 80px;
+            }
+
+            .slide-2 {
+                background-color: white;
+
+                .award {
+                    img {
+                        width: 250px;
+                        height: 250px;
+                    }
+                }
+
+                .award-desc {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: white;
+
+                    .desc {
+                        padding: 0;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        p {
+                            font-size: 2rem;
+                            text-align: center;
+
+                            &.title {
+                                font-size: 3rem;
+                                text-align: center;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+
+                    hr {
+                        width: 50%;
+                    }
+                }
+
+                .row {
+                    & > div {
+                        &:first-child {
+                            height: 40vh;
+                        }
+
+                        &:last-child {
+                            height: 60vh;
+                        }
+                    }
+                }
+            }
+        }
+
+        #wyn {
+            background-color: #DAE1E5;
+
+            .wyn-list {
+                .item {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        #op {
+            .op-content {
+                .partner-videos {
+                    iframe {
+                        height: 300px;
+                    }
+
+                    & > div {
+                        height: auto;
+                    }
+
+                    #jimini {
+                        background-image: none;
+                    }
+
+                    .video-desc {
+                        padding-top: 20px;
+                    }
+
+                    #messy-bessy {
+                        background-image: none;
+                        margin-top: 20px;
+
+                        .video-desc {
+                            text-align: left;
+                        }
+
+                        hr {
+                            float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .reverse-on-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 }

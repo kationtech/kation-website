@@ -16,7 +16,7 @@
             <div class="sub-section-title">Vacancies</div>
             <div class="career-list-content">
                 <div class="row list">
-                    <div class="col-lg-4" *ngFor="let career of careerList">
+                    <div class="col-lg-4 col-sm-6" *ngFor="let career of careerList">
                         <div class="vacancy">
                             <p>{{career.title}} <br> {{career.subtitle}}</p>
                             <div class="know-btn" (click)="getCareerDetails(career.id)"><button>Know More</button></div>

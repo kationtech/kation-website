@@ -227,3 +227,90 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    #about-us {
+        .about-us-wrapper {
+            #wwa {
+                .section-title {
+                    width: 60%;
+                }
+
+                .section-content {
+                    .image-container {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 0;
+                    }
+                }
+            }
+
+            #hww {
+                .section-title {
+                    width: 70%;
+                }
+
+                .section-content {
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+
+            #wwwu {
+                .section-content {
+                    img {
+                        display: none;
+                    }
+
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+
+            #awards {
+                .awards-content {
+                    padding: 4rem 1rem;
+                }
+            }
+
+            #mot {
+                .section-title {
+                    width: 70%;
+                }
+
+                .section-content {
+                    padding-top: 5rem;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    .team-list {
+                        .member-wrapper {
+                            .member-details {
+                                .meta {
+                                    width: 96%;
+                                }
+                            }
+
+                            .full-desc {
+                                width: 350px;
+                                margin: -101px 0 0 -30px;
+                            }
+                        }
+
+                        #team-1, #team-2, #team-3 {
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

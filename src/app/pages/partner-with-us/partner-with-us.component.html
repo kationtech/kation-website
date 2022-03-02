@@ -2,7 +2,7 @@
 <app-header *ngIf="isPage"></app-header>
 <div [ngClass]="{'view' : isPage, 'onFooter': !isPage}" id="pwu">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mobile-d-none">
             <div class="left-content">
                 <div class="tagline-wrapper">
                     <div class="tagline">
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-sm-12">
             <div class="right-content">
                 <div class="form-wrapper">
                     <p>Let’s make positive connections.</p>
