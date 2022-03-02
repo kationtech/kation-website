@@ -1,502 +1,227 @@
 #about-us {
-    background-image: url('../../../assets/images/bg2.png');
-    background-size: 100%;
-    padding-right: 20px;
-
-    .row {
-        & > div {
-            padding: 0;
-        }
-    }
-
     p {
-        margin-top: 2rem;
         font-size: 1.5rem;
-        line-height: 1.5;
-        text-align: justify;
+        line-height: 1.8;
     }
 
-    .inner-content {
-        padding: 0 5rem 0 8rem;
-    }
-    
-    #wwa {
-        margin-top: 3rem;
-        padding-bottom: 4rem;
+    .about-us-wrapper {
+        position: relative;
 
-        .left-content {
+        #wwa {
             .section-title {
-                width: 90%;
+                width: 400px;
             }
 
-            p {
-                text-align: justify;
-                font-size: 1.5rem;
-                margin-top: 2rem;
-                line-height: 1.5;
-            }
-        }
-
-        .right-content {
-            padding-right: 8rem;
-            position: relative;
-
-            .with-border {
-                position: absolute;
-                top: 0;
-
-                .wwa-image-1 {
-                    width: 930px;
-                    height: 450px;
-                }
-    
-                .border {
-                    width: 800px;
-                    height: 450px;
-                }
-                
-            }
-        }
-    }
-
-    #hww {
-        margin-top: 12rem;
-
-        .left-content {
-            .section-title {
-                width: 52%;
-            }
-        }
-
-        .right-content {
-            position: relative;
-
-            .hww-image-1 {
-                position: absolute;
-                width: 200px;
-                top: 100px;
-                left: -50px;
-            }
-        }
-    }
-
-    #wwwu {
-        margin-top: 6rem;
-
-        .left-content {
-            .section-title {
-                width: 52%;
-            }
-        }
-    }
-
-    #awards {
-        margin-top: 8rem;
-        padding-bottom: 5rem;
-
-        .left-content {
-            .section-title {
-                width: 52%;
-            }
-
-            p {
-                margin-top: 2rem;
-            }
-
-            .award-item {
-                margin-top: 3rem;
-
-                .award-image {
-                    width: 200px;
-                    height: 200px;
-                    margin: auto;
-                    border-radius: 15px;
-                    overflow: hidden;
-                }
-
-                .award-desc {
-                    h4 {
-                        text-transform: uppercase;
-                        width: 50%;
-                        margin: 10px auto;
-                        text-align: center;
-                        line-height: 1.5;
-                        letter-spacing: 2px;
-                        font-size: 1.3rem;
-                    }
-
-                    p {
-                        width: 60%;
-                        text-align: center;
-                        margin: auto;
-                    }
-                }
-            }
-        }
-
-        .right-content {
-            .awards-image-1 {
-                width: 540px;
-                
-                img {
-                    border-radius: 20px;
-                    overflow: hidden;
-                }
-            }
-
-            .border {
-                width: 540px;
-                height: 590px;
-            }
-
-            h4 {
-                font-weight: bold;
-                text-align: right;
-                padding-right: 30px;
-                line-height: 1.5;
-            }
-        }
-    }
-
-    #ot {
-        .team-name {
-            text-align: right;
-            float: right;
-            margin-right: 10rem;
-            
-            p {
-                margin: 0;
-                color: #18488A;
-            }
-        }
-
-        .left-content {
-            .section-title {
-                width: 52%;
-            }
-
-            .team-details {
-                margin-left: 150px;
-                background-color: #18488A;
-                padding: 2rem 10rem 2rem 2rem;
-                border-radius: 20px;
+            .section-content {
 
                 p {
-                    color: white;
-                    font-size: 1.4rem;
-                    text-align: right;
-                }
-            }
-
-            .team-1 {
-                margin-right: -150px;
-                margin-top: 200px;
-            }
-
-            .ot-image-2, .ot-image-3, .ot-image-4 {
-                width: 200px;
-                margin: -3rem 0 3rem 20rem;
-            }
-
-            .ot-image-3 {
-                margin-left: 25rem;
-            }
-        }
-
-        .right-content {
-            margin-top: 20rem;
-
-            .with-border {
-                width: 420px;
-                height: 420px;
-                margin: auto;
-
-                .ot-image-1 {
-                    width: 400px;
-                    height: 400px;
-                    overflow: hidden;
-                    border-radius: 20px;
+                    width: 85%;
+                    margin: auto;
                 }
 
-                .border {
-                    border-color: #18488A;
-                    width: 400px;
-                    height: 400px;
-                }
-            }
-        }
-
-        .team-section {
-            .right-content {
-                margin: 0;
-            }
-        }
-    }
-
-    #ot.for-web {
-        display: block;
-    }
-
-    #ot.for-mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 1024px) {
-    #about-us {
-        #wwa {
-            .right-content {
-                .with-border {
-                    .wwa-image-1 {
-                        width: 575px;
-                        height: auto;
-                    }
-                }
-            }
-
-            .left-content {
-                .section-title {
-                    width: 77%;
+                .image-container {
+                    position: absolute;
+                    top: -11rem;
+                    right: -2rem;
+                    z-index: 1;
+                    padding-left: 23px;
                 }
             }
         }
 
         #hww {
-            .left-content {
-                .section-title {
-                    width: 54%;
-                }
+            .section-title {
+                width: 400px;
             }
 
-            margin-top: 1rem;
+            .section-content {
+                p {
+                    width: 60%;
+                    padding-left: 5rem;
+                }
+            }
         }
 
         #wwwu {
-            .left-content {
-                .section-title {
-                    width: 54%;
+            position: relative;
+
+            .section-content {
+                p {
+                    width: 60%;
+                    padding-left: 5rem;
+                }
+
+                img {
+                    position: absolute;
+                    width: 250px;
+                    top: -24%;
+                    right: 13%;
                 }
             }
         }
 
         #awards {
-            .left-content {
-                .section-title {
-                    width: 54%;
-                }
+            .section-title {
+                position: absolute;
+                top: -3rem;
+                width: 300px;
             }
 
-            .right-content {
-                .awards-image-1 {
-                    width: 375px;
-                    height: 375px;
-                }
-            }
-        }
-
-        #ot {
-            .team-name {
-                margin-right: 1rem;
+            .awards-content {
+                padding: 8rem 4rem 8rem 4rem;
+                width: 95%;
+                margin: auto;
             }
 
-            .right-content {
-                .with-border {
-                    width: 330px;
-                    height: 330px;
-                    margin: 0;
-                    float: right;
+            .award-desc {
+                text-align: center;
+                margin-top: 3rem;
 
-                    .ot-image-1 {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .left-content {
-                .team-details {
-                    margin-left: 70px;
-                    padding: 2rem 13rem 2rem 2rem;
-                }
-
-                .team-1 {
-                    margin-top: 10rem;
-                }
-
-                .section-title {
-                    width: 54%;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 800px) {
-    #about-us {
-        background-image: none;
-        background-color: #DAE1E5;
-
-        .inner-content {
-            padding: 0 5rem;
-        }
-
-        #wwa {
-            .left-content {
-                .section-title {
-                    width: 60%;
-                }
-            }
-
-            .right-content {
-                padding: 0 5rem;
-                
-                .with-border {
-                    position: relative;
-                    padding: 0;
-
-                    .wwa-image-1 {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        #hww {
-            .right-content {
-                display: none;
-            }
-        }
-
-        #awards {
-            .left-content {
-                .award-item {
-                    margin-bottom: 2rem;
-                }
-            }
-
-            .right-content {
-                .awards-image-1 {
-                    width: 60%;
-                    height: auto;
+                img {
+                    width: 200px;
                     margin: auto;
                 }
 
-                h4 {
-                    text-align: center;
+                h3 {
+                    font-size: 1.5rem;
+                    font-family: "Montserrat-Bold";
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    line-height: 1.5;
+                }
+
+                hr {
+                    border: 1px solid black;
+                    width: 80%;
                 }
             }
-        }
 
-        #ot.for-web {
-            display: none;
-        }
-
-        #ot.for-mobile {
-            display: block;
-
-            .section-title {
-                width: 54%;
+            .image-caption {
+                text-align: right;
+                font-family: "Montserrat-Bold";
+                line-height: 1.5;
+                margin-top: 5px;
             }
-            
-            .ot-content {
-                padding: 5rem;
+        }
 
-                .team-section {
-                    width: 80%;
-                    margin: 0 auto 5rem auto;
+        #mot {
+            .section-title {
+                width: 400px;
+                position: absolute;
+                top: -3rem;
+            }
 
-                    .ot-desc {
-                        background-color: #18488A;
-                        padding: 2rem;
-                        margin-top: 2rem;
-                        border-radius: 20px;
-                        clear: both;
+            .section-content {
+                padding-left: 5rem;
+                padding-right: 5rem;
 
-                        p {
+                p {
+                    width: 70%;
+                }
+
+                .team-list {
+                    margin-top: 3rem;
+
+                    .member-wrapper {
+                        margin-bottom: 10rem;
+
+                        .member-details {
+                            max-width: 500px;
+                            margin: auto;
+                            position: relative;
+
+                            .meta {
+                                background-color: #18488A;
+                                position: absolute;
+                                bottom: 0;
+                                width: 482px;
+                                border-bottom-left-radius: 20px;
+                                border-bottom-right-radius: 18px;
+                                padding: 10px;
+
+                                & > div {
+                                    position: relative;
+
+                                    p {
+                                        color: white;
+                                        margin: 0;
+                                        width: 100%;
+                                        font-size: 1.5rem;
+                                        text-align: right;
+                                        padding-right: 25px;
+
+                                        span {
+                                            font-family: "Montserrat-Bold";
+                                        }
+                                    }
+
+                                    .toggle-arrow {
+                                        position: absolute;
+                                        bottom: -5px;
+                                        right: -5px;
+                                        width: 20px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+
+                        .full-desc {
+                            background-color: #18488A;
+                            width: 70%;
+                            margin: -75px 0 0 15rem;
+                            z-index: 1;
+                            position: relative;
+                            padding: 3rem 4rem;
+                            border-radius: 20px;
                             color: white;
                             text-align: right;
+
+                            .toggle-arrow-back {
+                                text-align: right;
+
+                                img {
+                                    width: 20px;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                margin: auto;
+                                clear: both;
+
+                                span {
+                                    font-family: "Montserrat-Bold";
+                                }
+                            }
+
+                            hr {
+                                width: 70%;
+                                float: right;
+                            }
                         }
                     }
 
-                    .team-name {
-                        text-align: right;
-                        margin-bottom: 2rem;
-
-                        p {
-                            float: right;
-                        }
+                    #team-1 {
+                        background-image: url('../../../assets/images/team-bg-1.png');
+                        background-size: 140px;
+                        background-repeat: no-repeat;
+                        background-position: 10% 0;
                     }
-                }
-            }
-        }
-    }
-}
 
-@media (max-width: 420px) {
-    .view .inner-content {
-        padding: 0 2rem;
-    }
-
-    #about-us {
-        background-image: none;
-        padding-right: 0;
-
-        .section-title {
-            width: 90% !important;
-        }
-        
-        .row {
-            & > div {
-                padding: 0;
-            }
-        }
-
-        #wwa {
-            .right-content {
-                padding: 0;
-                display: flex;
-                align-items: center;
-
-                .with-border {
-                    position: relative;
-                    text-align: center;
-
-                    .wwa-image-1 {
-                        width: 100%;
-                        padding: 0 2rem;
+                    #team-2 {
+                        background-image: url('../../../assets/images/team-bg-2.png');
+                        background-size: 250px;
+                        background-repeat: no-repeat;
+                        background-position: 98% 15%;
                     }
-                }
-            }
-        }
 
-        #hww {
-            .right-content {
-                .hww-image-1 {
-                    position: relative;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                }
-            }
-        }
-
-        #awards {
-            .right-content {
-                .awards-image-1 {
-                    width: 300px;
-                    height: 300px;
-                    margin: auto;
-
-                }
-            }
-        }
-
-        #ot.for-mobile {
-            .ot-content {
-                padding: 2rem;
-
-                .team-section {
-                    width: 100%;
+                    #team-3 {
+                        background-image: url('../../../assets/images/team-bg-3.png');
+                        background-size: 210px;
+                        background-repeat: no-repeat;
+                        background-position: 10% 25%;
+                    }
                 }
             }
         }

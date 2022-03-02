@@ -1,5 +1,9 @@
 @import '../../../constants.scss';
 
+.modal-wrapper {
+    position: relative;
+}
+
 .wrapper {
 
     h3 {
@@ -8,12 +12,20 @@
     }
 
     p {
-        font-size: .85rem;
+        font-size: 1.5rem;
         line-height: 1.8;
         width: 90%;
         margin: auto;
         margin-bottom: 10px;
     }
+}
+
+.close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
 }
 
 mat-dialog-actions {

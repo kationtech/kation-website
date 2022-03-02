@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="view" id="landing">
-    <div id="carousel-wrapper" class="for-web">
+    <div id="carousel-wrapper">
         <!-- FOR AUTOPLAY -->
         <div id="carousel" class="carousel slide" data-ride="carousel"> 
         <!-- <div id="carousel" class="carousel slide" data-interval="false"> -->
@@ -9,160 +9,134 @@
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
                 </ol>
-                <div class="item active slide-one">
+
+                <div class="slide-1 item active">
                     <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                            <div class="logo-wrapper">
-                                <div class="logo"><img src="assets/images/landing_logo.png" loading="lazy"></div>
+                        <div class="col-lg-5">
+                            <div class="logo">
+                                <img src="assets/images/landing_logo.png" />
                             </div>
                         </div>
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                        <div class="col-lg-7">
                             <div class="tagline-wrapper">
-                                <div class="carousel-image-1"><img src="assets/images/landing-image-1.png" loading="lazy"></div>
-                                <p>Bringing OPPORTUNITIES<br> and CO-CREATION<br>to UNLIMIT <br>the world’s digital workforce.</p>
+                                <div class="tagline">
+                                    <p><span>To</span> Unlimit</p>
+                                    <p><span>the</span> World</p>
+                                    <p><span>of</span> Work</p>
+                                </div>
+                                <hr>
+                                <p class="purpose">Our main purpose</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item slide-two">
+                <div class="slide-2 item">
                     <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                            <div class="award-wrapper">
-                                <div class="award-image">
-                                    <div class="image"><img src="assets/images/carousel-award.png" loading="lazy" alt="award-image"/></div>
+                        <div class="col-lg-5">
+                           <div class="award">
+                               <img src="assets/images/carousel-award.png" />
+                           </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="award-desc">
+                                <div class="desc">
+                                    <p class="title">Biz Apps Customer <br>Recruit Award</p>
+                                    <hr>
+                                    <p>Partner of the Year <br>Microsoft Philippines Partner <br>Awards FY20</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                            <div class="tagline-wrapper">
-                                <div class="carousel-image-2"><img src="assets/images/carousel-icon-2.png" loading="lazy"></div>
-                                <p>Biz Apps Customer Recruit Award<br> Partner of the Year <br>Microsoft Philippines Partner  <br>Awards FY20 </p>
-                            </div>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#carousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hiring-btn">
+            <div>
+                <p>We are hiring! <br> <span>Click here to know more</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="wyn">
+        <div class="wyn-wrapper">
+            <div class="section-title">WHAT DO YOU NEED?</div>
+            <div class="row wyn-list">
+                <div class="col-lg-4">
+                    <div class="item" id="business">
+                        <h2>Do you need to <br>consult about your <br><span>business apps</span>?</h2>
+                        <hr>
+                        <p>Our business application experts deliver advisory and system design solutions in the areas of process transformation, operational performance, customer engagement, and workforce productivity. </p>
+                        <div class="learn-btn">
+                            <a hef="" [routerLink]="['/businessapp']"><button>Learn More</button></a>
                         </div>
                     </div>
                 </div>
-                <a class="left carousel-control" href="#carousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="mobile-carousel" class="for-mobile">
-        <div id="carousel" class="carousel slide" data-ride="carousel"> 
-        <!-- <div id="carousel" class="carousel slide" data-interval="false"> -->
-            <div class="carousel-inner">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                </ol>
-                <div class="item active slide-one">
-                    <div class="logo-wrapper">
-                        <div class="logo"><img src="assets/images/landing_logo.png" loading="lazy"></div>
-                    </div>
-                    <div class="tagline-wrapper">
-                        <div class="carousel-image-1"><img src="assets/images/landing-image-1.png" loading="lazy"></div>
-                        <p>Bringing OPPORTUNITIES<br> and CO-CREATION<br>to UNLIMIT <br>the world’s digital workforce.</p>
-                    </div>
-                </div>
-                <div class="item slide-two">
-                    <div class="award-wrapper">
-                        <div class="award-image"><img src="assets/images/carousel-award.png" loading="lazy" alt="award-image"/></div>
-                    </div>
-                    <div class="tagline-wrapper">
-                        <div class="carousel-image-2"><img src="assets/images/carousel-icon-2.png" loading="lazy"></div>
-                        <p>Biz Apps Customer Recruit Award<br> Partner of the Year <br>Microsoft Philippines Partner  <br>Awards FY20 </p>
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#carousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div id="wwd">
-            <div class="section-title">What we do</div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="wwd-item business">
-                        <div class="item-icon"><img src="assets/images/icons/buss-icon.png" /></div>
-                        <h2>Business App Consulting</h2>
-                        <p>Our business application experts deliver advisory and system design solutions in the areas of process transformation, operational performance, customer engagement, and workforce productivity. </p>
-                        <div class="know-more"><a href="" [routerLink]="['/businessapp']" class="btn">Know More</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="wwd-item strategic">
-                        <div class="item-icon"><img src="assets/images/icons/strat-icon.png" /></div>
-                        <h2>Co-Strategic Partnerships</h2>
+                <div class="col-lg-4">
+                    <div class="item" id="partnership">
+                        <h2>Do you need to <br>unlock <span>strategic <br>business apps</span>?</h2>
+                        <hr>
                         <p>Expert services from to senior level consultants to unlock strategic adoption of new technologies and processes, closely aligned with your business and your other technology partners.</p>
-                        <div class="know-more"><a href="" [routerLink]="['/partnership']" class="btn">Know More</a></div>
+                        <div class="learn-btn">
+                            <a hef="" [routerLink]="['/partnership']"><button>Learn More</button></a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="wwd-item design">
-                        <div class="item-icon"><img src="assets/images/icons/des-icon.png" /></div>
-                        <h2>Design Thinking Solutioning</h2>
+                <div class="col-lg-4">
+                    <div class="item" id="solutions">
+                        <h2>Do you need to <br>develop <span>design <br>thinking solutions</span>?</h2>
+                        <hr>
                         <p>Design and delivery of services, strategic insight and products that build on the human strength and uniqueness of your business and your customers.</p>
-                        <div class="know-more"><a href="" [routerLink]="['/partnership']" class="btn">Know More</a></div>
+                        <div class="learn-btn">
+                            <a hef="" [routerLink]="['/design']"><button>Learn More</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="partnership">
-            <div class="section-title">Partnerships</div>
-            <div class="row pt-item" id="jmni">
-                <p>In everything we do, we make sure to create value for our clients. Hear from our previous and current partners about our journey together.</p>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                    <div class="pt-video">
-                        <div class="item-name">Jimini Pizza</div>
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/9xBWFfZKdXc"  loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="op">
+        <div class="section-title">OUR PARTNERSHIPS</div>
+        <div class="op-content">
+            <p>In everything we do, we make sure to create value for our clients. Hear from our previous and current partners about our journey together.</p>
+            <div class="partner-videos">
+                <div class="row" id="jimini">
+                    <div class="col-lg-8">
+                        <div class="video-container">
+                            <div class="name">Jimini Pizza</div>
+                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/9xBWFfZKdXc"  loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="video-desc">
+                            <h2>Jimini Pizza</h2>
+                            <hr>
+                            <p>Serving 330 kiosks and 1200 stations nationwide, they needed a more mobile and convenient POS system to help streamline all reporting activities. Find out how they are empowered by partner Kation Technologies with Microsoft solutions.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="pt-desc">
-                        <h2>Jimini Pizza </h2>
-                        <p>serving 330 kiosks and 1200 stations nationwide, they needed a more mobile and convenient POS system to help streamline all reporting activities. Find out how they are empowered by partner Kation Technologies with Microsoft solutions.</p>
-                        <div class="des-img for-web"><img src="assets/images/section-4-bg.png" loading="lazy"/></div>
+
+                <div class="row" id="messy-bessy">
+                    <div class="col-lg-4">
+                        <div class="video-desc">
+                            <h2>Messy Bessy</h2>
+                            <hr>
+                            <p>A social enterprise and SMB from the Philippines, is making use of an advanced ERP system to improve their operations and grow their business. </p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row pt-item for-web" id="mb">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="pt-desc">
-                        <h2>Messy Bessy </h2>
-                        <p>a social enterprise and SMB from the Philippines, is making use of an advanced ERP system to improve their operations and grow their business.</p>
-                        <div class="des-img"><img src="assets/images/section-5-bg.png" loading="lazy"/></div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                    <div class="pt-video">
-                        <div class="item-name">Messy Bessy</div>
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/J-Ng9Rob18Q" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-item for-mobile" id="mb">
-                <div class="col-lg-8 col-md-8">
-                    <div class="pt-video">
-                        <div class="item-name">Messy Bessy</div>
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/J-Ng9Rob18Q" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="pt-desc">
-                        <h2>Messy Bessy </h2>
-                        <p>a social enterprise and SMB from the Philippines, is making use of an advanced ERP system to improve their operations and grow their business.</p>
+                    <div class="col-lg-8">
+                        <div class="video-container">
+                            <div class="name">Messy Bessy</div>
+                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/J-Ng9Rob18Q" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

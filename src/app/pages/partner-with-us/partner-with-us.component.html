@@ -1,52 +1,71 @@
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-triangle-path" [fullScreen] = "true"></ngx-spinner>
 <app-header *ngIf="isPage"></app-header>
-<div class="wrapper" [ngClass]="{'view' : isPage}" id="pwu-form">
+<div [ngClass]="{'view' : isPage, 'onFooter': !isPage}" id="pwu">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 left-content">
-            <div>
-                <h1>Bringing opportunities <br>and co-creation to unlimit <br>the world’s digital workforce.</h1>
+        <div class="col-lg-6">
+            <div class="left-content">
+                <div class="tagline-wrapper">
+                    <div class="tagline">
+                        <p><span>To</span> Unlimit</p>
+                        <p><span>the</span> World</p>
+                        <p><span>of</span> Work</p>
+                    </div>
+                    <hr>
+                    <p class="purpose">Our main purpose</p>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 right-content">
-            <div>
-                <form [formGroup]="partnerFormGrp">
-                    <h1>PARTNER WITH US!</h1>
-                    <div class="fullname">
-                        <input type="text" placeholder="Full Name" formControlName="name"/>
-                    </div>
-                    <div class="display-flex">
-                        <div class="email input-container">
-                            <input type="text" placeholder="Email" formControlName="email"/>
-                            <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.pattern">
-                                Please enter a valid email address
+        <div class="col-lg-6">
+            <div class="right-content">
+                <div class="form-wrapper">
+                    <p>Let’s make positive connections.</p>
+                    <h2>CONNECT WITH US!</h2>
+                    <form [formGroup]="partnerFormGrp">
+                        <div class="fullname input-container">
+                            <input type="text" placeholder="Full Name" formControlName="name" required/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="email input-container">
+                                    <input type="text" placeholder="Email" formControlName="email"/>
+                                    <div class="error-msg" *ngIf="partnerFormGrp.controls['email'].errors?.pattern">
+                                        Please enter a valid email address
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="number input-container">
+                                    <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
+                                </div>
                             </div>
                         </div>
-                        <div class="number input-container">
-                            <input type="text" placeholder="Phone Number" formControlName="contact_number"/>
+                        <div class="subs-and-terms-wrapper">
+                            <div class="checkbox-wrapper">
+                                <mat-checkbox id="subs">I allow <span>KATION TECHNOLOGIES</span> to reach out to me.</mat-checkbox>
+                            </div>
+                            <div class="checkbox-wrapper terms-container">
+                                <mat-checkbox id="terms" formControlName="termsAndConditon" (change)="resetValidator($event)" [checked]="acceptedTerms"> I have read and understood the &nbsp;</mat-checkbox>
+                                <span class="termsAndConditon" (click)="showTermsAndConditions()">Terms and Conditions</span>.
+                            </div>
                         </div>
-                    </div>
-                    <div class="subs-and-terms-wrapper">
-                        <div class="checkbox-wrapper">
-                            <mat-checkbox id="subs">I allow KATION TECHNOLOGIES to reach out to me.</mat-checkbox>
+                        <div class="row form-section">
+                            <div class="col-md-6">
+                                <div class="recaptcha">
+                                    <re-captcha 
+                                        class="recaptcha-box"
+                                        (resolved)="resolved($event)" 
+                                        siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u">
+                                    </re-captcha>
+                                </div>
+                            </div>
+                            <div class="col-md-6 submit-btn-wrapper">
+                                <div class="submit-btn">
+                                    <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid" (click)="submitForm()">Submit</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="checkbox-wrapper terms-container">
-                            <mat-checkbox id="terms" formControlName="termsAndConditon" (change)="resetValidator($event)" [checked]="acceptedTerms"> I have read and understood the</mat-checkbox>
-                            <span class="termsAndConditon" (click)="showTermsAndConditions()"> Terms and Conditions</span>
-                        </div>
-                    </div>
-                    <div class="display-flex recaptcha-container">
-                        <div class="recaptcha">
-                            <re-captcha 
-                                class="recaptcha-box"
-                                (resolved)="resolved($event)" 
-                                siteKey="6LeZav4cAAAAAK6jKF3rBHeWd5g_Yx8B4T92Il4u">
-                            </re-captcha>
-                        </div>
-                        <div class="submit-btn">
-                            <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid" (click)="submitForm()">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

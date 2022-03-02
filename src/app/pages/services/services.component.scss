@@ -1,183 +1,111 @@
 #services {
-    .banner {
+    padding-top: 20rem;
+
+    p {
+        line-height: 1.8;
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        background-image: url('../../../assets/images/services-bg.png');
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: 90% 100%;
+        background-position: bottom;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 500px;
-        position: relative;
 
-        h1 {
+        h2 {
+            font-family: "Montserrat-Black";
             font-size: 6rem;
-            margin: 10px 0 0 0;
-            font-weight: bolder;
+            width: 65%;
+            margin: auto;
+            line-height: 1;
+
+            span {
+                font-size: 3rem;
+            }
         }
 
-        p {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-
-        &:before, &:after {
-            position: absolute;
-            bottom: 0;
-        }
-
-        &:before {
-            content: '';
-            left: 17rem;
-            background-image: url('../../../assets/images/services-image-1.png');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 350px;
-            width: 130px;
-        }
-
-        &:after {
-            content: '';
-            right: 8rem;
-            background-image: url('../../../assets/images/services-image-2.png');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 350px;
-            width: 300px;
-        }
     }
 
     .service-list {
-        .service-item {
-            border: 3px solid white;
-            border-radius: 30px;
-            padding: 2rem 3rem;
-            height: 500px;
+        width: 95%;
+        margin: auto;
+
+        hr {
+            width: 40%;
+            float: left;
+            border: 1px solid white;
+            margin-top: 10px;
+        }
+
+        .service {
+            background-color: #18488A;
+            border-radius: 25px;
+            height: 550px;
+            padding: 14rem 3rem 4rem 3rem;
+            background-image: url('../../../assets/images/icons/buss-icon.png');
+            background-size: 70px;
+            background-repeat: no-repeat;
+            background-position: 20px 30px;
             position: relative;
 
-            .item-icon {
-                width: 60px;
-                height: 60px;
-            }
-
-            h2, p {
-                color: white;
-            }
-
             h2 {
-                font-size: 4rem;
+                font-family: "Montserrat-Bold";
+                margin: 0;
             }
 
             p {
-                font-size: 1.5rem;
-                position: absolute;
-                top: 30rem;
-                left: 3rem;
-                right: 3rem;
+                clear: both;
+                margin-top: 8rem;
             }
 
-            .btn-wrapper {
+            .learn-btn {
                 position: absolute;
-                bottom: 2rem;
+                bottom: 5rem;
+                left: 3rem;
+                right: 3rem;
                 text-align: center;
-                left: 0;
-                right: 0;
 
-                .btn {
-                    background-color: transparent;
-                    text-align: center;
-                    width: 230px;
-                    border-color: white;
+                button {
+                    width: 200px;
+                    padding: 10px 0;
+                    border-radius: 50px;
                     text-transform: uppercase;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
                 }
             }
         }
 
         #business {
-            background-color: #18488A;
+            color: white;
         }
 
         #partnership {
             background-color: #F4BA6D;
+            background-image: url('../../../assets/images/icons/strat-icon.png');
 
-            h2, p {
-                color: black;
+            hr {
+                border-color: black;
             }
 
-            .btn-wrapper {
-                .btn {
+            .learn-btn {
+                button {
                     color: black;
                     border-color: black;
                 }
             }
         }
-        
-        #design {
+
+        #solutions {
             background-color: #466F7A;
-
-            .item-icon {
-                width: 35px;
-
-                img {
-                    height: 100%;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    #services {
-        .banner {
-            &::before {
-                left: 2rem;
-            }
-
-            .wrapper {
-                margin-left: -13rem;
-            }
-
-            &::after {
-                right: 2rem;
-            }
-        }
-        .service-list {
-            .service-item {
-                height: 560px;
-            }
-        }
-    }
-}
-
-@media (max-width: 800px) {
-    #services {
-        .banner {
-            &::before, &::after {
-                display: none;
-            }
-
-            .wrapper {
-                margin: auto;
-            }
-        }
-
-        .service-list {
-            .service-item {
-                width: 60%;
-                margin: 0 auto 3rem auto;
-            }
-        }
-    }
-}
-
-@media (max-width: 400px) {
-    #services {
-        .banner {
-            padding: 0 2rem;
-        }
-        
-        .service-list {
-            .service-item {
-                width: 100%;
-                margin: 0 auto 3rem auto;
-            }
+            background-image: url('../../../assets/images/icons/des-icon.png');
+            background-size: 50px 70px;
+            color: white;
         }
     }
 }

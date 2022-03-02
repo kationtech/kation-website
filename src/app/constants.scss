@@ -14,3 +14,43 @@ $tablet: 805px;
 $mobile: 480px;
 $mobile-small: 320px;
 $mobile-xsmall: 280px;
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../assets/fonts/Montserrat-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-ItalicBold';
+    src: url('../assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Reg';
+    src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('../assets/fonts/Montserrat-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../assets/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-XLight';
+    src: url('../assets/fonts/Montserrat-ExtraLight.ttf') format('truetype');
+}

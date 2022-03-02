@@ -1,79 +1,101 @@
 <app-header></app-header>
 <div class="view" id="careers">
-    <div id="career-desc">
-        <div class="row">
-            <div class="col-lg-7 col-md-7">
-                <div id="careers-container">
-                    <div class="section-title">Careers</div>
-                    <div class="desc">
-                        <p class="inner-content">At Kation Technologies, we believe that technology is made by people, for the people.
-                        <p class="inner-content">As a Filipino company, we look for people who seek to elevate the Filipino IT talent to the world stage and create value for our clients, people and communities.</p>
-                        <p class="inner-content">Grow your career with us. Bring your pioneering mindset and determination, and together, let’s create positively charged connections.</p>
-                    </div>
-                </div>
-                <div id="vacancy-conatiner">
-                    <div class="section-title">Vacancies</div>
-                    <div class="inner-content">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 vac-list" *ngFor="let career of careerList" (click)="getCareerDetails(career.id)">
-                                <div class="vac-item">
-                                    <p>{{career.title}} <br> {{career.subtitle}}</p>
-                                </div>
-                            </div>
+    <div class="career-wrapper">
+        <div class="section">
+            <div class="section-content empty"></div>
+        </div>
+        <div class="section" id="career-desc">
+            <div class="section-title">Careers</div>
+            <div class="section-content">
+                <p>At Kation Technologies, we believe that technology is made by people, for the people.</p>
+                <p>As a Filipino company, we look for people who seek to elevate the Filipino IT talent to the world stage and create value for our clients, people and communities.</p>
+                <p>Grow your career with us. Bring your pioneering mindset and determination, and together, let’s create positively charged connections.</p>
+            </div>
+        </div>
+        <div class="section" id="career-list">
+            <div class="sub-section-title">Vacancies</div>
+            <div class="career-list-content">
+                <div class="row list">
+                    <div class="col-lg-4" *ngFor="let career of careerList">
+                        <div class="vacancy">
+                            <p>{{career.title}} <br> {{career.subtitle}}</p>
+                            <div class="know-btn" (click)="getCareerDetails(career.id)"><button>Know More</button></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-5">
-                <div class="careers-image-1"><img src="assets/images/team-image-5.png" loading="lazy"/></div>
+        </div>
+        <div class="section" id="experiences">
+            <div class="sub-section-title">Experiences with Kation</div>
+            <div class="section-content">
+                <div class="team-wrapper" id="member-1">
+                    <div class="member-detail">
+                        <div class="member">
+                            <img src="assets/images/team-joshua.png" />
+                            <div class="meta">
+                                <div>
+                                    <p class="name">Joshua Oducado <br> Software Developer</p>
+                                    <div class="toggle-arrow" data-toggle="collapse" data-target="#joshua"><img src="assets/images/icons/toggle-arrow.png" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="joshua" class="full-desc collapse">
+                        <div class="desc">
+                            <div class="toggle-arrow-back"><img src="assets/images/icons/toggle-arrow-back.png" data-toggle="collapse" data-target="#joshua"/></div>
+                            <p>“ I like working in Kation because of the Opportunities for career growth, and tons of career development resources available. The company attracts some of the best talent and best people to work with in the world. I’ve always aspired to be “world-class”; the very best in my field/specialty. Being a part of a company that shares the same goal.The feeling is just surreal.”</p>
+                            <hr>
+                            <p class="name">Joshua Oducado <br> Software Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-wrapper" id="member-2">
+                    <div class="member-detail">
+                        <div class="member">
+                            <img src="assets/images/team-alvin.png" />
+                            <div class="meta">
+                                <div>
+                                    <p class="name">Alvin Heruela, CPA <br> Senior Business Apps Consultant</p>
+                                    <div class="toggle-arrow" data-toggle="collapse" data-target="#alvin"><img src="assets/images/icons/toggle-arrow.png" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="alvin" class="full-desc collapse">
+                        <div class="desc">
+                            <div class="toggle-arrow-back"><img src="assets/images/icons/toggle-arrow-back.png" data-toggle="collapse" data-target="#alvin"/></div>
+                            <p>“I will always choose to work at KATION Technologies. Our culture values transparency and honesty within the workplace. The leaders treat its employees as valued team members, and are always supportive in achieving our personal and professional growth. These values made me motivated to perform better and be better.”</p>
+                            <hr>
+                            <p class="name">Alvin Heruela, CPA <br> Senior Business Apps Consultant</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-wrapper" id="member-3">
+                    <div class="member-detail">
+                        <div class="member">
+                            <img src="assets/images/team-maricel.png" />
+                            <div class="meta">
+                                <div>
+                                    <p class="name">Maricel Javier <br> Business Development Manager</p>
+                                    <div class="toggle-arrow" data-toggle="collapse" data-target="#maricel"><img src="assets/images/icons/toggle-arrow.png" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="maricel" class="full-desc collapse">
+                        <div class="desc">
+                            <div class="toggle-arrow-back"><img src="assets/images/icons/toggle-arrow-back.png" data-toggle="collapse" data-target="#maricel"/></div>
+                            <p>“I really love working in Kation because it’s challenging and inspiring. It’s role and not the position basis. The people are warm-hearted, the workspace is very cool and work schedules is flexible. There’s a lot of new learning which are valuable and up to date, and lastly I found the right work place at the right time for me -a family oriented one.”</p>
+                            <hr>
+                            <p class="name">Maricel Javier <br> Business Development Manager</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="exp-container">
-        <div class="row">
-            <div class="col-lg-7 col-md-7">
-                <div class="section-title">Experiences with kation</div>
-            </div>
-        </div>
-        <div class="row team-section">
-            <div class="col-lg-7 col-md-7 left-content">
-                <div class="team-1 team-details">
-                    <p class="with-quote">“I like working in Kation because of the Opportunities for career growth, and tons of career development resources available. The company attracts some of the best talent and best people to work with in the world. I’ve always aspired to be “world-class”; the very best in my field/specialty. Being a part of a company that shares the same goal.
-                        The feeling is just surreal.”</p>
-                    <p>Joshua Oducado <br> Software Developer</p>
-                </div>
-                <div class="exp-image-2"><img src="assets/images/team-image-1.png"></div>
-            </div>
-            <div class="col-lg-5 col-md-5 right-content">
-                <div class="exp-image-1"><img src="assets/images/team-joshua.png"></div>
-            </div>
-        </div>
-        <div class="row team-section">
-            <div class="col-lg-7 col-md-7  left-content">
-                <div class="team-1 team-details">
-                    <p class="with-quote">“I will always choose to work at KATION Technologies. Our culture values transparency and honesty within the workplace. The leaders treat its employees as valued team members, and are always supportive in achieving our personal and professional growth. These values made me motivated to perform better and be better.”</p>
-                    <p>Alvin Heruela, CPA <br> Senior Business Apps Consultant</p>
-                </div>
-                <div class="exp-image-3"><img src="assets/images/team-image-2.png"></div>
-            </div>
-            <div class="col-lg-5 col-md-5 right-content">
-                <div class="exp-image-1"><img src="assets/images/team-alvin.png"></div>
-            </div>
-        </div>
-        <div class="row team-section">
-            <div class="col-lg-7 col-md-7  left-content">
-                <div class="team-1 team-details">
-                    <p class="with-quote">“I really love working in Kation because it’s challenging and inspiring.
-                        It’s role and not the position basis. The people are warm-hearted, the workspace is very cool 
-                        and work schedules is flexible. There’s a lot of new learning which are valuable and up to date, and lastly I found the right work place at the right time for me -a family oriented one.”</p>
-                    <p>Maricel Javier <br> Business Development Manager</p>
-                </div>
-                <div class="exp-image-2"><img src="assets/images/about-us-image-2.png"></div>
-            </div>
-            <div class="col-lg-5 col-md-5 right-content">
-                <div class="exp-image-1"><img src="assets/images/team-maricel.png"></div>
-            </div>
-        </div>
-    </div>
+    <div class="careers-des-image"><img src="assets/images/team-image-5.png"></div>
 </div>
 <app-footer></app-footer>

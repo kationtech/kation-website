@@ -1,75 +1,28 @@
-@import '../../constants.scss';
-
 #humane {
-    background-color: $yellow;
-    height: 100%;
+    background-color: #F4BA6D;
+    position: relative;
 
-    .section {
-        padding: 4rem 0 0 0;
-        display: block;
+    .content-wrapper {
+        padding: 5rem 0;
 
-        .section-title {
+        .sub-section-title {
             background-color: #ED672C;
-            width: 30%;
+            width: 450px;
         }
 
         .content {
-            p {
-                padding: 3rem 4rem;
-                font-size: 1.4rem;
-            }
+            width: 90%;
+            margin: auto;
+            padding: 3rem 0;
+            height: 600px; //temporary
         }
     }
-}
 
-.partnership-image-1 {
-    position: absolute;
-    right: 10rem;
-    width: 200px;
-    height: 200px;
-    background-image: url('../../../assets/images/humane-image-1.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index: 2;
-    margin-top: -8rem;
-}
-
-@media (max-width: 1366px) {
-    #humane {
-        .section {
-            .section-title {
-                width: 40%;
-            }
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    #humane {
-        .section {
-            .section-title {
-                width: 50%;
-            }
-        }
-    }
-}
-
-@media (max-width: $mobile) {
-    #humane {
-        height: auto;
-        background-position: 200% 99%;
-        background-size: 80%;
-
-        section {
-            .content {
-                ul {
-                    flex-direction: column;
-
-                    li {
-                        margin-bottom: 20px;
-                    }
-                }
-            }
-        }
+    .image-divider-1 {
+        position: absolute;
+        width: 250px;
+        bottom: -120px;
+        right: 120px;
+        z-index: 1;
     }
 }

@@ -1,178 +1,218 @@
 #careers {
-    background-image: url('../../../assets/images/bg2.png');
-    background-size: 100%;
-    padding-right: 20px;
-
-    .row {
-        & > div {
-            padding: 0;
-        }
-    }
+    position: relative;
 
     p {
+        line-height: 1.8;
         font-size: 1.5rem;
-        text-align: justify;
     }
 
-    .section-title {
-        width: 60%;
-        padding: 10px 50px;
-    }
-
-    .inner-content {
-        padding: 0 5rem 0 8rem;
+    .sub-section-title {
+        position: absolute;
+        background-color: #466F7A;
     }
 
     #career-desc {
-        margin-top: 3rem;
+        .section-title {
+            width: 300px;
+        }
 
-        .desc {
-            margin-top: 3rem;
+        .section-content {
+            padding-left: 5rem;
 
             p {
-                margin-bottom: 15px;
+                width: 60%;
             }
         }
     }
 
-    #vacancy-conatiner {
-        margin-top: 5rem;
+    #career-list {
+        .sub-section-title {
+            top: -2rem;
+        }
 
-        .inner-content {
-            margin-top: 3rem;
+        .career-list-content {
+            width: 95%;
+            margin: auto;
 
-            .vac-list {
-                margin-top: 5rem;
+            .list {
+                width: 60%;
+                padding: 8rem 5rem;
 
-                .vac-item {
+                .vacancy {
                     background-color: #466F7A;
-                    border: 2px solid white;
-                    padding: 10px;
-                    border-radius: 15px;
-                    height: 200px;
-                    width: 200px;
+                    height: 230px;
                     margin: auto;
-                    position: relative;
-    
+                    border-radius: 25px;
+                    padding: 3rem;
+
                     p {
-                        position: absolute;
-                        bottom: 20px;
-                        left: 20px;
-                        right: 20px;
                         color: white;
-                        font-size: 1.5rem;
-                        text-align: left;
+                        line-height: 1.5;
+                    }
+
+                    .know-btn {
+                        position: absolute;
+                        bottom: 2rem;
+                        left: 2rem;
+                        right: 2rem;
+                        text-align: center;
+
+                        button {
+                            background-color: transparent;
+                            border: 1px solid white;
+                            text-transform: uppercase;
+                            padding: 10px 0;
+                            width: 150px;
+                            border-radius: 25px;
+                            color: white;
+                        }
                     }
                 }
             }
         }
     }
 
-    .careers-image-1 {
-        width: 95%;
-        margin-left: -30px;
-    }
+    #experiences {
+        .sub-section-title {
+            background-color: #18488A;
+            width: 450px;
+            top: -2rem;
+        }
 
-    #exp-container {
-        .team-section {
-            margin-bottom: 10rem;
+        .team-wrapper {
+            margin-bottom: 8rem;
 
-            &:last-child {
-                margin-bottom: 0;
+            .member {
+                max-width: 400px;
+                margin-left: 25rem;
+                position: relative;
+
+                .meta {
+                    position: absolute;
+                    bottom: 0;
+                    right: 7px;
+                    left: 0;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    background-color: #466F7A;
+
+                    & > div {
+                        position: relative;
+
+                        .name {
+                            margin: 0;
+                            color: white;
+                            padding: 20px 40px 20px 20px;
+                            line-height: 1.5;
+                            text-align: right;
+                        }
+
+                        .toggle-arrow {
+                            width: 20px;
+                            position: absolute;
+                            bottom: 5px;
+                            right: 8px;
+                        }
+                    }
+                }
             }
         }
 
-        .left-content {
-            .team-details {
-                background-color: #466F7A;
-                padding: 2rem 11rem 2rem 2rem;
+        .full-desc {
+            background-color: #466F7A;
+            width: 60%;
+            margin: -84px 0 0px 15px;
+            z-index: 1;
+            position: relative;
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            color: white;
+
+            &::before {
                 position: absolute;
-                right: -14rem;
-                left: 10rem;
-                top: 14rem;
-                border-radius: 20px;
+                content: "";
+                background-image: url('../../../assets/images/bubble-team-point.png');
+                width: 40px;
+                height: 55px;
+                top: -34px;
+                background-size: 100% 100%;
+                left: 7rem;
+                background-repeat: no-repeat;  
+            }
+
+            .desc {
+                text-align: right;
+
+                &::before {
+                    content: "\201C";
+                    font-size: 15rem;
+                    position: absolute;
+                    left: 2rem;
+                    top: -2rem;
+                }
+
+                .toggle-arrow-back {
+                    text-align: right;
+                    
+                    img {
+                        width: 25px;
+                        cursor: pointer;
+                    }
+                }
 
                 p {
-                    color: white;
-                    font-size: 1.4rem;
-                    position: relative;
-                    padding-left: 6rem;
-                    line-height: 1.5;
-                    text-align: right;
+                    margin-left: 10rem;
                 }
-
-                .with-quote {
-                    margin-bottom: 20px;
-
-                    &::before {
-                        content: "\201C";
-                        font-size: 8rem;
-                        position: absolute;
-                        left: 0;
-                        top: -30px;
-                    }
-                }
-
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background-image: url('../../../assets/images/bubble-team-point.png');
-                    width: 20px;
-                    height: 40px;
-                    bottom: -30px;
-                    background-size: 100% 100%;
-                    right: 7rem;
-                    background-repeat: no-repeat;                        
-                }
-            }
-
-            .exp-image-2, .exp-image-3 {
-                z-index: 2;
-                position: relative;
-                width: 200px;
-                margin: 24rem 0 0 25rem;
-            }
-
-            .exp-image-3 {
-                margin: 24rem 0 0 16rem;
             }
         }
 
-        .right-content {
-            .exp-image-1 {
-                width: 75%;
-                margin: auto;
+        #member-1 {
+            .member-detail {
+                background-image: url('../../../assets/images/exp-bg-1.png');
+                background-repeat: no-repeat;
+                background-size: 200px;
+                background-position: 73% 50%;
+            }
+        }
+
+        #member-2 {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+
+           .member-detail {
+                background-image: url('../../../assets/images/exp-bg-2.png');
+                background-repeat: no-repeat;
+                background-size: 250px;
+                height: 300px;
+                background-position: 30% 50%;
+
+               .member {
+                    float: right;
+                    margin-right: 15rem;
+               }
+           }
+
+           .full-desc {
+               float: right;
+               margin-right: 15px;
+           }
+        }
+
+        #member-3 {
+            .member-detail {
+                background-image: url('../../../assets/images/exp-bg-3.png');
+                background-repeat: no-repeat;
+                background-size: 200px;
+                background-position: 73% 50%;
             }
         }
     }
 }
 
-@media (max-width: 1024px) {
-    #careers {
-        .section-title {
-            width: 90%;
-        }
-
-        #exp-container {
-            margin-top: 3rem;
-
-            .left-content {
-                .team-details {
-                    top: 2rem;
-
-                    &::after {
-                        right: 9rem;
-                    }
-                }
-
-                .exp-image-2 {
-                    margin: 15rem 0 0 20rem;
-                }
-
-                .exp-image-3 {
-                    margin-top: 18rem;
-                }
-            }
-        }
-    }
+.careers-des-image {
+    position: absolute;
+    top: 4%;
+    right: 0;
+    width: 600px;
 }
