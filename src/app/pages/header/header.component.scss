@@ -69,13 +69,19 @@ header {
                         color: white;
 
                         &:hover {
-                            color: #18488A;
+                            color: #ED672C;
                             box-shadow: inset 400px 0 0 0 white;
                             text-decoration: none;
 
                             &:after {
                                 width: 0;
                             }
+                        }
+
+                        &.isActive {
+                            background-color: transparent;
+                            color: #ED672C;
+                            border-color: #ED672C;
                         }
                     }
                 }
