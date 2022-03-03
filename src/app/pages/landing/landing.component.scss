@@ -34,9 +34,6 @@
         }
 
         .slide-1 {
-            background-image: url('../../../assets/images/slide-1.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
             height: 650px;
     
             .logo {
@@ -59,12 +56,12 @@
     
                 .tagline {
                     width: 70%;
-                    margin: auto;
+                    margin: 0 0 0 90px;
                     text-align: center;
                     position: relative;
         
                     p {
-                        font-family: "Montserrat-Black";
+                        font-family: "Montserrat-Bold";
                         font-size: 6rem;
                         line-height: 1;
                         text-transform: uppercase;
@@ -78,11 +75,11 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        left: 2px;
-                        top: -105px;
+                        left: 32px;
+                        top: -70px;
                         background-image: url('../../../assets/images/slide-img-1.png');
-                        height: 150px;
-                        width: 150px;
+                        height: 120px;
+                        width: 120px;
                         background-repeat: no-repeat;
                         background-size: 100%;
                     }
@@ -90,8 +87,8 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        right: 80px;
-                        bottom: -3px;
+                        right: 90px;
+                        bottom: -8px;
                         background-image: url('../../../assets/images/three-arrows.png');
                         height: 50px;
                         width: 50px;
@@ -103,13 +100,45 @@
                 hr {
                     width: 20%;
                     border: 1px solid black;
-                    margin: 0 0 0 28rem;
+                    margin: 0 0 0 250px;
                 }
 
                 .purpose {
                     font-family: "Montserrat-ItalicBold";
-                    margin: 0 0 0 28rem;
+                    margin: 0 0 0 250px;
                     font-size: 2rem;
+                }
+            }
+
+            .left-container {
+                background-color: #DAE1E5;
+            }
+
+            .right-container {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 30px;
+                    bottom: 0;
+                    width: 200px;
+                    height: 450px;
+                    background-image: url('../../../assets/images/landing-image-3.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -82px;
+                    bottom: 0;
+                    width: 280px;
+                    height: 350px;
+                    background-image: url('../../../assets/images/landing-image-2.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
                 }
             }
         }
@@ -147,11 +176,14 @@
                     
                     p {
                         font-size: 3rem;
-                        font-family: "Montserrat-Black";
+                        font-family: "Montserrat-Bold";
+                        line-height: 1.5;
+                        clear: both;
     
                         &.title {
-                            font-family: "Montserrat-XLight";
+                            font-family: "Montserrat-Thin";
                             font-size: 4rem;
+                            line-height: 1.2;
                         }
                     }
     
@@ -165,6 +197,12 @@
                         width: 150px;
                         background-repeat: no-repeat;
                         background-size: 100%;
+                    }
+
+                    hr {
+                        width: 40%;
+                        float: left;
+                        margin: 5px 0;
                     }
                 }
             }
