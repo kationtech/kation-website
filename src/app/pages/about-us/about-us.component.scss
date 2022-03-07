@@ -190,8 +190,9 @@
                                 width: 100%;
                                 margin: auto;
                                 clear: both;
+                                margin-bottom: 20px;
 
-                                span {
+                                span.bold {
                                     font-family: "Montserrat-Bold";
                                 }
                             }
@@ -297,12 +298,14 @@
                             .member-details {
                                 .meta {
                                     width: 96%;
+                                    border-bottom-left-radius: 19px;
+                                    border-bottom-right-radius: 15px;
                                 }
                             }
 
                             .full-desc {
                                 width: 350px;
-                                margin: -101px 0 0 -30px;
+                                margin: -112px 0 0 -30px;
                             }
                         }
 

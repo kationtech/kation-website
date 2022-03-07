@@ -181,7 +181,7 @@
                         clear: both;
     
                         &.title {
-                            font-family: "Montserrat-Thin";
+                            font-family: "Montserrat-Light";
                             font-size: 4rem;
                             line-height: 1.2;
                         }
@@ -439,12 +439,15 @@
                     top: 0;
 
                     .tagline {
+                        width: 100%;
+                        margin: auto;
+
                         p {
                             font-size: 4rem;
                         }
 
                         &::before {
-                            left: -20px;
+                            left: 48px;
                             bottom: -15px;
                             height: 60px;
                             width: 60px;
@@ -452,17 +455,24 @@
                         }
 
                         &::after {
-                            right: -13px;
-                            bottom: -13px;
+                            right: 50px;
+                            bottom: -11px;
                         }
                     }
 
                     hr {
-                        margin: 0 0 0 117px;
+                        margin: 0 0 0 119px;
                     }
 
                     .purpose {
-                        margin: 0 0 0 117px;
+                        margin: 0 0 0 119px;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .right-container {
+                    &::before, &::after {
+                        display: none;
                     }
                 }
             }
@@ -523,6 +533,10 @@
                     }
                 }
             }
+
+            .carousel-control {
+                width: 50px;
+            }
         }
 
         #wyn {
@@ -576,4 +590,8 @@
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
+}
+
+@media (max-width: 380px) {
+
 }

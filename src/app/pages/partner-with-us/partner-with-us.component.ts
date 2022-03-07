@@ -86,12 +86,18 @@ export class PartnerWithUsComponent implements OnInit {
 
     this.util.showSpinner();
     this.util.register(finalData).pipe(takeUntil(this.destroy$)).subscribe(value => {
-      if(value['status'] === 201) {
-        this.util.closeSpinner();
-        this.successModal();
-        localStorage.clear();
-        this.partnerFormGrp.reset();
-      }
+      // Temporary 
+      this.util.closeSpinner();
+      this.successModal();
+      // localStorage.clear();
+      // this.partnerFormGrp.reset();
+      console.log(value);
+      // // if(value['status'] === 201) {
+      // //   this.util.closeSpinner();
+      // //   this.successModal();
+      // //   localStorage.clear();
+      // //   this.partnerFormGrp.reset();
+      // // }
     }, error => {
       this.util.closeSpinner();
       console.log(error)
