@@ -137,6 +137,10 @@ img { width: 100%; }
 }
 
 @media (max-width: 480px) {
+    .view {
+        padding-top: 80px;
+    }
+
     .section-title, .sub-section-title {
         width: 90%;
         font-size: 2rem;

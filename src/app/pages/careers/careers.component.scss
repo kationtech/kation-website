@@ -217,7 +217,7 @@
     width: 600px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     .careers-des-image {
         display: none;
     }
@@ -232,18 +232,13 @@
         }
 
         #career-list {
-            .sub-section-title {
-                width: 250px;
-            }
-
             .career-list-content {
                 .list {
                     width: 100%;
-                    padding: 5rem 2rem;
 
-                    .vacancy {
-                        max-width: 200px;
-                        margin-bottom: 20px;
+                    & > div {
+                        max-width: 300px;
+                        margin: 10px auto;
                     }
                 }
             }
@@ -288,6 +283,47 @@
                         margin-left: 5rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #careers {
+        
+
+        #career-list {
+            .sub-section-title {
+                width: 250px;
+            }
+
+            .career-list-content {
+                .list {
+                    width: 100%;
+                    padding: 5rem 2rem;
+
+                    .vacancy {
+                        max-width: 200px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    #careers {
+        #experiences {
+            .sub-section-title {
+                width: 300px;
+            }
+        }
+
+        #career-desc {
+            .section-content {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
             }
         }
     }

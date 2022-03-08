@@ -106,3 +106,9 @@ mat-dialog-actions {
         }
     }
 }
+
+@media (max-width: 380px) {
+    .mat-dialog-content {
+        max-height: 100%;
+    }
+}

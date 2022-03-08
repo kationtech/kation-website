@@ -320,7 +320,7 @@ header {
                                     a {
                                         text-transform: capitalize;
                                     }
-                                    
+
                                     &:hover {
                                         background-color: white;
 
@@ -425,9 +425,18 @@ header {
 }
 
 @media (max-width: 420px) {
+    header {
+        height: 80px;
+        line-height: 80px;
+    }
+
     #mobile-menu {
         #logo {
             max-width: 70%;
+        }
+
+        #menu-icon {
+            font-size: 2.5rem;
         }
     }
 }

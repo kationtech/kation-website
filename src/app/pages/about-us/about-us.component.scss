@@ -230,7 +230,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     #about-us {
         .about-us-wrapper {
             #wwa {
@@ -275,6 +275,88 @@
                 }
             }
 
+            #mot {
+                .section-content {
+                    .team-list {
+                        .member-wrapper {
+                            .full-desc {
+                                width: 100%;
+                                margin: -75px 0 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #about-us {
+        .about-us-wrapper {
+            #wwa {
+                .section-title {
+                    width: 60%;
+                }
+
+                .section-content {
+                    .image-container {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 0;
+                    }
+                }
+            }
+
+            #hww {
+                .section-title {
+                    width: 70%;
+                }
+
+                .section-content {
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+
+            #wwwu {
+                .section-content {
+                    img {
+                        display: none;
+                    }
+
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #about-us {
+        .about-us-wrapper {
+            
+
+            #hww {
+                .section-title {
+                    width: 70%;
+                }
+
+                .section-content {
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+
             #awards {
                 .awards-content {
                     padding: 4rem 1rem;
@@ -311,6 +393,27 @@
 
                         #team-1, #team-2, #team-3 {
                             background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    #about-us {
+        .about-us-wrapper {
+            #mot {
+                .section-content {
+                    .team-list {
+                        .member-wrapper {
+                            .member-details {
+                                .meta {
+                                    border-bottom-left-radius: 15px;
+                                    border-bottom-right-radius: 12px;                                
+                                }
+                            }
                         }
                     }
                 }

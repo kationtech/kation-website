@@ -294,12 +294,14 @@
     background-color: #e1e1e1 !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     .mobile-d-none {
         display: none;
     }
 
     #pwu {
+        height: auto;
+
         .right-content {
             .form-wrapper {
                 padding-top: 3rem;
@@ -316,6 +318,18 @@
                     }
                 }
             }
+        }
+
+        div {
+            height: auto;
+        }
+
+        .right-content {
+            padding-top: 10rem;
+        }
+
+        &.onFooter {
+            height: auto;
         }
     }
 

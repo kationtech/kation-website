@@ -33,12 +33,36 @@
     }
 }
 
+@media (max-width: 720px) {
+    #hybrid {
+        .image-divider-1 {
+            right: 0px;
+        }
+    }
+}
+
 @media (max-width: 480px) {
     #hybrid {
         .content-wrapper {
             .sub-section-title {
                 width: 90%;
             }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    #hybrid {
+        .content-wrapper {
+            .sub-section-title {
+                width: 300px;
+            }
+        }
+
+        .image-divider-1 {
+            width: 200px;
+            bottom: -60px;
+            right: 0;
         }
     }
 }

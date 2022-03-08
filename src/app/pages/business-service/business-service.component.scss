@@ -189,10 +189,8 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     #business {
-        padding: 3rem 0;
-
         .business-content-wrapper {
             .item {
                 height: auto;
@@ -201,7 +199,9 @@ p {
         }
 
         .image-divider-1 {
-            display: none;
+            bottom: -60px;
+            right: -46px;
+            width: 250px;
         }
     }
 
@@ -221,7 +221,31 @@ p {
 
     #hybrid {
         .image-divider-2 {
+            bottom: -105px;
+            right: 25px;
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #business {
+        padding: 3rem 0;
+
+        .image-divider-1 {
             display: none;
         }
+    }
+
+    #hybrid {
+        .image-divider-2 {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .sub-section-title {
+        width: 300px;
     }
 }
