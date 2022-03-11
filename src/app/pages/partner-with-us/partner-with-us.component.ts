@@ -52,6 +52,7 @@ export class PartnerWithUsComponent implements OnInit {
   }
 
   resetValidator(event: any){
+    console.log(event.checked);
     if(!event.checked) {
       this.partnerFormGrp.get('termsAndConditon')?.setValue(null);
     }
@@ -71,6 +72,7 @@ export class PartnerWithUsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.acceptedTerms = true;
+        this.partnerFormGrp.get('termsAndConditon')?.setValue(this.acceptedTerms);
       }
     });
   }
@@ -91,7 +93,6 @@ export class PartnerWithUsComponent implements OnInit {
       this.successModal();
       // localStorage.clear();
       // this.partnerFormGrp.reset();
-      console.log(value);
       // // if(value['status'] === 201) {
       // //   this.util.closeSpinner();
       // //   this.successModal();
