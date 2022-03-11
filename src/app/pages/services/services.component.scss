@@ -112,6 +112,31 @@
     }
 }
 
+@media (max-width: 1024px) {
+    #services {
+        .service-list {
+            .service {
+                height: 650px;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #services {
+        .tagline {
+            background-image: none;
+        }
+
+        .service-list {
+            .service {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
 @media (max-width: 720px) {
     #services {
         .tagline {
@@ -174,6 +199,17 @@
             .service {
                 margin-bottom: 20px;
                 height: 600px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    #services {
+        .service-list {
+            .service {
+                height: 680px;
             }
         }
     }

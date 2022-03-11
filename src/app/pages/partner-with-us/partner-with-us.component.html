@@ -2,7 +2,7 @@
 <app-header *ngIf="isPage"></app-header>
 <div [ngClass]="{'view' : isPage, 'onFooter': !isPage}" id="pwu">
     <div class="row">
-        <div class="col-lg-6 mobile-d-none">
+        <div class="col-lg-6 col-md-6 mobile-d-none">
             <div class="left-content">
                 <div class="tagline-wrapper">
                     <div class="tagline">
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="right-content">
                 <div class="form-wrapper">
                     <p>Let’s make positive connections.</p>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="row form-section">
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="recaptcha">
                                     <re-captcha 
                                         class="recaptcha-box"
@@ -58,7 +58,7 @@
                                     </re-captcha>
                                 </div>
                             </div>
-                            <div class="col-md-6 submit-btn-wrapper">
+                            <div class="col-lg-6 col-md-12 submit-btn-wrapper">
                                 <div class="submit-btn">
                                     <button class="btn btn-orange btn-slide" [disabled]="partnerFormGrp.invalid" (click)="submitForm()">Submit</button>
                                 </div>

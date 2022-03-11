@@ -335,6 +335,113 @@
                     }
                 }
             }
+
+            #mot {
+                .section-content {
+                    .team-list {
+                        .member-wrapper {
+                            .member-details {
+                                .meta {
+                                    width: 454px;
+                                }
+                            }
+
+                            .full-desc {
+                                width: 110%;
+                                margin: -85px 0 0 -23px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #about-us {
+        .about-us-wrapper {
+            #wwa {
+                .section-content {
+                    .image-container {
+                        top: 0;
+                    }
+                }
+            }
+
+            #mot {
+                .section-content {
+                    .team-list {
+                        .member-wrapper {
+                            .full-desc {
+                                width: 100%;
+                                margin: -85px 0 0 0rem;
+                            }
+                        }
+
+                        #team-1 {
+                            background-position: 30px 90px;
+                            background-size: 100px;
+                        }
+
+                        #team-2 {
+                            background-size: 150px;
+                            background-position: 720px 150px;
+                        }
+
+                        #team-3 {
+                            background-position: 10px 150px;
+                            background-size: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #about-us {
+        .about-us-wrapper {
+            #wwa {
+                .section-content {
+                    .image-container {
+                        position: relative;
+                        padding-left: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            #hww {
+                .section-content {
+                    p {
+                        width: 90%;
+                    }
+                }
+            }
+
+            #wwwu {
+                .section-content {
+                    img {
+                        display: none;
+                    }
+
+                    p {
+                        width: 90%;
+                    }
+                }
+            }
+
+            #mot {
+                .section-content {
+                    .team-list {
+                        #team-1, #team-2, #team-3 {
+                            background-image: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -412,6 +519,47 @@
                                 .meta {
                                     border-bottom-left-radius: 15px;
                                     border-bottom-right-radius: 12px;                                
+                                }
+                            }
+
+                            .full-desc {
+                                width: 320px;
+                                margin: -112px 0 0 -41px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    #about-us {
+        .about-us-wrapper {
+            #wwa, #hww, #mot {
+                .section-title {
+                    width: 80%;
+                }
+            }
+
+            #wwwu {
+                .section-title {
+                    width: 95%;
+                }
+            }
+
+            #mot {
+                .section-content {
+                    .team-list {
+                        .member-wrapper {
+                            .member-details {
+                                .meta {
+                                    & > div {
+                                        p {
+                                            font-size: 1rem;
+                                        }
+                                    }
                                 }
                             }
                         }

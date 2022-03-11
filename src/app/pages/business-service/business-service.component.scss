@@ -189,6 +189,46 @@ p {
     }
 }
 
+@media (max-width: 1024px) {
+    #business {
+        .business-content-wrapper {
+            .item {
+                height: 1500px;
+            }
+        }
+
+        .image-divider-1 {
+            right: -32px;
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    #business {
+        .business-content-wrapper {
+            .item {
+                height: auto;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #humane {
+        .humane-content {
+            #kiosk {
+                .desc {
+                    position: relative;
+                }
+
+                .kiosk-image {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 720px) {
     #business {
         .business-content-wrapper {

@@ -294,11 +294,13 @@
     background-color: #e1e1e1 !important;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 770px) {
     .mobile-d-none {
         display: none;
     }
+}
 
+@media (max-width: 720px) {
     #pwu {
         height: auto;
 

@@ -453,6 +453,26 @@
                 }
 
             }
+
+            .slide-2 {
+                .award {
+                    img {
+                        max-width: 400px;
+                        max-height: 400px;
+                    }
+                }
+
+                .award-desc {
+                    .desc {
+                        p {
+                            font-size: 2.5rem;
+                            &.title {
+                                font-size: 3.5rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         #wyn {
@@ -462,6 +482,162 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 770px) {
+    #landing {
+        #carousel-wrapper {
+            .slide-1, .slide-2 {
+                background-image: none;
+                background-color: #DAE1E5;
+                height: auto;
+
+                .row {
+                    & > div {
+                        height: 40vh;
+                    }
+                }
+            }
+
+            .slide-1 {
+                .right-container {
+                    &::before, &::after {
+                        display: none;
+                    }
+                }
+
+                .tagline-wrapper {
+                    top: 0;
+                    left: 0;
+
+                    .tagline {
+                        width: 100%;
+                        margin: auto;
+
+                        p {
+                            font-size: 5rem;
+                        }
+
+                        &::before {
+                            left: 140px;
+                            bottom: -75px;
+                            top: revert;
+                        }
+
+                        &::after {
+                            right: 200px;
+                            bottom: -8px;
+                        }
+                    }
+
+                    hr {
+                        margin: 0 0 0 270px;
+                    }
+
+                    .purpose {
+                        margin: 0 0 0 270px;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .slide-2 {
+                .award-desc {
+                    position: relative;
+                    width: 70%;
+                    margin: auto;
+                    top: 10%;
+                }
+            }
+        }
+
+        #wyn {
+            background-color: #DAE1E5;
+
+            .wyn-list {
+                .item {
+                    width: 80%;
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        #op {
+            .op-content {
+                .partner-videos {
+                    iframe {
+                        height: 300px;
+                    }
+
+                    & > div {
+                        height: auto;
+                    }
+
+                    #jimini {
+                        background-image: none;
+                    }
+
+                    .video-desc {
+                        padding-top: 20px;
+                    }
+
+                    #messy-bessy {
+                        background-image: none;
+                        margin-top: 20px;
+
+                        .video-desc {
+                            text-align: left;
+                        }
+
+                        hr {
+                            float: left;
+                        }
+                    }
+                }
+            }
+
+            #op {
+                .op-content {
+                    .partner-videos {
+                        iframe {
+                            height: 300px;
+                        }
+    
+                        & > div {
+                            height: auto;
+                        }
+    
+                        #jimini {
+                            background-image: none;
+                        }
+    
+                        .video-desc {
+                            padding-top: 20px;
+                        }
+    
+                        #messy-bessy {
+                            background-image: none;
+                            margin-top: 20px;
+    
+                            .video-desc {
+                                text-align: left;
+                            }
+    
+                            hr {
+                                float: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .reverse-on-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 }
 
@@ -611,6 +787,66 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 712px) {
+    #landing {
+        #carousel-wrapper {
+            .slide-1 {
+                .tagline-wrapper {
+                    top: 0;
+
+                    .tagline {
+                        width: 100%;
+
+                        p {
+                            font-size: 5rem;
+                        }
+
+                        &::before {
+                            left: 110px;
+                            bottom: -65px;
+                        }
+
+                        &::after {
+                            right: 180px;
+                            bottom: -8px;
+                        }
+                    }
+
+                    hr {
+                        margin: 0 0 0 275px;
+                    }
+                    
+                    .purpose {
+                        margin: 0 0 0 275px;
+                    }
+                }
+            }
+
+            .slide-2 {
+                .award-desc {
+                    top: 0;
+
+                    .desc {
+                        padding-top: 0;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        p {
+                            text-align: center;
+                        }
+
+                        hr {
+                            margin: 5px 0 5px 90px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -869,6 +1105,7 @@
             .wyn-list {
                 .item {
                     margin-bottom: 20px;
+                    width: 100%;
                 }
             }
         }
