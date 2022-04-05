@@ -78,9 +78,14 @@ p {
     .image-divider-1 {
         position: absolute;
         bottom: -87px;
-        right: -46px;
+        right: 0;
         width: 350px;
+        height: 230px;
         z-index: 1;
+        background-image: url('../../../assets/images/divider-1.png');
+        background-size: 100% 100%;
+        background-position: 55px 0;
+        background-repeat: no-repeat;
     }
 }
 

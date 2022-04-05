@@ -57,7 +57,6 @@ export class LandingComponent implements OnInit {
   }
 
   promptSuccess(){
-    console.log('asd');
     let handleSuccess = this.dialog.open(PromptModalComponent, {
       width: '500px',
       data: 'successPrompt'
@@ -65,7 +64,6 @@ export class LandingComponent implements OnInit {
   }
 
   goToCareers() {
-    console.log('asad');
     // this.router.navigate(['/team'], {queryParams: {section: 'careers'}});
     this.router.navigate(['/team'], { fragment: "careerSection" })
   }

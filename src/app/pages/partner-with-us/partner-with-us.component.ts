@@ -52,7 +52,6 @@ export class PartnerWithUsComponent implements OnInit {
   }
 
   resetValidator(event: any){
-    console.log(event.checked);
     if(!event.checked) {
       this.partnerFormGrp.get('termsAndConditon')?.setValue(null);
     }
@@ -88,20 +87,15 @@ export class PartnerWithUsComponent implements OnInit {
 
     this.util.showSpinner();
     this.util.register(finalData).pipe(takeUntil(this.destroy$)).subscribe(value => {
-      // Temporary 
-      this.util.closeSpinner();
-      this.successModal();
-      // localStorage.clear();
-      // this.partnerFormGrp.reset();
-      // // if(value['status'] === 201) {
-      // //   this.util.closeSpinner();
-      // //   this.successModal();
-      // //   localStorage.clear();
-      // //   this.partnerFormGrp.reset();
-      // // }
+      if(value['status'] === 201) {
+        this.util.closeSpinner();
+        this.successModal();
+        localStorage.clear();
+        this.partnerFormGrp.reset();
+      }
     }, error => {
       this.util.closeSpinner();
-      console.log(error)
+      console.log(error);
     })
   }
 

@@ -56,7 +56,6 @@ export class BusinessServiceComponent implements OnInit {
     if(this.selectedService) {
       this.services.forEach(data => {
         if(this.selectedService === data.id) {
-          console.log(this.selectedService, data.id);
           this.showDetails(data);
         }
       });

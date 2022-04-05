@@ -13,7 +13,6 @@ export class DetailsModalComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.data);
   }
 
 }
