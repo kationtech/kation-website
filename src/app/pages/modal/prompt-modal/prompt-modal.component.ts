@@ -17,4 +17,8 @@ export class PromptModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
+
 }

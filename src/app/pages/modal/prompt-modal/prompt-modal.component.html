@@ -12,5 +12,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="center" [ngClass]="{'isSuccessPrompt': data === 'successPrompt'}">
     <div class="close" *ngIf="data === 'successPrompt'" mat-dialog-close><img src="assets/images/icons/close.png"></div>
-    <button *ngIf="data !== 'successPrompt'" mat-dialog-close class="btn btn-orange">Great!</button>
+    <button *ngIf="data !== 'successPrompt'" (click)="refreshPage()" class="btn btn-orange">Great!</button>
 </mat-dialog-actions>

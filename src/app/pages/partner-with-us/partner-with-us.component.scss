@@ -243,8 +243,9 @@
                                 text-transform: uppercase;
                         
                                 &:hover {
-                                    box-shadow: inset 400px 0 0 0 #18488A;
                                     color: #ED672C;
+                                    box-shadow: inset 400px 0 0 0 white;
+                                    text-decoration: none;
                                 }
             
                                 &:disabled {

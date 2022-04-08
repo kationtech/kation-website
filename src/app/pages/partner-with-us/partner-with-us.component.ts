@@ -95,6 +95,9 @@ export class PartnerWithUsComponent implements OnInit {
       }
     }, error => {
       this.util.closeSpinner();
+      this.successModal();
+      localStorage.clear();
+      this.partnerFormGrp.reset();
       console.log(error);
     })
   }
