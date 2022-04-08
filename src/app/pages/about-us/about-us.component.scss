@@ -230,6 +230,67 @@
     }
 }
 
+@media (max-width: 834px) {
+    #about-us {
+        .about-us-wrapper {
+            #wwa {
+                .section-title {
+                    width: 60%;
+                }
+
+                .section-content {
+                    .image-container {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 0;
+                    }
+                }
+            }
+
+            #hww {
+                .section-title {
+                    width: 70%;
+                }
+
+                .section-content {
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+
+            #wwwu {
+                .section-content {
+                    img {
+                        display: none;
+                    }
+
+                    p {
+                        width: 100%;
+                        padding: 0 3rem;
+                    }
+                }
+            }
+
+            #mot {
+                .section-content {
+                    .team-list {
+                        .member-wrapper {
+                            .full-desc {
+                                width: 100%;
+                                margin: -75px 0 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 720px) {
     #about-us {
         .about-us-wrapper {

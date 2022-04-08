@@ -485,6 +485,163 @@
     }
 }
 
+@media (max-width: 834px) {
+    #landing {
+        #carousel-wrapper {
+            .slide-1, .slide-2 {
+                background-image: none;
+                background-color: #DAE1E5;
+                height: auto;
+
+                .row {
+                    & > div {
+                        height: 40vh;
+                    }
+                }
+            }
+
+            .slide-1 {
+                .right-container {
+                    &::before, &::after {
+                        display: none;
+                    }
+                }
+
+                .tagline-wrapper {
+                    top: 0;
+                    left: 0;
+
+                    .tagline {
+                        width: 100%;
+                        margin: auto;
+
+                        p {
+                            font-size: 5rem;
+                        }
+
+                        &::before {
+                            left: 140px;
+                            bottom: -75px;
+                            top: revert;
+                        }
+
+                        &::after {
+                            right: 200px;
+                            bottom: -8px;
+                        }
+                    }
+
+                    hr {
+                        margin: 0 0 0 270px;
+                    }
+
+                    .purpose {
+                        margin: 0 0 0 270px;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .slide-2 {
+                .award-desc {
+                    position: relative;
+                    width: 70%;
+                    margin: auto;
+                    top: 10%;
+                }
+            }
+        }
+
+        #wyn {
+            background-color: #DAE1E5;
+
+            .wyn-list {
+                .item {
+                    width: 80%;
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        #op {
+            .op-content {
+                .partner-videos {
+                    iframe {
+                        height: 300px;
+                    }
+
+                    & > div {
+                        height: auto;
+                    }
+
+                    #jimini {
+                        background-image: none;
+                    }
+
+                    .video-desc {
+                        padding-top: 20px;
+                    }
+
+                    #messy-bessy {
+                        background-image: none;
+                        margin-top: 20px;
+
+                        .video-desc {
+                            text-align: left;
+                        }
+
+                        hr {
+                            float: left;
+                        }
+                    }
+                }
+            }
+
+            #op {
+                .op-content {
+                    .partner-videos {
+                        iframe {
+                            height: 300px;
+                        }
+    
+                        & > div {
+                            height: auto;
+                        }
+    
+                        #jimini {
+                            background-image: none;
+                        }
+    
+                        .video-desc {
+                            padding-top: 20px;
+                        }
+    
+                        #messy-bessy {
+                            background-image: none;
+                            margin-top: 20px;
+    
+                            .video-desc {
+                                text-align: left;
+                            }
+    
+                            hr {
+                                float: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .reverse-on-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+
 @media (max-width: 770px) {
     #landing {
         #carousel-wrapper {
@@ -1141,6 +1298,44 @@
                             float: left;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    #landing {
+        #carousel-wrapper {
+            .slide-1 {
+                .tagline-wrapper {
+                    .tagline {
+                        margin: 20px auto;
+
+                        &::after {
+                            right: 37px;
+                        }
+
+                        &::before {
+                            left: 30px;
+                        }
+                    }
+                }
+            }
+
+            .hiring-btn {
+                bottom: 25px;
+            }
+
+            .carousel-indicators {
+                bottom: -10px;
+            }
+        }
+
+        #wyn {
+            .wyn-list {
+                .item {
+                    height: 700px;
                 }
             }
         }

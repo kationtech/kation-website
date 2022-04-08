@@ -209,6 +209,31 @@ p {
     }
 }
 
+@media (max-width: 834px) {
+    #business {
+        .business-content-wrapper {
+            .item {
+                height: auto;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #humane {
+        .humane-content {
+            #kiosk {
+                .desc {
+                    position: relative;
+                }
+
+                .kiosk-image {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 770px) {
     #business {
         .business-content-wrapper {

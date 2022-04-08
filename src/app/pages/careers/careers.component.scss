@@ -261,6 +261,86 @@
     }
 }
 
+@media (max-width: 834px) {
+    .careers-des-image {
+        display: none;
+    }
+
+    #careers {
+        #career-desc {
+            .section-content {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        #career-list {
+            .career-list-content {
+                .list {
+                    width: 100%;
+
+                    & > div {
+                        max-width: 300px;
+                        margin: 10px auto;
+                    }
+                }
+            }
+        }
+
+        #experiences {
+            #member-1 {
+                .member-detail {
+                    background-size: 140px;
+                    background-position: 595px 50%;
+                }
+            }
+
+            #member-2, #member-3 {
+                .member-detail {
+                    background-size: 140px;
+                    background-position: 75px 50%;
+
+                    .member {
+                        float: none;
+                        margin: auto;
+                    }
+                }
+
+                .full-desc {
+                    margin-top: -108px;
+                }
+            }
+
+            #member-3 {
+                .member-detail {
+                    background-position: 595px 50%;
+                }
+            }
+
+            .team-wrapper {
+                .member {
+                    max-width: 300px;
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+
+            .full-desc {
+                width: 95%;
+                margin: -84px auto 0px auto;
+
+                .desc {
+                    p {
+                        margin-left: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width: 770px) {
     .careers-des-image {
         display: none;

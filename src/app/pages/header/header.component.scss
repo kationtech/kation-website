@@ -276,6 +276,11 @@ header {
                                     box-shadow: inset 400px 0 0 0 #18488A;
                                     color: white;
                                 }
+
+                                &:visited, &:active, &:target {
+                                    background-color: white;
+                                    color: #ED672C;
+                                }
                             }
                         }
 
