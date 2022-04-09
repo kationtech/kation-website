@@ -5,12 +5,12 @@
             <h1>Thank you for filling out the form!</h1>
         </div>
         <div *ngIf="data !== 'successPrompt'">
-            <h1>Well done!</h1>
-            <p>We’re glad that you’re interested to hear from us. <br>A member of our team at Kation Technologies will be reaching out to you soon. Thank you!</p>
+            <h1>Thank You!</h1>
+            <!-- <p>We’re glad that you’re interested to hear from us. <br>A member of our team at Kation Technologies will be reaching out to you soon. Thank you!</p> -->
         </div>
     </div>
 </mat-dialog-content>
 <mat-dialog-actions align="center" [ngClass]="{'isSuccessPrompt': data === 'successPrompt'}">
     <div class="close" *ngIf="data === 'successPrompt'" mat-dialog-close><img src="assets/images/icons/close.png"></div>
-    <button *ngIf="data !== 'successPrompt'" (click)="refreshPage()" class="btn btn-orange">Great!</button>
+    <button *ngIf="data !== 'successPrompt'" (click)="refreshPage()" class="btn btn-orange">OK</button>
 </mat-dialog-actions>

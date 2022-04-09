@@ -104,7 +104,7 @@ export class PartnerWithUsComponent implements OnInit {
 
   successModal(){
     const dialogRef = this.dialog.open(PromptModalComponent, {
-      width: '600px'
+      width: '450px'
     });
   }
 
